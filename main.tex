@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Congratulations, you've made an excellent choice
+%% of writing your Tampere University thesis using
+%% the LaTeX system. This document attempts to be
+%% as complete a template as possible to let you focus
+%% on the most important part: the writing itself.
+%% Thus the details regarding the visual appearance
+%% and even structure have already been worked out
+%% for you!
+%%
+%% I sincerely hope you will find this template useful
+%% in completing your thesis project. I've tried to
+%% add comments (followed by the % sign) to clarify
+%% the structure and purpose of some of the commands.
+%% Most of the magic happens in the file tauthesis.cls,
+%% which you are more than welcome to take a look at.
+%% Just refrain from editing it in the most crucial
+%% versions of the thesis!
+%%
+%% I wish you and your thesis project the best of luck!
+%% If this template causes you trouble along the way
+%% or if you've any suggestions for improving it,
+%% please be in contact through GitHub
+%% (<URL HERE>)
+%%
+%% Yours,
+%%
+%% Ville Koljonen
+%%
+%% PS. This template or its associated class file don't
+%% come with a warranty. The content is provided as is,
+%% without even the implied promise of fitness to the
+%% mentioned purpose. You, as the author of the thesis,
+%% are responsible for the entire work, including the
+%% provided material. No one else is liable to you for
+%% any damage inflicted on you or your thesis, were it
+%% caused by using this template or not.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% METADATA %%%%%
+%
+% Always keep the following metadata up to date! This is important for your
+% PDF file to comply to accessibility standards. (And yes, this information
+% must remain here, before \documentclass[...]{...}.)
+
+\input{metadata.tex}
+
+\input{preamble.tex} % You can add packages and define new commands in this file.
+
+%%%%%%%% % % % Joonas edits % % % %%%%%%%%%
+
+%\addbibresource{publications/publications.bib}
+\DeclareBibliographyCategory{ThesisPublications}
+\addtocategory{ThesisPublications}{article1}
+\addtocategory{ThesisPublications}{article2}
+\addtocategory{ThesisPublications}{article3}
+\defbibnote{pubs2thesis}{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%% FRONT MATTER %%%%%
+
+%%%%% Thesis information and title page.
+
+\titlepagematter
+
+\maketitle
+
+\frontmatter
+
+\input{frontmatter/index.tex}
+
+%%%%% MAIN MATTER %%%%%
+
+\mainmatter
+
+% Actually include your chapters in the file specified by this input statement.
+
+\input{mainmatter/index.tex}
+
+%%%%% Bibliography/references.
+
+\printbibliography[heading=bibintoc,notkeyword={thisdissertation}]
+
+
+%%%%% Appendices.
+
+\begin{appendices}
+
+\input{appendices/index.tex}
+
+\end{appendices}
+
+%%%%% PhD Publications
+
+\publicationmatter
+
+\input{publications/index.tex}
+
+\end{document}
