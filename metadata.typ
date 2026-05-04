@@ -52,7 +52,7 @@
  * not need a Finnish abstract.
 ***/
 
-#let includeFinnishAbstract = true
+#let includeFinnishAbstract = false
 
 /**
  * Set this to true before compiling your document, if you intend
