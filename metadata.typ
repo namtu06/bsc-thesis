@@ -176,7 +176,7 @@
 #let includeListOfListings = true
 
 // Choose your fonts. Remember that they need to exist on
-// your system for Typst to find them.
+// your system for Typst to find them. 
 //
 // NOTE that these should be accessible: sans serif with
 // distinctive letters, so that visually impaired people
