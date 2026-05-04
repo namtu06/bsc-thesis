@@ -520,7 +520,7 @@
                 }{
                     Tämä~ja~seuraava~sivu~korvataan~painotalossa.
                 }{
-                    This~and~the~following~page~will~be~replaced~at~the~printing~house.
+   
                 }
             }
         }{
