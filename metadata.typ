@@ -10,7 +10,7 @@
 
 // Common metadata.
 
-#let author = "Nam Tu"
+#let author = "Nam Từ"
 
 #let examiners = (
 	(
@@ -140,8 +140,8 @@
 #let faculty = "Engineering and Natural Sciences"
 #let keywords = ("keyword1", "keyword2", "...")
 #let location = "Tampere"
-#let subtitle = "" // or none without the ""
-#let maintitle = "Multiomics analysis of Glioblastoma"
+#let subtitle = "A Comparative Study of Transcriptomes and Proteomes" // or none without the ""
+#let maintitle = "Decoding Glioblastoma Through Multiomics"
 #let thesisProgramme = "Science and Engineering"
 #let university = "Tampere University"
 
