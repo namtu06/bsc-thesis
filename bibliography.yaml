@@ -9,6 +9,69 @@
 # should also be added here, with the additional keys "license" (string)
 # "tauthesis-publication" (boolean) and "author-contribution" (multiline string).
 #
+#
+
+vogel2012:
+  type: article
+  title: Insights into the regulation of protein abundance from proteomic and transcriptomic analyses
+  author:
+  - Vogel, Christine
+  - Marcotte, Edwards
+  date: 2012
+  page-range: 227-232
+  serial-number:
+    doi: 10.1038/nrg3185
+  url:
+    value: https://doi.org/10.1038/nrg3185
+    date: 2025-05-11
+  parent: 
+    type: periodical
+    title: Nature Review Genetics
+    publisher: Nature
+    volume: 13
+
+crick1970:
+  type: article
+  title: Central Dogma of Molecular Biology
+  author:
+    - Crick, Francis
+  date: 1970-08-08
+  page-range: 561-563
+  serial-number:
+    doi: 10.1038/227561a0
+  url:
+    value: https://doi.org/10.1038/227561a0
+    date: 2025-05-11
+  parent:
+    type: periodical
+    title: Nature
+    volume: 227
+  publisher: Nature
+
+lemee2018:
+  type: article
+  title: "Integration of transcriptome and proteome profiles in glioblastoma: looking for the missing link"
+  author:
+    - Lemée, Jean‑Michel
+    - Clavreul, Anne
+    - Aubry, Marc
+    - Com, Emmanuelle
+    - de Tayrac, Marie
+    - Mosser, Jean
+    - Menei, Philippe
+  date: 2018
+  page-range: 1-13
+  serial-number:
+    doi: 10.1186/s12867-018-0115-7
+  url:
+    value: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6249855/
+    date: 2026-05-11
+  parent:
+    type: periodical
+    title: Proteome Science
+    publisher: BioMed Central
+    volume: 16
+    issue: 1
 
 Bezanson2017Julia:
   type: article

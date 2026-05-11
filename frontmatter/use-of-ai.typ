@@ -15,15 +15,21 @@ I hereby declare, that the AI-based applications used in generating this work ar
 		[*Application*],
 		[*Version*]
 	),
-	[...],
-	[...],
-	[...],
-	[...],
+	[Microsoft 365 Copilot],
+	[],
+	[Github Copilot],
+	[GPT-4.1],
+	[ChatGPT],
+	[GPT-5.5]
 )
 
 == Purpose of the use of AI
 
 Explain here _in detail_, for which purpose and how AI was utilized in writing this thesis.
+
+M365 Copilot was used to suggest papers to read up on background information regarding the thesis's topic, and checking typo and wording throughout the entire work.
+
+Github Copilot and ChatGPT were used mainly for debugging preprocessing code during analysis of multiomics.
 
 == Parts of this work,  where AI was used
 

@@ -9,6 +9,13 @@
 // Include appendix-specific chapters there.
 //
 
+#include "1_introduction.typ"
+#include "2_background.typ"
+#include "3_method.typ"
+#include "4_results.typ"
+#include "5_discussion.typ"
+#include "6_conclusions.typ"
+
 #include "01.typ"
 #include "02.typ"
 #include "03.typ"

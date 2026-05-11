@@ -12,6 +12,12 @@
 #import "../preamble.typ": *
 
 #let glossary_words = (
+	glioblastoma: (
+		name: "GBM",
+		description: [
+			Glioblastoma
+		]
+	),
 	scalar: (
 		name: math.equation(
 			alt: "s",
@@ -46,13 +52,5 @@
 	tuni: (
 		name: "TUNI",
 		description: "Tampere University"
-	),
-	julia: (
-		name: "Julia",
-		description: [
-			A high-level, dynamically typed general-purpose
-			programming language. Julia is compiled via LLVM into
-			native code which makes it fast.
-		]
 	),
 )

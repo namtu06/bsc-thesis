@@ -13,7 +13,7 @@
 
 #import "../preamble.typ": *
 
-= Introduction <introduction>
+= Introduction <introduction1>
 
 This document template conforms to the Guide to Writing a Thesis
 in Tampere University @kirjoitusohje2019 @thesiswriting2019. A
