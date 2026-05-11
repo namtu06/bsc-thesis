@@ -73,6 +73,32 @@ lemee2018:
     volume: 16
     issue: 1
 
+singh2022:
+  type: article
+  title: "Glioblastoma at the crossroads: current understanding and future therapeutic horizons"
+  author:
+    - Singh, Shilpi
+    - Dey, Devanjan
+    - Barik, Debashis
+    - Mohapatra, Iteeshree
+    - Kim, Stefan
+    - Sharma, Mayur
+    - Prasad, Sujata
+    - Wang, Peize
+    - Singh, Amar
+    - Singh, Gatikrushna
+  date: 2022
+  page-range: 1-23
+  parent:
+    type: periodical
+    title: Signal Transduction and Targeted Therapy
+    publisher: Nature Publishing Group
+    volume: 7
+    issue: 1
+  url:
+    value: https://www.nature.com/articles/s41392-021-00861-0
+    date: 2026-05-12
+
 Bezanson2017Julia:
   type: article
   title: >-

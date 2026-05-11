@@ -15,7 +15,7 @@
 	glioblastoma: (
 		name: "GBM",
 		description: [
-			Glioblastoma
+			Glioblastoma multiforme
 		]
 	),
 	scalar: (
