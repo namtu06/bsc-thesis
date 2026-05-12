@@ -4,8 +4,18 @@
 
 == Glioblastoma biology <glioblastoma>
 
-Glioblastoma multiforme is one of the most aggressive and most common form of brain tumors, with an extremely poor prognosis of a median survival period of 12-15 months @lemee2018 @singh2022. GBM possesses an extreme heterogeneity in its structure which results in its resistance to conventional therapies and high recurrence rate. Advanced sequencing technologies emphasizes the need for therapies to target both molecular drivers of the tumors and their arised microenvironment; one of the promising path to battle GBM involves precision medicine, leveraging computational methods for targeted therapy selection and resistance prediction @singh2022. 
+Glioblastoma multiforme is one of the most aggressive and most common form of brain tumors, with an extremely poor prognosis of a median survival period of 12-15 months @lemee2018 @singh2022. GBM possesses an extreme heterogeneity in its structure which results in its resistance to conventional therapies and high recurrence rate @singh2022. 
 
-== Transcriptomic and proteomic profiling in glioblastoma <multiomics>
+Advanced sequencing technologies emphasizes the need for therapies to target both molecular drivers of the tumors and their arised microenvironment; one of the promising path to battle GBM involves precision medicine, leveraging computational methods for targeted therapy selection and resistance prediction @singh2022. 
 
-== Previous research in Glioblastoma multiomics <prevresearch>
+== Transcriptomics and proteomics <multiomics>
+
+Transcriptomics technologies obtains information on how genes are expressed an organism's DNA by looking through all the RNA transcripts produced from the DNA @crick1970 @lowe2017. According to Lowe et al. @lowe2017, there are two main ways of approaching the reading of RNA, including (1) quantifying predetermined sequences with microarrays, and (2) using RNA sequencing (RNA-seq) which also identifies sequences that were not predetermined via high-throughput sequencing.
+
+Based on current literature @altelaar2013 @crick1970, proteomics is the analysis of the protein content of an organism which is a far more complex area of the central dogma to analyze due to alternative splicing and diverse modications and degradation of proteins, in combination with various other factors; but thanks to recent advancements in technologies, identification and quantification of proteins is now possible on a single-experiment basis. Altelaar et al. @altelaar2013 stated that protein quantification typically can be done based on their mass through a process called mass-spectrometry, but a variety of other methods can also be performed based on the research's goal. 
+
+Comparitive profiling, which can be performed both in transcriptomics and proteomics, is the process of comparing expression levels of one sample against another (e.g. a diseased sample against a healthy sample) to identify and understand molecular causes of biological processes @altelaar2013. The differential analysis done in this thesis is a form of comparitive profiling.
+
+The term _multiomics_ is often used to refer to research combining biotechnology ending with the "-omics" suffix, such as the aforementioned transcriptomics and proteomics @luo2024.
+
+== Multiomics profiling in glioblastoma <glio-omics>

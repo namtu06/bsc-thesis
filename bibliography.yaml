@@ -99,6 +99,121 @@ singh2022:
     value: https://www.nature.com/articles/s41392-021-00861-0
     date: 2026-05-12
 
+lowe2017:
+  type: article
+  title: "Transcriptomics technologies"
+  author:
+    - Lowe, R.
+    - Shirley, N.
+    - Bleackley, M.
+    - Dolan, S.
+    - Shafee, T.
+  date: 2017-05-18
+  page-range: e1005457
+  serial-number:
+    doi: 10.1371/journal.pcbi.1005457
+    pmid: 28545146
+    pmcid: PMC5436640
+  url:
+    value: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005457
+    date: 2026-05-12
+  parent:
+    type: periodical
+    title: PLoS Computational Biology
+    volume: 13
+    issue: 5
+
+altelaar2013:
+  type: article
+  title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
+  author:
+    - Altelaar, A.
+    - Munoz, J.
+    - Heck, A.
+  date: 2013
+  page-range: 35-48
+  serial-number:
+    doi: 10.1038/nrg3356
+  url:
+    value: https://doi.org/10.1038/nrg3356
+    date: 2026-05-12
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    publisher: Nature Publishing Group
+    volume: 14
+
+luo2024:
+  type: article
+  title: "Multiomics Research: Principles and Challenges in Integrated Analysis"
+  author:
+    - Luo, Yunqing
+    - Zhao, Chengjun
+    - Chen, Fei
+  date: 2024
+  page-range: 0059
+  serial-number:
+    doi: 10.34133/bdr.0059
+    issn: 2693-1257
+  url:
+    value: https://doi.org/10.34133/bdr.0059
+    date: 2026-05-12
+  parent:
+    type: periodical
+    title: BioDesign Research
+    volume: 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Bezanson2017Julia:
   type: article
   title: >-

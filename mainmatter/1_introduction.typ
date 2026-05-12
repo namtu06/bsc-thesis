@@ -10,4 +10,4 @@ This discrepancy may pose a significant challenge for biomedical research aimed 
 
 The content of this thesis aims to statistically compare and contrast transcriptomics and proteomics of GBM via differential analysis of their respective expression data against healthy brain tissue.
 
-Chapter @background presents the relevant knowledge regarding the thesis's topic, including the biological entity of interest - glioblastoma, and multiomics.
+Chapter @background presents the relevant knowledge regarding the thesis's topic including glioblastoma and multiomics of glioblastoma.

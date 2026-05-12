@@ -18,6 +18,13 @@
 			Glioblastoma multiforme
 		]
 	),
+	multiomics: (
+		name: "Multiomics",
+		description: [
+	
+			 Research that combines biotechnology ending with the “-omics” suffix such transcriptomics, proteomics, genomics, etc.
+		]
+	),
 	scalar: (
 		name: math.equation(
 			alt: "s",
