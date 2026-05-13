@@ -19,3 +19,7 @@ Comparitive profiling, which can be performed both in transcriptomics and proteo
 The term _multiomics_ is often used to refer to research combining biotechnology ending with the "-omics" suffix, such as the aforementioned transcriptomics and proteomics @luo2024.
 
 == Multiomics profiling in glioblastoma <glio-omics>
+
+As per Lemée et al. @lemee2018, computational research in GBM has until very recently been done through independent analyses of transciptomes and proteomes. However, joint research comnbining the two shows promises of new biological insights, despite the fact that there still exists a discrepancy regarding expression values and simply labelling a correlation coefficient generalizes the relationship too much @lemee2018 @kim2024. A recent landmark multiomics study conducted by Kim et al. @kim2024 showed that the RNA-protein divergence is even more pronounced in recurrent GBM. 
+
+The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of proteogenomic profiling data for numerous tumor types including that of glioblastoma @kim2024. More specialized data regarding transcriptomics can also be obtained at the public database Gene Expression Omnibus (GEO).

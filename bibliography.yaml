@@ -163,7 +163,63 @@ luo2024:
     title: BioDesign Research
     volume: 6
 
-
+kim2024:
+  type: article
+  title: "Integrated proteogenomic characterization of glioblastoma evolution"
+  author:
+    - Kim, Kyung-Hee
+    - Migliozzi, Simona
+    - Koo, Harim
+    - Hong, Jun-Hee
+    - Park, Seung Min
+    - Kim, Sooheon
+    - Kwon, Hyung Joon
+    - Ha, Seokjun
+    - Garofano, Luciano
+    - Oh, Young Taek
+    - D'Angelo, Fulvio
+    - Kim, Chan Il
+    - Kim, Seongsoo
+    - Lee, Ji Yoon
+    - Kim, Jiwon
+    - Hong, Jisoo
+    - Jang, Eun-Hae
+    - Mathon, Bertrand
+    - Di Stefano, Anna-Luisa
+    - Bielle, Franck
+    - Laurenge, Alice
+    - Nesvizhskii, Alexey I.
+    - Hur, Eun-Mi
+    - Yin, Jinlong
+    - Shi, Bingyang
+    - Kim, Youngwook
+    - Moon, Kyung-Sup
+    - Kwon, Jeong Taik
+    - Lee, Shin Heon
+    - Lee, Seung Hoon
+    - Gwak, Ho Shin
+    - Lasorella, Anna
+    - Yoo, Heon
+    - Sanson, Marc
+    - Sa, Jason K.
+    - Park, Chul-Kee
+    - Nam, Do-Hyun
+    - Iavarone, Antonio
+    - Park, Jong Bae
+  date: 2024-03-11
+  page-range: 358-377.e8
+  serial-number:
+    doi: 10.1016/j.ccell.2023.12.015
+    pmid: 38215747
+    pmcid: PMC10939876
+  url:
+    value: https://doi.org/10.1016/j.ccell.2023.12.015
+    date: 2026-05-13
+  parent:
+    type: periodical
+    title: Cancer Cell
+    volume: 42
+    issue: 3
 
 
 
