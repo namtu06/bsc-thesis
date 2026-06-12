@@ -140,7 +140,7 @@
 #let faculty = "Engineering and Natural Sciences"
 #let keywords = ("keyword1", "keyword2", "...")
 #let location = "Tampere"
-#let subtitle = "A Comparative Study of Transcriptomes and Proteomes" // or none without the ""
+#let subtitle = "A Comparative Study of Transcriptomes and Proteomes via Differential Analysis" // or none without the ""
 #let maintitle = "Decoding Glioblastoma Through Multiomics"
 #let thesisProgramme = "Science and Engineering"
 #let university = "Tampere University"
