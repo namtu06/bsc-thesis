@@ -221,7 +221,51 @@ kim2024:
     volume: 42
     issue: 3
 
+law2014:
+  type: article
+  title: "voom: Precision Weights Unlock Linear Model Analysis Tools for RNA-seq Read Counts"
+  author:
+    - Law, Charity W.
+    - Chen, Yunshun
+    - Shi, Wei
+    - Smyth, Gordon K.
+  date: 2014
+  page-range: R29
+  serial-number:
+    doi: 10.1186/gb-2014-15-2-r29
+    issn: 1465-6906
+  url:
+    value: https://doi.org/10.1186/gb-2014-15-2-r29
+    date: 2026-06-14
+  parent:
+    type: periodical
+    title: Genome Biology
+    volume: 15
+    issue: 2
 
+cox2014:
+  type: article
+  title: "Accurate Proteome-wide Label-free Quantification by Delayed Normalization and Maximal Peptide Ratio Extraction, Termed MaxLFQ"
+  author:
+    - Cox, Jürgen
+    - Hein, Marco Y.
+    - Luber, Christian A.
+    - Paron, Igor
+    - Nagaraj, Nagarjuna
+    - Mann, Matthias
+  date: 2014
+  page-range: 2513-2526
+  serial-number:
+    doi: 10.1074/mcp.M113.031591
+    issn: 1535-9476
+  url:
+    value: https://doi.org/10.1074/mcp.M113.031591
+    date: 2026-06-14
+  parent:
+    type: periodical
+    title: Molecular & Cellular Proteomics
+    volume: 13
+    issue: 9
 
 
 

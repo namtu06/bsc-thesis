@@ -1,8 +1,11 @@
 #import "../preamble.typ": *
 
 = Research methodology <methodology>
-Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study dataset, given as already-normalized expression values according to their originating gene.
-An example expression value matrix is given in Table 1.
+Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study dataset, given as already-normalized (but not yet $log_2$-transformed) expression values according to their originating gene.
+
+Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions.
+Therefore, a common practice when working with expression matrices, which has been done to the current data, is to apply a $log_2$-transformation @law2014 @cox2014. 
+An example expression value matrix ready for calculation is given in Table 1.
 
 #show table.cell.where(y: 0): strong
 #figure(
