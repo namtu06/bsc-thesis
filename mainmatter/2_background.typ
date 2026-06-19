@@ -20,6 +20,12 @@ The term _multiomics_ is often used to refer to research combining biotechnology
 
 == Multiomics profiling in glioblastoma <glio-omics>
 
-As per Lemée et al. @lemee2018, computational research in GBM has until very recently been done through independent analyses of transciptomes and proteomes. However, joint research comnbining the two shows promises of new biological insights, despite the fact that there still exists a discrepancy regarding expression values and simply labelling a correlation coefficient generalizes the relationship too much @lemee2018 @kim2024. According to Lemée et al., other ways of approaching the transcriptome-proteome discepancy include (possible identification and) the inspection of: (1) the overlapping of transcriptome and proteome data, (2) altered common biological pathways in both datasets, (3) altered common functional pathways in both datasets, ... @lemee2018  A recent landmark multiomics study conducted by Kim et al. @kim2024 showed that the RNA-protein divergence is even more pronounced in recurrent GBM. 
+As per Lemée et al. @lemee2018, computational research in GBM has until very recently been done through independent analyses of transciptomes and proteomes. However, joint research comnbining the two shows promises of new biological insights, despite the fact that there still exists a discrepancy regarding expression values and simply labelling a correlation coefficient generalizes the relationship too much @lemee2018 @kim2024. 
+According to Lemée et al., other ways of approaching the transcriptome-proteome discepancy include (possible identification and) the inspection of: (1) the overlapping of transcriptome and proteome data, (2) altered common biological pathways in both datasets, (3) altered common functional pathways in both datasets, ... @lemee2018  A recent landmark multiomics study conducted by Kim et al. @kim2024 showed that the RNA-protein divergence is even more pronounced in recurrent GBM. 
 
 The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of proteogenomic profiling data for numerous tumor types including that of glioblastoma @kim2024. More specialized data regarding transcriptomics can also be obtained at the public database Gene Expression Omnibus (GEO).
+
+
+== Programmed cell death modes <cell-death>
+
+One of the main processes cells experience — especially after they have served their purpose — is cell death, occuring naturally keeps the bodily functions in check, and problems arise when this process is hindered or accelerated unexpectedly @clevelandclinic2023. 

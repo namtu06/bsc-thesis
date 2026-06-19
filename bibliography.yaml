@@ -267,28 +267,17 @@ cox2014:
     volume: 13
     issue: 9
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+clevelandclinic2023:
+  type: web
+  title: "Cell Death: Causes, Apoptosis, Autophagy & Necrosis"
+  author:
+    - Cleveland Clinic
+  date: 2023-09-28
+  url:
+    value: https://my.clevelandclinic.org/health/articles/cell-death
+    date: 2026-06-19
+  accessed:
+    date: 2026-06-19
 
 
 
