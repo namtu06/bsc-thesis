@@ -34,3 +34,5 @@ One of the main processes cells experience — especially after they have served
 - *Necroptosis*: A recently-defined form of programmed cell death that has characteristics of both Apoptosis and Necrosis (a certain unprogrammed cell death, not to be confused with what is being described), happening often alongside them and rarely isolated. It is a highly inflammatory cell death that happens when apoptosis fails, caused by the same prodeath signals. 
 - *Pyroptosis*: As can be inferred from its name, it is also an inflammatory form of cell death induced by the inflammasome and caspase activity.
 - *Ferroptosis*: This cell death is induced by the imbalance of iron-related lipid peroxides within the cell (hence the "Ferro" in "Ferroptosis").
+
+Ultimately, the DNA is still the "blueprint" for the cascades of proteins that induce these cell death modes. Therefore, the expression of genes in the DNA can be correlated to the activities of these modes in some way or another.
