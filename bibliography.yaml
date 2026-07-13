@@ -279,8 +279,30 @@ clevelandclinic2023:
   accessed:
     date: 2026-06-19
 
-
-
+qian2024:
+  type: article
+  title: "Programmed Cell Death: Molecular Mechanisms, Biological Functions, Diseases, and Therapeutic Targets"
+  author:
+    - Qian, Shen'er
+    - Long, Yao
+    - Tan, Guolin
+    - Li, Xiaoguang
+    - Xiang, Bo
+    - Tao, Yongguang
+    - Xie, Zuozhong
+    - Zhang, Xiaowei
+  date: 2024-11-28
+  page-range: e70024
+  serial-number:
+    doi: 10.1002/mco2.70024
+  url:
+    value: https://doi.org/10.1002/mco2.70024
+    date: 2026-07-13
+  parent:
+    type: periodical
+    title: MedComm
+    volume: 5
+    issue: 12
 
 
 
