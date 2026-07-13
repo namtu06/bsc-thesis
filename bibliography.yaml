@@ -304,12 +304,55 @@ qian2024:
     volume: 5
     issue: 12
 
+kim2019:
+  type: article
+  title: "Statistical Notes for Clinical Researchers: The Independent Samples t-Test"
+  author:
+    - Kim, Hae-Young
+  date: 2019
+  page-range: e26
+  serial-number:
+    doi: 10.5395/rde.2019.44.e26
+    issn: 2234-7658
+  url:
+    value: https://doi.org/10.5395/rde.2019.44.e26
+    date: 2026-07-14
+  parent:
+    type: periodical
+    title: Restorative Dentistry & Endodontics
+    volume: 44
+    issue: 3
 
+scipyttestind:
+  type: web
+  title: "scipy.stats.ttest_ind"
+  author:
+    - SciPy Developers
+  url:
+    value: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html
+    date: 2026-07-14
+  accessed:
+    date: 2026-07-14
 
-
-
-
-
+jafari2019:
+  type: article
+  title: "Why, When and How to Adjust Your P Values?"
+  author:
+    - Jafari, Mohieddin
+    - Ansari-Pour, Naser
+  date: 2019
+  page-range: 604-607
+  serial-number:
+    doi: 10.22074/cellj.2019.5992
+    issn: 2228-5806
+  url:
+    value: https://doi.org/10.22074/cellj.2019.5992
+    date: 2026-07-14
+  parent:
+    type: periodical
+    title: Cell Journal
+    volume: 20
+    issue: 4
 
 
 
