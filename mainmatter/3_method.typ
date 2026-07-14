@@ -7,7 +7,7 @@ Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study
 Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions @law2014.
 Therefore, a common practice when working with expression matrices, which has been done to the current data, is to apply a $log_2$-transformation to each of the value @law2014 @cox2014. 
 An example expression value matrix ready for calculation is given in @example-expression-matrix.
-
+From this point onwards, "$log_2$ expression" is now referred to as "expression".
 #show table.cell.where(y: 0): strong
 #figure(
     table(
@@ -23,6 +23,8 @@ An example expression value matrix ready for calculation is given in @example-ex
     caption: [Example expression matrix]
 ) <example-expression-matrix>
 == Performing differential analysis
+
+=== Calculation & testings
 
 In the CPTAC Discovery Study, healthy brain tissue samples are provided as the
 baseline for comparison for the remaining tumor samples. As described in @multiomics,
@@ -40,8 +42,50 @@ which means the difference between the average expression of a gene in the subty
 
 At the same time, the Welch's t-test for independence can also be applied to obtain the statistical significance of the difference between the expression of the tumors and healthy samples for a specific gene in the form of the obtained p-value @kim2019. The Welch's t-test was chosen over the standard Student's t-test due to the high chance of the variances to be different @kim2019. Using the `scipy` library for Python, this can be easily automated for the entire dataset with the `ttest_ind` function with the `equal_var=False` parameter.
 
-To account for inflated false positive count resulting from multiple testings, the p-values are corrected with the Benjamini-Hochberg method for False Discovery Rate (FDR) @jafari2019. This can also be achieved in Python with the `statsmodels` library using the `multipletests` function and `method=fdr_bh` parameter.
+To account for inflated false-positive count resulting from multiple testings, the p-values are corrected with the Benjamini-Hochberg method for False Discovery Rate (FDR) @jafari2019. This can also be achieved in Python with the `statsmodels` library using the `multipletests` function and `method=fdr_bh` parameter.
 
-With the obtained p-value and log2FC obtained for each gene, the genes can be classified whether they are considered "Significant" with a chosen threshold for p-value and absolute value of log2FC, which are $0.05$ and $1$ respectively for this thesis. Consequently, genes with $p"-value" < 0.05$ and $log_2 F C > 1$ are categorized as "Significantly Upregulated", and genes with $p"-value" < 0.05$ and $log_2 F C < -1$ are "Significantly Downregulated". From this point onwards, the categories are simply referred as "upregulated" and "downregulated".
+With the obtained p-value and log2FC obtained for each gene, the genes can be classified whether they are considered statistically and quantitatively significant with a chosen threshold for p-value and absolute value of log2FC, which are $0.05$ and $1$ respectively for this thesis. Consequently, genes with $p"-value" < 0.05$ and $log_2 F C > 1$ are categorized as "Significantly Upregulated", and genes with $p"-value" < 0.05$ and $log_2 F C < -1$ are "Significantly Downregulated". From this point onwards, the categories are simply referred to as "upregulated" and "downregulated".
 
 This step concludes the preparation for a "solid base" of results for further comparative computations, which should include: (1) gene name and its corresponding (2) transcriptome log2FC, (3) transcriptome adjusted p-value, (4) proteome log2FC, (5) proteome adjusted p-value.
+
+=== Exploratory plotting
+
+With the results, we can plot a variety of plots to give insight into the overall structure of the expressions.
+For instance, the volcano plot: log2FC for the x-axis, $-log_10(p-"value")$ for the y-axis.
+Additionally, the thresholds can be added to the plot to show the categorically significant portion of the distribution. For example, the volcano plots for the expression values of both transcriptome and proteome for the proneural subtype are shown side-by-side in @example-volcano.
+
+#figure(
+    grid(
+        columns: 2,
+        row-gutter: 1em,
+    )[
+        #image("../images/proneural_volcano_rna.png"
+        )
+    ][
+        #image("../images/proneural_volcano_pro.png")
+    ],
+    kind: image,
+    caption:[Example volcano plots] 
+    ,
+) <example-volcano>
+
+Other possible plots to see the structure of the data include plotting log2FC of the transcriptome against that of the proteome, with this we can calculate the correlation between the two. Additionally, the distribution of log2FC values can be inspected in a density plot. Both are shown in @example-log2fc-plots.
+
+
+
+#figure(
+    grid(
+        columns: 2,
+        row-gutter: 1em,
+    )[
+        #image("../images/log2fc_corr.png"
+        )
+    ][
+        #image("../images/log2fc_density.png")
+    ],
+    kind: image,
+    caption:[Example log2FC comparison plots] 
+    ,
+) <example-log2fc-plots>
+
+The resulting $R^2 = 0.463$ from the correlation of log2FCs lines up quite closely with what was discussed in Chapter @introduction, where only about 40% of the variation of one can be explained by the other.
