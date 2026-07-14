@@ -354,7 +354,26 @@ jafari2019:
     volume: 20
     issue: 4
 
-
+joly2021:
+  type: article
+  title: "Differential Gene Set Enrichment Analysis: A Statistical Approach to Quantify the Relative Enrichment of Two Gene Sets"
+  author:
+    - Joly, Jean H.
+    - Lowry, William E.
+    - Graham, Nicholas A.
+  date: 2021
+  page-range: 5247-5254
+  serial-number:
+    doi: 10.1093/bioinformatics/btaa658
+    issn: 1367-4803
+  url:
+    value: https://doi.org/10.1093/bioinformatics/btaa658
+    date: 2026-07-15
+  parent:
+    type: periodical
+    title: Bioinformatics
+    volume: 36
+    issue: 21
 
 
 
