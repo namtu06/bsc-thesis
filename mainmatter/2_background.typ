@@ -26,13 +26,13 @@ According to Lemée et al., other ways of approaching the transcriptome-proteome
 The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of proteogenomic profiling data for numerous tumor types including that of glioblastoma @kim2024. More specialized data regarding transcriptomics can also be obtained at the public database Gene Expression Omnibus (GEO).
 
 
-== Programmed cell death modes <cell-death>
+== Regulated Cell Death Signaling Pathways <cell-death>
 
 One of the main processes cells experience — especially after they have served their purpose — is programmed cell death, occuring via a complex cascade of molecular signaling. It keeps the bodily functions in check, and problems arise when this process is hindered or accelerated unexpectedly @clevelandclinic2023 @qian2024. The core types of programmed cell deaths are @qian2024: 
-- *Apoptosis*: Cell death without an induced inflammatory reponse, defined by a caspase cascade.
-- *Autophagy*: Cells use their lyosomes to degrade or repair damaged, aged, or excess parts of themselves, which also releases some molecules that can be reused.
-- *Necroptosis*: A recently-defined form of programmed cell death that has characteristics of both Apoptosis and Necrosis (a certain unprogrammed cell death, not to be confused with what is being described), happening often alongside them and rarely isolated. It is a highly inflammatory cell death that happens when apoptosis fails, caused by the same prodeath signals. 
-- *Pyroptosis*: As can be inferred from its name, it is also an inflammatory form of cell death induced by the inflammasome and caspase activity.
-- *Ferroptosis*: This cell death is induced by the imbalance of iron-related lipid peroxides within the cell (hence the "Ferro" in "Ferroptosis").
+- *Apoptosis*: Regulated through intrinsic (mitochondrial) and extrinsic (death receptor) signalling pathways.
+- *Autophagy*: Regulated through signalling pathways controlling lysosomal degradation and cellular recycling.
+- *Necroptosis*: Initiated when death receptor signalling occurs while caspase-8 activity is inhibited, preventing apoptosis.
+- *Pyroptosis*: Inflammatory programmed cell death driven by inflammasome signalling.
+- *Ferroptosis*: Regulated by signalling pathways governing iron metabolism, lipid peroxidation, and cellular redox balance.
 
-Ultimately, the DNA is still the "blueprint" for the cascades of proteins that induce these cell death modes. Therefore, the expression of genes in the DNA can be correlated to the activities of these modes in some way or another.
+Each programmed cell death mode is regulated by a characteristic network of genes and proteins @qian2024. Consequently, differential expression of genes participating in these pathways can provide insight into alterations in the underlying signaling mechanisms. By integrating differentially expressed genes with Gene Ontology enrichment and curated cell death pathway gene sets, it becomes possible to identify which regulated cell death pathways are most strongly associated with each GBM molecular subtype.
