@@ -40,7 +40,7 @@ $
 
 which means the difference between the average expression of a gene in the subtype and the average expression of the same gene in the healthy samples.
 
-At the same time, the Welch's t-test for independence is applied to obtain the statistical significance of the difference between the expression of the tumors and healthy samples for a specific gene in the form of the obtained p-value @kim2019. The Welch's t-test was chosen over the standard Student's t-test due to the high chance of the variances to be different @kim2019. The analysis was implemented in Python using SciPy's `ttest_ind function` with `equal_var=False`.
+At the same time, the Welch's t-test for independence is applied to obtain the statistical significance of the difference between the expression of the tumors and healthy samples for a specific gene in the form of the obtained p-value @kim2019. The Welch's t-test was chosen over the standard Student's t-test due to the high chance of the variances to be different @kim2019. The analysis was implemented in Python using SciPy's `ttest_ind` function with `equal_var=False`.
 
 To account for inflated false-positive count resulting from multiple testings, the p-values are corrected with the Benjamini-Hochberg method for False Discovery Rate (FDR) @jafari2019. This is achieved in Python with the `statsmodels` library using the `multipletests` function and `method=fdr_bh` parameter.
 
@@ -51,7 +51,7 @@ This step concludes the preparation for a "solid base" of results for further co
 === Exploratory Plotting
 
 With the results, we can plot a variety of plots to give insight into the overall structure of the expressions.
-For instance, the volcano plot: log2FC for the x-axis, $-log_10(p-"value")$ for the y-axis.
+For instance, the volcano plot: log2FC for the x-axis, $-log_10(p"-value")$ for the y-axis.
 Additionally, the thresholds can be added to the plot to show the categorically significant portion of the distribution. For example, the volcano plots for the expression values of both transcriptome and proteome for the proneural subtype are shown side-by-side in @example-volcano.
 
 #figure(
@@ -69,7 +69,7 @@ Additionally, the thresholds can be added to the plot to show the categorically 
     ,
 ) <example-volcano>
 
-Another possible plot to see the structure of the data include plotting log2FC of the transcriptome against that of the proteome, with this we can calculate the correlation between the two. Additionally, the distribution of log2FC values can be inspected in a density plot. Both are shown in @example-log2fc-plots.
+Another possible plot to see the structure of the data include plotting log2FC of the transcriptome against that of the proteome, with this we can calculate the correlation between the two. Additionally, the distribution of log2FC values can be inspected in a density plot. Example for both, produced from the processed CPTAC expression data, are shown in @example-log2fc-plots.
 
 
 
@@ -88,7 +88,7 @@ Another possible plot to see the structure of the data include plotting log2FC o
     ,
 ) <example-log2fc-plots>
 
-The resulting $R^2 = 0.463$ from the correlation of log2FCs lines up quite closely with what was discussed in Chapter @introduction, where only about 40% of the variation of one can be explained by the other @vogel2012.
+The resulting $R^2 = 0.463$ from the correlation of log2FCs lines up quite closely with previous major studies, where only about 40% of the variation of one can be explained by the other @vogel2012.
 
 == Gene Ontology Enrichment and Cell Death Pathway Integration
 
@@ -97,4 +97,4 @@ gene set enrichment analysis was applied to identify significant changes in cell
 that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set Gene Ontology (GO) libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
 Additionally, the set of genes involved in the biological processes affected were collected for further integration with cell death pathways. 
 
-Sets of genes in the five major modes of cell death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` libraries.
+Sets of genes in the five major modes of cell death mentioned in @cell-death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` pathway databases.
