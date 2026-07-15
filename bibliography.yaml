@@ -375,10 +375,76 @@ joly2021:
     volume: 36
     issue: 21
 
+geneontology:
+  type: web
+  title: "Gene Ontology Overview"
+  author:
+    - Gene Ontology Consortium
+  url:
+    value: https://geneontology.org/docs/ontology-documentation/
+    date: 2026-07-15
+  accessed:
+    date: 2026-07-15
 
+ashburner2000:
+  type: article
+  title: "Gene Ontology: Tool for the Unification of Biology"
+  author:
+    - Ashburner, Michael
+    - Ball, Catherine A.
+    - Blake, Judith A.
+    - Botstein, David
+    - Butler, Heather
+    - Cherry, J. Michael
+    - Davis, Allan P.
+    - Dolinski, Kara
+    - Dwight, Selina S.
+    - Eppig, Janan T.
+    - Harris, Midori A.
+    - Hill, David P.
+    - Issel-Tarver, Laurie
+    - Kasarskis, Andrew
+    - Lewis, Suzanna
+    - Matese, James C.
+    - Richardson, Joel E.
+    - Ringwald, Martin
+    - Rubin, Gerald M.
+    - Sherlock, Gavin
+  date: 2000
+  page-range: 25-29
+  serial-number:
+    doi: 10.1038/75556
+    issn: 1061-4036
+  url:
+    value: https://doi.org/10.1038/75556
+    date: 2026-07-16
+  parent:
+    type: periodical
+    title: Nature Genetics
+    volume: 25
+    issue: 1
 
-
-
+yu2012:
+  type: article
+  title: "clusterProfiler: An R Package for Comparing Biological Themes Among Gene Clusters"
+  author:
+    - Yu, Guangchuang
+    - Wang, Li-Gen
+    - Han, Yanyan
+    - He, Qing-Yu
+  date: 2012
+  page-range: 284-287
+  serial-number:
+    doi: 10.1089/omi.2011.0118
+    issn: 1536-2310
+  url:
+    value: https://doi.org/10.1089/omi.2011.0118
+    date: 2026-07-16
+  parent:
+    type: periodical
+    title: OMICS
+    volume: 16
+    issue: 5
 
 
 

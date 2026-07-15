@@ -8,23 +8,21 @@ Glioblastoma multiforme is one of the most aggressive and most common form of br
 
 Advanced sequencing technologies emphasizes the need for therapies to target both molecular drivers of the tumors and their arised microenvironment; one of the promising path to battle GBM involves precision medicine, leveraging computational methods for targeted therapy selection and resistance prediction @singh2022. 
 
-== Transcriptomics and proteomics <multiomics>
+== Transcriptomics and Differential Expression Analysis <transcriptomics>
 
-Transcriptomics technologies obtains information on how genes are expressed an organism's DNA by looking through all the RNA transcripts produced from the DNA @crick1970 @lowe2017. According to Lowe et al. @lowe2017, there are two main ways of approaching the reading of RNA, including (1) quantifying predetermined sequences with microarrays, and (2) using RNA sequencing (RNA-seq) which also identifies sequences that were not predetermined via high-throughput sequencing.
+Transcriptomics technologies obtains information on how genes are expressed an organism's DNA by looking through all the RNA transcripts produced from the DNA @crick1970 @lowe2017. According to Lowe et al. @lowe2017, there are two main ways of approaching the reading of RNA, including (1) quantifying predetermined sequences with microarrays, and (2) using RNA sequencing (RNA-seq) which also identifies sequences that were not predetermined via high-throughput sequencing. The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of transcriptomic profiling data for numerous tumor types including that of glioblastoma @kim2024.
 
-Based on current literature @altelaar2013 @crick1970, proteomics is the analysis of the protein content of an organism which is a far more complex area of the central dogma to analyze due to alternative splicing and diverse modications and degradation of proteins, in combination with various other factors; but thanks to recent advancements in technologies, identification and quantification of proteins is now possible on a single-experiment basis. Altelaar et al. @altelaar2013 stated that protein quantification typically can be done based on their mass through a process called mass-spectrometry, but a variety of other methods can also be performed based on the research's goal. 
+Comparitive profiling is the process of comparing expression levels of one sample against another (e.g. a diseased sample against a healthy sample) to identify and understand molecular causes of biological processes @altelaar2013. The differential analysis done in this thesis is a form of comparitive profiling.
 
-Comparitive profiling, which can be performed both in transcriptomics and proteomics, is the process of comparing expression levels of one sample against another (e.g. a diseased sample against a healthy sample) to identify and understand molecular causes of biological processes @altelaar2013. The differential analysis done in this thesis is a form of comparitive profiling.
 
-The term _multiomics_ is often used to refer to research combining biotechnology ending with the "-omics" suffix, such as the aforementioned transcriptomics and proteomics @luo2024.
+== Gene Ontology <gene-ontology>
 
-== Multiomics profiling in glioblastoma <glio-omics>
+The Gene Ontology (GO) database provides structured and standardized representation of biological activities according to gene products,
+organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology.
 
-As per Lemée et al. @lemee2018, computational research in GBM has until very recently been done through independent analyses of transciptomes and proteomes. However, joint research comnbining the two shows promises of new biological insights, despite the fact that there still exists a discrepancy regarding expression values and simply labelling a correlation coefficient generalizes the relationship too much @lemee2018 @kim2024. 
-According to Lemée et al., other ways of approaching the transcriptome-proteome discepancy include (possible identification and) the inspection of: (1) the overlapping of transcriptome and proteome data, (2) altered common biological pathways in both datasets, (3) altered common functional pathways in both datasets, ... @lemee2018
+Gene Ontology enrichment analysis is commonly performed following differential expression analysis to determine whether particular GO terms — items belonging to each of the aforementioned aspects — are statistically overrepresented within a set of differentially expressed genes compared with a suitable background gene set instead of inspecting individual genes in isolation @ashburner2000 @yu2012. In the context of glioblastoma, GO enrichment provides insight into biological mechanisms associated with each molecular subtype.
 
-The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of proteogenomic profiling data for numerous tumor types including that of glioblastoma @kim2024. More specialized data regarding transcriptomics can also be obtained at the public database Gene Expression Omnibus (GEO).
-
+Although all three GO ontologies provide complementary biological information, this thesis focuses primarily on the Biological Process ontology, as it describes coordinated cellular pathways and processes that can subsequently be related to regulated cell death signalling pathways.
 
 == Regulated Cell Death Signaling Pathways <cell-death>
 

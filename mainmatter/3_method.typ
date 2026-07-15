@@ -27,7 +27,7 @@ From this point onwards, "$log_2$ expression" is now referred to as "expression"
 === Calculation & Testings
 
 In the CPTAC Discovery Study, healthy brain tissue samples are provided as the
-baseline for comparison for the remaining tumor samples. As described in @multiomics,
+baseline for comparison for the remaining tumor samples. As described in @transcriptomics,
 comparing the gene expressions of the tumors against healthy samples can give insights 
 (or, at least, a base for further comparative computations) into what is different.
 
@@ -94,5 +94,7 @@ The resulting $R^2 = 0.463$ from the correlation of log2FCs lines up quite close
 
 From the set of significant genes for individual subtypes, 
 gene set enrichment analysis was applied to identify significant changes in cellular aspects
-that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
+that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set Gene Ontology (GO) libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
+Additionally, the set of genes involved in the biological processes affected were collected for further integration with cell death pathways. 
 
+Sets of genes in the five major modes of cell death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` libraries.
