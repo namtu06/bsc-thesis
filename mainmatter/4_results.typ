@@ -1,6 +1,6 @@
 #import "../preamble.typ": *
 
-= Results <results>
+= Results and Discussion <results-discussion>
 
 
 == Gene Ontology Enrichment <gene-ont>
