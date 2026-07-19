@@ -78,7 +78,7 @@ Another possible plot to see the structure of the data include plotting log2FC o
         columns: 2,
         row-gutter: 1em,
     )[
-        #image("../images/log2fc_corr.png"
+        #image("../images/log2fc_corr_proneural.png"
         )
     ][
         #image("../images/log2fc_density.png")
@@ -88,7 +88,7 @@ Another possible plot to see the structure of the data include plotting log2FC o
     ,
 ) <example-log2fc-plots>
 
-The resulting $R^2 = 0.463$ from the correlation of log2FCs lines up quite closely with previous major studies, where only about 40% of the variation of one can be explained by the other @vogel2012.
+Because the result of these calculations are _particularly important_ because all other analyses onwards rely on it, the computed correlations between the two log2FC's for each subtype are shown and discussed regarding reliability in section @explore-plot-result.
 
 == Gene Ontology Enrichment and Cell Death Pathway Integration
 
@@ -96,4 +96,4 @@ From the set of significant genes for individual subtypes,
 gene set enrichment analysis was applied to identify significant changes in cellular aspects
 that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set Gene Ontology (GO) libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
 
-Additionally, the set of genes involved in the biological processes affected were collected for further integration with cell death pathways. Sets of genes in the five major modes of cell death mentioned in @cell-death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` pathway databases. The intersection of the two sets were taken to identify genes involved in (1) the biological process significantly affected in a specific subtype and (2) a cell death pathway. The heatmaps displaying for each subtype, significantly differentially expressed genes involved in at least one cell death pathway are displayed in @cell-death-intergration.
+Additionally, the set of genes involved in the biological processes affected were collected for further integration with cell death pathways. Sets of genes in the five major modes of cell death mentioned in @cell-death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` pathway databases. The intersection of the two sets were taken to identify genes involved in (1) the biological process significantly affected in a specific subtype and (2) a cell death pathway. The heatmaps displaying for each subtype, significantly differentially expressed genes involved in at least one cell death pathway are displayed in @gene-ont.

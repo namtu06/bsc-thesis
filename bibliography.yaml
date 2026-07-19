@@ -446,10 +446,140 @@ yu2012:
     volume: 16
     issue: 5
 
+aguardia2020:
+  type: article
+  title: "Proneural and Mesenchymal Glioma Stem Cells Display Major Differences in Splicing and lncRNA Profiles"
+  author:
+    - A Guardia, Gabriela D.
+    - Correa, Bruna R.
+    - Araujo, Patricia Rosa
+    - Qiao, Mei
+    - Burns, Suzanne
+    - Penalva, Luiz O. F.
+    - Galante, Pedro A. F.
+  date: 2020
+  page-range: "2"
+  serial-number:
+    doi: 10.1038/s41525-019-0108-5
+    issn: 2055-0278
+  url:
+    value: https://doi.org/10.1038/s41525-019-0108-5
+    date: 2026-07-19
+  parent:
+    type: periodical
+    title: npj Precision Oncology
+    volume: 5
+    issue: 1
 
+verhaak2010:
+  type: article
+  title: "Integrated Genomic Analysis Identifies Clinically Relevant Subtypes of Glioblastoma Characterized by Abnormalities in PDGFRA, IDH1, EGFR, and NF1"
+  author:
+    - Verhaak, Roel G. W.
+    - Hoadley, Katherine A.
+    - Purdom, Elizabeth
+    - Wang, Victoria
+    - Qi, Yuan
+    - Wilkerson, Matthew D.
+    - Miller, C. Ryan
+    - Ding, Li
+    - Golub, Todd
+    - Mesirov, Jill P.
+    - Alexe, Gabriele
+    - Lawrence, Michael
+    - O'Kelly, Michael
+    - Tamayo, Pablo
+    - Weir, Barbara A.
+    - Gabriel, Stacey
+    - Winckler, Wendy
+    - Gupta, Supriya
+    - Jakkula, Lakshmi
+    - Feiler, Heidi S.
+    - Hodgson, J. Graeme
+    - James, C. David
+    - Sarkaria, Jann N.
+    - Brennan, Cameron
+    - Kahn, Ari
+    - Spellman, Paul T.
+    - Wilson, Richard K.
+    - Speed, Terence P.
+    - Gray, Joe W.
+    - Meyerson, Matthew
+    - Getz, Gad
+    - Perou, Charles M.
+    - Hayes, D. Neil
+    - Cancer Genome Atlas Research Network
+  date: 2010
+  page-range: 98-110
+  serial-number:
+    doi: 10.1016/j.ccr.2009.12.020
+    issn: 1535-6108
+  url:
+    value: https://doi.org/10.1016/j.ccr.2009.12.020
+    date: 2026-07-19
+  parent:
+    type: periodical
+    title: Cancer Cell
+    volume: 17
+    issue: 1
 
+fabris2020:
+  type: article
+  title: "Comparing Enrichment Analysis and Machine Learning for Identifying Gene Properties That Discriminate Between Gene Classes"
+  author:
+    - Fabris, Fabio
+    - Palmer, Daniel
+    - de Magalhães, João Pedro
+    - Freitas, Alex A.
+  date: 2020
+  page-range: 803-814
+  serial-number:
+    doi: 10.1093/bib/bbz028
+    issn: 1477-4054
+  url:
+    value: https://doi.org/10.1093/bib/bbz028
+    date: 2026-07-19
+  parent:
+    type: periodical
+    title: Briefings in Bioinformatics
+    volume: 21
+    issue: 3
 
-
+gill2014:
+  type: article
+  title: "MRI-Localized Biopsies Reveal Subtype-Specific Differences in Molecular and Cellular Composition at the Margins of Glioblastoma"
+  author:
+    - Gill, Brian J.
+    - Pisapia, David J.
+    - Malone, Hani R.
+    - Goldstein, Hannah
+    - Lei, Liang
+    - Sonabend, Adam
+    - Yun, Jonathan
+    - Samanamud, Jorge
+    - Sims, Jennifer S.
+    - Banu, Matei
+    - Dovas, Athanassios
+    - Teich, Andrew F.
+    - Sheth, Sameer A.
+    - McKhann, Guy M.
+    - Sisti, Michael B.
+    - Bruce, Jeffrey N.
+    - Sims, Peter A.
+    - Canoll, Peter
+  date: 2014
+  page-range: 12550-12555
+  serial-number:
+    doi: 10.1073/pnas.1405839111
+    issn: 1091-6490
+  url:
+    value: https://doi.org/10.1073/pnas.1405839111
+    date: 2026-07-19
+  parent:
+    type: periodical
+    title: Proceedings of the National Academy of Sciences of the United States of America
+    volume: 111
+    issue: 34
 
 
 
