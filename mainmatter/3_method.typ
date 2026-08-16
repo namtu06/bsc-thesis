@@ -1,7 +1,7 @@
 #import "../preamble.typ": *
 
 = Materials and Methods <methodology>
-== Data retrieval and preparation
+== Data retrieval and preprocessing
 Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
 
 Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions @law2014.
