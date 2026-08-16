@@ -1,6 +1,6 @@
 #import "../preamble.typ": *
 
-= Research methodology <methodology>
+= Materials and Methods <methodology>
 == Data retrieval and preparation
 Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
 
@@ -22,13 +22,14 @@ From this point onwards, "$log_2$ expression" is now referred to as "expression"
     ),
     caption: [Example expression matrix]
 ) <example-expression-matrix>
-== Performing Differential Analysis
 
-=== Calculation & Testings
+
+
+== Differential expression analysis
+
 
 In the CPTAC Discovery Study, healthy brain tissue samples are provided as the
-baseline for comparison for the remaining tumor samples. As described in @transcriptomics,
-comparing the gene expressions of the tumors against healthy samples can give insights 
+baseline for comparison for the remaining tumor samples. Comparing the gene expressions of the tumors against healthy samples can give insights 
 (or, at least, a base for further comparative computations) into what is different.
 
 The samples were split into three major subtypes according to the metadata: classical, proneural, mesenchymal. For each subtype, the $log_2$-fold-change (log2FC) for a specific gene becomes:
@@ -48,7 +49,9 @@ With the obtained p-value and log2FC obtained for each gene, the genes are class
 
 This step concludes the preparation for a "solid base" of results for further comparative computations, which should include: (1) gene name and its corresponding (2) transcriptome log2FC, (3) transcriptome adjusted p-value, (4) proteome log2FC, (5) proteome adjusted p-value.
 
-=== Exploratory Plotting
+
+
+
 
 With the results, we can plot a variety of plots to give insight into the overall structure of the expressions.
 For instance, the volcano plot: log2FC for the x-axis, $-log_10(p"-value")$ for the y-axis.
@@ -90,10 +93,14 @@ Another possible plot to see the structure of the data include plotting log2FC o
 
 Because the result of these calculations are _particularly important_ because all other analyses onwards rely on it, the computed correlations between the two log2FC's for each subtype are shown and discussed regarding reliability in section @explore-plot-result.
 
-== Gene Ontology Enrichment and Cell Death Pathway Integration
+== Gene Ontology enrichment analysis
 
 From the set of significant genes for individual subtypes, 
 gene set enrichment analysis was applied to identify significant changes in cellular aspects
 that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set Gene Ontology (GO) libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
 
-Additionally, the set of genes involved in the biological processes affected were collected for further integration with cell death pathways. Sets of genes in the five major modes of cell death mentioned in @cell-death were also obtained with `GSEApy` from `KEGG_2021_Human` and `Reactome_2022` pathway databases. The intersection of the two sets were taken to identify genes involved in (1) the biological process significantly affected in a specific subtype and (2) a cell death pathway. The heatmaps displaying for each subtype, significantly differentially expressed genes involved in at least one cell death pathway are displayed in @gene-ont.
+== Identification of apoptosis and mitochondrial complex-associated genes
+
+== STRING Interaction Network Analysis
+
+== Statistical Analysis

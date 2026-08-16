@@ -581,6 +581,59 @@ gill2014:
     volume: 111
     issue: 34
 
+rcddb:
+  type: web
+  title: "RCDdb: Regulated Cell Death Database"
+  author:
+    - Chen Laboratory
+  url:
+    value: http://chenyclab.com/RCDdb/
+    date: 2026-07-19
+  accessed:
+    date: 2026-07-19
+
+deathbase:
+  type: web
+  title: "DeathBase: A Database on Cell Death"
+  author:
+    - Barcelona Supercomputing Center
+  url:
+    value: http://deathbase.org/
+    date: 2026-07-20
+  accessed:
+    date: 2026-07-20
+
+lee2023:
+  type: article
+  title: "Regulated Cell Death Pathways and Their Roles in Homeostasis, Infection, Inflammation, and Tumorigenesis"
+  author:
+    - Lee, Ein
+    - Song, Chang-Hyun
+    - Bae, Sung-Jin
+    - Ha, Ki-Tae
+    - Karki, Rajendra
+  date: 2023
+  page-range: 1632-1643
+  serial-number:
+    doi: 10.1038/s12276-023-01069-y
+    issn: 1226-3613
+  url:
+    value: https://doi.org/10.1038/s12276-023-01069-y
+    date: 2026-07-20
+  parent:
+    type: periodical
+    title: Experimental & Molecular Medicine
+    volume: 55
+    issue: 8
+
+
+
+
+
+
+
+
+
 
 
 Bezanson2017Julia:
