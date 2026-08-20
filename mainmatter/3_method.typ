@@ -1,8 +1,11 @@
 #import "../preamble.typ": *
 
 = Materials and Methods <methodology>
-== Data retrieval and preprocessing
-Both transcriptome and proteome data was obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
+
+== Dataset
+
+== Data preprocessing
+The transcriptomic data obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
 
 Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions @law2014.
 Therefore, a common practice when working with expression matrices, which has been done to the current data, is to apply a $log_2$-transformation to each of the value @law2014 @cox2014. 
@@ -98,8 +101,6 @@ Because the result of these calculations are _particularly important_ because al
 From the set of significant genes for individual subtypes, 
 gene set enrichment analysis was applied to identify significant changes in cellular aspects
 that would otherwise go unnoticed if examination was done on an individual gene basis @joly2021. This was achieved by using the `GSEApy` library, and using the library's predefined gene set Gene Ontology (GO) libraries `GO_Biological_Process_2023`,`GO_Cellular_Component_2023`, and `GO_Molecular_Function_2023` to identify biological processes, cellular components, and molecular functions significantly affected by the genes. One can choose the gene set fed into `GSEApy` to include only upregulated genes, downregulated genes, or both. For explatory purposes, all three options can be done. For this thesis, however, including both was chosen to capture as much of the underlying interactions as possible for further analysis. Results are presented in section @gene-ont.
-
-== Identification of apoptosis and mitochondrial complex-associated genes
 
 == STRING Interaction Network Analysis
 
