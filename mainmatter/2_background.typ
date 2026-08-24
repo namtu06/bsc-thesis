@@ -26,15 +26,14 @@ According to Verhaak et al. @verhaak2010, while _EGFR_ are likely important acro
 
 Molecular alterations in GBM significantly affect pathways governing fundamental biological cellular processes, and the dysregulation of these processes promotes growth, invasion, and resistance to therapy in GBM @singh2022.
 
-A few of the most significant pathways dysregulated are @singh2022 @tang2025 @gomes2025:
-- PI3K/AKT/mTOR: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness. 
-- p53: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
+A few of the most common pathways dysregulated (out of the several dozens) are @singh2022 @tang2025 @gomes2025:
+- ***PI3K/AKT/mTOR***: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness. Dysregulation of the pathway is observed in 70% of GBM patients.
+- ***p53***: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
+- ***EGFR***: Governed by the gene of the same name. The amplification of the _EGFR_ gene leads to increased activation of the pathway, enhancing tumor proliferation and survival.
+- ***NF-κB***: Contribtutes to tumor vascularization, drives inflammation and resistance to apoptosis.
+- *Et cetera.*
 
-
-
-
-
-Collectively, these alterations disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
+Collectively, these alterations have the tendency to disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
 
 
 
@@ -52,7 +51,15 @@ Collectively, these alterations disrupt signalling pathways involved in cell pro
 
  its intrisic pathway is closely associated with mitochondrial function, linking apoptosis to mitochondrial processes such as oxidative phosphorylation and the activity of mitochondrial respiratory complexes @lee2023
 
-== Transcriptomics and computational analysis the transcriptome
+== Gene expression analysis
+
+=== Challenges in non-computational methods
+
+=== Overcoming the challenges with computational methods
+
+=== Multiomics 
+
+=== Transcriptomics of GBM
 
 Transcriptomics technologies obtains information on how genes are expressed an organism's DNA by looking through all the RNA transcripts produced from the DNA @lowe2017. According to Lowe et al. @lowe2017, there are two main ways of approaching the reading of RNA, including (1) quantifying predetermined sequences with microarrays, and (2) using RNA sequencing (RNA-seq) which also identifies sequences that were not predetermined via high-throughput sequencing. The Clinical Proteomic Tumor Analysis Consortium (CPTAC), among with other public databases, has deposited a large amount of transcriptomic profiling data for numerous tumor types including that of glioblastoma @kim2024.
 The thesis utilizes CPTAC's GBM Discovery Study data.
