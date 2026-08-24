@@ -24,14 +24,27 @@ According to Verhaak et al. @verhaak2010, while _EGFR_ are likely important acro
 
 === Major molecular pathways altered in GBM
 
+Molecular alterations in GBM significantly affect pathways governing fundamental biological cellular processes, and the dysregulation of these processes promotes growth, invasion, and resistance to therapy in GBM @singh2022.
 
-=== Molecular alterations and tumour cell survival
+A few of the most significant pathways dysregulated are @singh2022 @tang2025 @gomes2025:
+- PI3K/AKT/mTOR: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness. 
+- p53: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
 
 
-Collectively, these molecular alterations disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
+
+
+
+Collectively, these alterations disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
+
+
+
+
+
+
 
 == Apoptosis in glioblastoma
 
+@gomes2025 @lee2023
 
 
 

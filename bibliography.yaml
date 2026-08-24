@@ -152,6 +152,47 @@ natureeducation2010:
   accessed:
     date: 2026-08-19
 
+tang2025:
+  type: article
+  title: "Therapeutic Targets in Glioblastoma: Molecular Pathways, Emerging Strategies, and Future Directions"
+  author:
+    - Tang, Justin
+    - Karbhari, Nishika
+    - Campian, Jian L.
+  date: 2025-03-26
+  page-range: 494
+  serial-number:
+    doi: 10.3390/cells14070494
+    issn: 2073-4409
+  url:
+    value: https://doi.org/10.3390/cells14070494
+    date: 2026-08-21
+  parent:
+    type: periodical
+    title: Cells
+    volume: 14
+    issue: 7
+
+gomes2025:
+  type: article
+  title: "Signaling Pathways in Glioblastoma"
+  author:
+    - Gomes, Isabella
+    - Oliveira, Renato José da Silva
+    - Girol, Ana Paula
+  date: 2025
+  page-range: 104647
+  serial-number:
+    doi: 10.1016/j.critrevonc.2025.104647
+    issn: 1879-0461
+  url:
+    value: https://doi.org/10.1016/j.critrevonc.2025.104647
+    date: 2026-08-24
+  parent:
+    type: periodical
+    title: Critical Reviews in Oncology/Hematology
+    volume: 209
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
