@@ -14,7 +14,13 @@ The World Health Organization classifies gliomas into grades I to IV, with grade
 == Molecular mechanisms of glioblastoma
 
 === Molecular heterogeneity and subtypes
-As discussed, GBM posses an incredible molecular heterogeneity. Defining mutations of GBM include _EGFR, IDH1, PTEN, TP53, MGMT_ methylation promoter, and many others, with vastly differing levels of expression per sample @verhaak2010 @hanif2017. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
+As discussed, GBM posses an incredible molecular heterogeneity. Defining mutations of GBM include @tang2025:
+- *_TP53_ mutations*: Appear in 31-38% of all GBM patients, play a role in disrupting cell cycle regulation and apoptosis.
+- *_PTEN_ mutations*: Appears in 24-37% of GBM patients, activate tumor-survival-enducing pathways.
+- *_EGFR_ amplifcation and mutations*: Enhances cell growth
+- *and many others*.
+
+The expression levels of the genes listed vary vastly on a per-sample basis @verhaak2010 @hanif2017. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
 
 A major analysis done by Verhaak et al. @verhaak2010 of GBM samples from The Cancer Genome Atlas (TCGA), often cited by other papers, categorizes GBM into 4 major subtypes according to their expression of signature genes: Proneural, Neural, Mesenchymal, and Classical.
 
@@ -24,14 +30,14 @@ According to Verhaak et al. @verhaak2010, while _EGFR_ are likely important acro
 
 === Major molecular pathways altered in GBM
 
-Molecular alterations in GBM significantly affect pathways governing fundamental biological cellular processes, and the dysregulation of these processes promotes growth, invasion, and resistance to therapy in GBM @singh2022.
+Molecular alterations in GBM described above significantly affect pathways governing fundamental biological cellular processes, and the dysregulation of these processes promotes growth, invasion, and resistance to therapy in GBM @singh2022.
 
 A few of the most common pathways dysregulated (out of the several dozens) are @singh2022 @tang2025 @gomes2025:
-- ***PI3K/AKT/mTOR***: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness. Dysregulation of the pathway is observed in 70% of GBM patients.
-- ***p53***: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
-- ***EGFR***: Governed by the gene of the same name. The amplification of the _EGFR_ gene leads to increased activation of the pathway, enhancing tumor proliferation and survival.
-- ***NF-κB***: Contribtutes to tumor vascularization, drives inflammation and resistance to apoptosis.
-- *Et cetera.*
+- *PI3K/AKT/mTOR*: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness.
+- *p53*: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
+- *EGFR*: Governed by the gene of the same name. The amplification of the _EGFR_ gene leads to increased activation of the pathway, enhancing tumor proliferation and survival.
+- *NF-κB*: Contribtutes to tumor vascularization, drives inflammation and resistance to apoptosis.
+- *and many others.*
 
 Collectively, these alterations have the tendency to disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
 

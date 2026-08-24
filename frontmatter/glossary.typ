@@ -25,13 +25,10 @@
 			 Research that combines biotechnology ending with the “-omics” suffix such transcriptomics, proteomics, genomics, etc.
 		]
 	),
-	scalar: (
-		name: math.equation(
-			alt: "s",
-			$s$
-		),
+	gene: (
+		name: emph[EGFR],
 		description: [
-			Lower-case italic letters denote scalars.
+			Italic words denote genes
 		]
 	),
 	vector: (
