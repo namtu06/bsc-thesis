@@ -193,6 +193,26 @@ gomes2025:
     title: Critical Reviews in Oncology/Hematology
     volume: 209
 
+jan2019:
+  type: article
+  title: "Understanding Apoptosis and Apoptotic Pathways Targeted Cancer Therapeutics"
+  author:
+    - Jan, Rehmat
+    - Chaudhry, Gul-E-Saba
+  date: 2019
+  page-range: 205-218
+  serial-number:
+    doi: 10.15171/apb.2019.024
+    issn: 2251-7308
+  url:
+    value: https://doi.org/10.15171/apb.2019.024
+    date: 2026-08-25
+  parent:
+    type: periodical
+    title: Advanced Pharmaceutical Bulletin
+    volume: 9
+    issue: 2
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"

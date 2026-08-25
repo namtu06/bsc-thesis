@@ -47,13 +47,29 @@ Collectively, these alterations have the tendency to disrupt signalling pathways
 
 
 == Apoptosis in glioblastoma
-According to Gomes et al. @gomes2025, programmed cell death or cell apoptosis is essential for development and homeostasis, but dysregulation can resut in immunological and neurodegenerative disorders and cancer. In addition to the described dysregulated pathways in the previous section, it can be inferred that apoptosis is among one of the most important processes in cancers, as its (in)activity contributes to one of cancer's most defining attribute — its aggressive proliferation. 
 
-@gomes2025 @lee2023
+Regulated cell death, or cell apoptosis, is one of the most researched form of cell death @lee2023. It has 2 main pathways depending on the molecular interactions involved: (1) *intrinsic or mitochondrial pathway*, triggered by a variety of both extra- and intra-celullar stress, and (2) *extrinsic or death receptor pathway*, activated when extracellular ligands attach to certain extracellular receptors and resulting in the formation of death-inducing signalling complexes @lee2023 @jan2019. More specifically, the cascades of interactions leading to apoptosis are @jan2019:
+- Intrinsic pathway: stress induces the production of proteins in the Bcl-2 family which when inserted into the mitochondrial membrane, releasing cytochrome c. Cytochrome c combines with Apaf-1 and procaspase-9, producing the apoptosome complex that triggers the activation of caspase-9,
+- Extrinsic pathway: extracellular ligands include TNF (tumor necrosis factor), Fas-L (Fas ligand), and TRAIL (TNF-related apoptosis-inducing ligand), when attached to their respective extracellular portion of transmembrane receptors, forms a death-inducing signalling complex (DISC) and leads to the activation of caspase-8,
 
+with both ultimately converging on the activation of executioner caspases which start the main process of apoptosis, better visualized in @cell-death-pathway-diagram. The main process involves loss of inner mitochondrial membrane potential, hyperproduction of superoxide ions, outflow of matrix calcium glutathione, and release of membrane proteins, rendering the cell "dead" @jan2019.
 
+#figure(
+    grid(
+        columns: 1,
+        row-gutter: 1em,
+    )[
+        #image("../images/deathpathway.jpg"
+        )
+    ],
+    kind: image,
+    caption:[Pathways of Apoptosis @jan2019] 
+    ,
+) <cell-death-pathway-diagram>
 
-Apoptosis's intrisic pathway is closely associated with mitochondrial function, linking apoptosis to mitochondrial processes such as oxidative phosphorylation and the activity of mitochondrial respiratory complexes @lee2023
+Apoptosis, when functioning normally, is essential for normal development and tissue homeostasis, while its dysregulation has been implicated in various diseases, including cancer. In cancer, impaired apoptotic signalling can allow cells carrying genomic abnormalities to evade elimination and continue proliferating, thereby contributing to tumour development and progression. Consequently, the ability of cancer cells to evade apoptosis is considered an important characteristic of tumorigenesis @gomes2025 @lee2023.
+
+The intrinsic apoptotic pathway is closely associated with mitochondrial function. Mitochondrial outer membrane permeabilization and the subsequent release of cytochrome c represent key events in this pathway. At the same time, mitochondria are responsible for essential metabolic processes, including oxidative phosphorylation through the mitochondrial respiratory chain @lee2023 @jan2019. This connection between mitochondrial function and apoptosis provides a basis for examining the relationship between apoptosis-associated genes and mitochondrial respiratory complexes, which is discussed further in the following section .
 
 == Mitochondrial function and respiratory complexes
 
