@@ -78,7 +78,26 @@ The intrinsic apoptotic pathway is closely associated with mitochondrial functio
 
 
 == Mitochondrial function and respiratory complexes
+=== General mitochondrial function
+The mitochondria is the primary site of cellular function, and it has fundamental roles in processes such as ATP production, ROS generation, and the execution of cell death pathways @liang2025 @jan2019. Carbohydrates, fatty acids, and amino acids can be metabolised into substrates, which enters the tricarboxylic acid (TCA) cycle. The TCA cycle generates reducing equivalents, primarily NADH and FADH₂, which subsequently donate electrons to the mitochondrial respiratory chain to drive oxidative phosphorylation and ATP production @liang2025.
 
+=== Oxidative phosphorylation and the respiratory chain
+
+Mitochondrial oxidative phosphorylation is a key mechanism of energy production in eukaryotic cells. It is comprised of 5 inner mitochondrial protein complexes I-V (also referred to as CI, CII, etc.) and 2 mobile electron carriers forming the electron transport chain (ETC) @vercellino2022. 
+
+According to Vercellino et al. @vercellino2022, the ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the reduction of molecular oxygen to water and the pumping of protons across the inner mitochondrial membrane (IMM) via Complex I, III, and IV, each using their own pumping mechanism, to drive ATP synthesis. The ETC also uses energy from the reducing equivalents to generated a proton gradient across the IMM, which is used by ATP synthase (Complex V) to *phosphorylate* ADP to ATP, the universal energy currency of cells . The specific roles of each complexes are as follows @vercellino2022:
+- *Complex I*: Transfers electrons from NADH to ubiquinone and pumps protons.
+- *Complex II*: Does not pump protons but contributes to reduction of ubiquinone.
+- *Complex III*: Reduces ubiquinone and cytochrome c, in turn shuttles to Complex IV.
+- *Complex IV*: Donates electron for final reduction of oxygen.
+- *Complex V*: Uses proton gradient and the reduction of oxygen to synthesize ATP.
+
+The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
+=== Mitochondria and apoptosis
+
+@nagy2015
+
+=== Mitochondrial respiratory complexes in GBM
 
 
 == Gene expression analysis

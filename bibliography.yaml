@@ -213,6 +213,69 @@ jan2019:
     volume: 9
     issue: 2
 
+liang2025:
+  type: article
+  title: "The Promise of Mitochondria in the Treatment of Glioblastoma: A Brief Review"
+  author:
+    - Liang, Zhuo
+    - Zhao, Songyun
+    - Liu, Yuankun
+    - Cheng, Chao
+  date: 2025-02-09
+  page-range: 1-13
+  serial-number:
+    doi: 10.1007/s12672-025-01891-y
+    issn: 2662-7568
+  url:
+    value: https://doi.org/10.1007/s12672-025-01891-y
+    date: 2026-08-25
+  parent:
+    type: periodical
+    title: Discover Oncology
+    volume: 16
+    issue: 1
+
+vercellino2022:
+  type: article
+  title: "The Assembly, Regulation and Function of the Mitochondrial Respiratory Chain"
+  author:
+    - Vercellino, Ilaria
+    - Sazanov, Leonid A.
+  date: 2022
+  page-range: 141-161
+  serial-number:
+    doi: 10.1038/s41580-021-00415-0
+    issn: 1471-0080
+  url:
+    value: https://doi.org/10.1038/s41580-021-00415-0
+    date: 2026-08-25
+  parent:
+    type: periodical
+    title: Nature Reviews Molecular Cell Biology
+    volume: 23
+    issue: 3
+
+nagy2015:
+  type: article
+  title: "Mitochondrial Energy Metabolism and Apoptosis Regulation in Glioblastoma"
+  author:
+    - Nagy, Adam
+    - Eder, Katalin
+    - Selak, Mary A.
+    - Kalman, Bernadette
+  date: 2015-01-21
+  page-range: 127-142
+  serial-number:
+    doi: 10.1016/j.brainres.2014.10.062
+    issn: 1872-6240
+  url:
+    value: https://doi.org/10.1016/j.brainres.2014.10.062
+    date: 2026-08-25
+  parent:
+    type: periodical
+    title: Brain Research
+    volume: 1595
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
