@@ -276,6 +276,46 @@ nagy2015:
     title: Brain Research
     volume: 1595
 
+garofano2021:
+  type: article
+  title: "Pathway-Based Classification of Glioblastoma Uncovers a Mitochondrial Subtype with Therapeutic Vulnerabilities"
+  author:
+    - Garofano, Luciano
+    - Migliozzi, Simona
+    - Oh, Young Taek
+    - D'Angelo, Fulvio
+    - Najac, Ryan D.
+    - Ko, Aram
+    - Frangaj, Brulinda
+    - Caruso, Francesca Pia
+    - Yu, Kai
+    - Yuan, Jinzhou
+    - Zhao, Wenting
+    - Di Stefano, Anna Luisa
+    - Bielle, Franck
+    - Jiang, Tao
+    - Sims, Peter
+    - Suvà, Mario L.
+    - Tang, Fuchou
+    - Su, Xiao-Dong
+    - Ceccarelli, Michele
+    - Sanson, Marc
+    - Lasorella, Anna
+    - Iavarone, Antonio
+  date: 2021
+  page-range: 141-156
+  serial-number:
+    doi: 10.1038/s43018-020-00159-4
+    issn: 2662-1347
+  url:
+    value: https://doi.org/10.1038/s43018-020-00159-4
+    date: 2026-08-25
+  parent:
+    type: periodical
+    title: Nature Cancer
+    volume: 2
+    issue: 2
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
