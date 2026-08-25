@@ -47,14 +47,17 @@ Collectively, these alterations have the tendency to disrupt signalling pathways
 
 
 == Apoptosis in glioblastoma
+According to Gomes et al. @gomes2025, programmed cell death or cell apoptosis is essential for development and homeostasis, but dysregulation can resut in immunological and neurodegenerative disorders and cancer. In addition to the described dysregulated pathways in the previous section, it can be inferred that apoptosis is among one of the most important processes in cancers, as its (in)activity contributes to one of cancer's most defining attribute — its aggressive proliferation. 
 
 @gomes2025 @lee2023
 
 
 
+Apoptosis's intrisic pathway is closely associated with mitochondrial function, linking apoptosis to mitochondrial processes such as oxidative phosphorylation and the activity of mitochondrial respiratory complexes @lee2023
+
 == Mitochondrial function and respiratory complexes
 
- its intrisic pathway is closely associated with mitochondrial function, linking apoptosis to mitochondrial processes such as oxidative phosphorylation and the activity of mitochondrial respiratory complexes @lee2023
+
 
 == Gene expression analysis
 
