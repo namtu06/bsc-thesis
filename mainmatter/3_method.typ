@@ -35,14 +35,14 @@ In the CPTAC Discovery Study, healthy brain tissue samples are provided as the
 baseline for comparison for the remaining tumor samples. Comparing the gene expressions of the tumors against healthy samples can give insights 
 (or, at least, a base for further comparative computations) into what is different.
 
-The samples were split into three major subtypes according to the metadata: classical, proneural, mesenchymal. For each subtype, the $log_2$-fold-change (log2FC) for a specific gene becomes:
+The samples were split into three major subtypes according to the metadata: classical, proneural, mesenchymal. For each subtype, the $log_2$-fold-change (log2FC) for a specific gene is the difference between the mean expression of a gene in the subtype and the mean expression of the same gene in the control:
 
 $
-  log_2 F C = sum("expression in subtype")/n_"subtype" - sum("expression in healthy sample")/n_"healthy"
+  log_2 F C = sum("expression in subtype")/n_"subtype" - sum("expression in control")/n_"control"
   
 $
 
-which means the difference between the average expression of a gene in the subtype and the average expression of the same gene in the healthy samples.
+
 
 At the same time, the Welch's t-test for independence is applied to obtain the statistical significance of the difference between the expression of the tumors and healthy samples for a specific gene in the form of the obtained p-value @kim2019. The Welch's t-test was chosen over the standard Student's t-test due to the high chance of the variances to be different @kim2019. The analysis was implemented in Python using SciPy's `ttest_ind` function with `equal_var=False`.
 

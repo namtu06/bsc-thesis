@@ -316,6 +316,115 @@ garofano2021:
     volume: 2
     issue: 2
 
+
+kitano2002:
+  type: article
+  title: "Systems Biology: A Brief Overview"
+  author:
+    - Kitano, Hiroaki
+  date: 2002-03-01
+  page-range: 1662-1664
+  serial-number:
+    doi: 10.1126/science.1069492
+    issn: 0036-8075
+  url:
+    value: https://doi.org/10.1126/science.1069492
+    date: 2026-08-26
+  parent:
+    type: periodical
+    title: Science
+    volume: 295
+    issue: 5560
+
+kitano2002b:
+  type: article
+  title: "Computational Systems Biology"
+  author:
+    - Kitano, Hiroaki
+  date: 2002-11-14
+  page-range: 206-210
+  serial-number:
+    doi: 10.1038/nature01254
+    issn: 0028-0836
+  url:
+    value: https://doi.org/10.1038/nature01254
+    date: 2026-08-26
+  parent:
+    type: periodical
+    title: Nature
+    volume: 420
+    issue: 6912
+
+barabasi2011:
+  type: article
+  title: "Network Medicine: A Network-Based Approach to Human Disease"
+  author:
+    - Barabási, Albert-László
+    - Gulbahce, Natali
+    - Loscalzo, Joseph
+  date: 2011
+  page-range: 56-68
+  serial-number:
+    doi: 10.1038/nrg2918
+    issn: 1471-0056
+  url:
+    value: https://doi.org/10.1038/nrg2918
+    date: 2026-08-26
+  parent:
+    type: periodical
+    title: Nature Reviews Genetics
+    volume: 12
+    issue: 1    
+
+greene2014:
+  type: article
+  title: "Big Data Bioinformatics"
+  author:
+    - Greene, Casey S.
+    - Tan, Jie
+    - Ung, Matthew
+    - Moore, Jason H.
+    - Cheng, Chao
+  date: 2014-12
+  page-range: 1896-1900
+  serial-number:
+    doi: 10.1002/jcp.24662
+    issn: 1097-4652
+  url:
+    value: https://doi.org/10.1002/jcp.24662
+    date: 2026-08-26
+  parent:
+    type: periodical
+    title: Journal of Cellular Physiology
+    volume: 229
+    issue: 12
+
+elvitigala2010:
+  type: article
+  title: "High-Throughput Biological Data Analysis: A Step Toward Understanding Cellular Regulation"
+  author:
+    - Elvitigala, Thanura R.
+    - Polpitiya, Ashoka D.
+    - Wang, Wenxue
+    - Stöckel, Jana
+    - Khandelwal, Abha
+    - Quatrano, Ralph S.
+    - Pakrasi, Himadri B.
+    - Ghosh, Bijoy K.
+  date: 2010-12
+  page-range: 81-100
+  serial-number:
+    doi: 10.1109/MCS.2010.938100
+    issn: 1066-033X
+  url:
+    value: https://doi.org/10.1109/MCS.2010.938100
+    date: 2026-08-26
+  parent:
+    type: periodical
+    title: IEEE Control Systems
+    volume: 30
+    issue: 6
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
