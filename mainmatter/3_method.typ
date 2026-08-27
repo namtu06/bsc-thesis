@@ -5,6 +5,9 @@
 == Dataset
 
 == Data preprocessing
+
+Before performing analysis, data needs to be normalized and preprocess to make the data consistent and as noiseless as possible @rosati2024.
+
 The transcriptomic data obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
 
 Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions @law2014.

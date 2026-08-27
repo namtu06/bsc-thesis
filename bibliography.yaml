@@ -425,6 +425,88 @@ elvitigala2010:
     volume: 30
     issue: 6
 
+rosati2024:
+  type: article
+  title: "Differential Gene Expression Analysis Pipelines and Bioinformatic Tools for the Identification of Specific Biomarkers: A Review"
+  author:
+    - Rosati, Diletta
+    - Palmieri, Maria
+    - Brunelli, Giulia
+    - Morrione, Andrea
+    - Iannelli, Francesco
+    - Frullanti, Elisa
+    - Giordano, Antonio
+  date: 2024-03-01
+  page-range: 1154-1168
+  serial-number:
+    doi: 10.1016/j.csbj.2024.02.018
+    issn: 2001-0370
+  url:
+    value: https://doi.org/10.1016/j.csbj.2024.02.018
+    date: 2026-08-27
+  parent:
+    type: periodical
+    title: Computational and Structural Biotechnology Journal
+    volume: 23
+
+barrett2013:
+  type: article
+  title: "NCBI GEO: Archive for Functional Genomics Data Sets—Update"
+  author:
+    - Barrett, Tanya
+    - Wilhite, Stephen E.
+    - Ledoux, Pierre
+    - Evangelista, Carlos
+    - Kim, Irene F.
+    - Tomashevsky, Maxim
+    - Marshall, Kimberly A.
+    - Phillippy, Katherine H.
+    - Sherman, Patti M.
+    - Holko, Michelle
+    - Yefanov, Andrey
+    - Lee, Hyeseung
+    - Zhang, Naigong
+    - Robertson, Cynthia L.
+    - Serova, Nadezhda
+    - Davis, Sean
+    - Soboleva, Alexandra
+  date: 2013
+  page-range: D991-D995
+  serial-number:
+    doi: 10.1093/nar/gks1193
+    issn: 1362-4962
+  url:
+    value: https://doi.org/10.1093/nar/gks1193
+    date: 2026-08-27
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    volume: 41
+    issue: Database issue
+
+tcga:
+  type: web
+  title: "The Cancer Genome Atlas Program (TCGA)"
+  author:
+    - National Cancer Institute
+    - National Human Genome Research Institute
+  url:
+    value: https://www.cancer.gov/ccg/research/genome-sequencing/tcga
+    date: 2026-08-27
+  accessed:
+    date: 2026-08-27
+
+cptac:
+  type: web
+  title: "Clinical Proteomic Tumor Analysis Consortium (CPTAC)"
+  author:
+    - National Cancer Institute
+  url:
+    value: https://gdc.cancer.gov/about-gdc/contributed-genomic-data-cancer-research/clinical-proteomic-tumor-analysis-consortium-cptac
+    date: 2026-08-27
+  accessed:
+    date: 2026-08-27
+
 altelaar2013:
   type: article
   title: "Next-generation proteomics: towards an integrative view of proteome dynamics"
