@@ -125,12 +125,14 @@ Comparative profiling involves comparing molecular measurements between predefin
 
 === Functional analysis and network analysis
 
-Interpreting differentially expressed genes (DEGs) individually may provide limited insight into the broader biological processes underlying the observed changes @kitano2002. Functional enrichment analysis can instead identify biological pathways or functions that represent the identified DEGs @yu2012. 
+Interpreting differentially expressed genes (DEGs) individually may provide limited insight into the broader biological processes underlying the observed changes @kitano2002. Functional enrichment analysis can instead identify biological pathways or functions that are overrepresented among the identified DEGs. @yu2012
 
 The Gene Ontology (GO) database provides structured and standardized representation of biological activities according to gene products,
 organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology. GO enrichment analysis evaluates whether particular GO terms are statistically overrepresented among a set of genes compared with an appropriate background gene set @ashburner2000 @yu2012. This allows groups of DEGs to be interpreted in terms of shared biological functions and processes rather than as individual genes.
 
+Still, the identified overrepresented biologcal processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011.
 
+Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
 
-
+Together, functional enrichment and network analysis therefore enable differentially expressed genes to be interpreted at a systems level, providing both information on the biological processes associated with gene-expression changes and the molecular relationships connecting the genes involved.
 
