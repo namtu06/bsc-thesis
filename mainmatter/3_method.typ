@@ -2,9 +2,16 @@
 
 = Materials and Methods <methodology>
 
-== Dataset
+== Data Source
 
-== Data preprocessing
+The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204.
+
+Additionally, the CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from the Genotype-Tissue Expression (GTEx) project as controls. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis @pdc000204. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. Differences between sequencing depth and library size between the controls and GBM samples will be resolved later in the process with the DEseq2 library. 
+
+
+== Data inspection and quality control
+@hbctraining_qc
+@hbctraining_deseq2
 
 Before performing analysis, data needs to be normalized and preprocess to make the data consistent and as noiseless as possible @rosati2024.
 

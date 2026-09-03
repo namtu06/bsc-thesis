@@ -425,6 +425,52 @@ elvitigala2010:
     volume: 30
     issue: 6
 
+cptac3_gdc:
+  type: web
+  title: "CPTAC-3"
+  author:
+    - National Cancer Institute
+  url:
+    value: https://portal.gdc.cancer.gov/projects/CPTAC-3
+    date: 2026-09-03
+  accessed:
+    date: 2026-09-03
+
+pdc000204:
+  type: web
+  title: "CPTAC GBM Discovery Study - Proteome"
+  author:
+    - National Cancer Institute
+  url:
+    value: https://pdc.cancer.gov/pdc/study/PDC000204
+    date: 2026-09-03
+  accessed:
+    date: 2026-09-03
+
+hbctraining_qc:
+  type: web
+  title: "QC Methods for DE Analysis Using DESeq2"
+  author:
+    - Harvard Chan Bioinformatics Core
+  url:
+    value: https://hbctraining.github.io/Intro-to-DGE/lessons/03_DGE_QC_analysis.html
+    date: 2026-09-03
+  accessed:
+    date: 2026-09-03
+
+hbctraining_deseq2:
+  type: web
+  title: "Gene-level differential expression analysis with DESeq2"
+  author:
+    - Harvard Chan Bioinformatics Core
+  url:
+    value: https://hbctraining.github.io/DGE_workshop/lessons/05_DGE_DESeq2_analysis2.html
+    date: 2026-09-03
+  accessed:
+    date: 2026-09-03
+
+
+
 rosati2024:
   type: article
   title: "Differential Gene Expression Analysis Pipelines and Bioinformatic Tools for the Identification of Specific Biomarkers: A Review"

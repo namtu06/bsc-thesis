@@ -138,10 +138,10 @@
 //// English metadata.
 
 #let faculty = "Engineering and Natural Sciences"
-#let keywords = ("keyword1", "keyword2", "...")
+#let keywords = ("glioblastoma", "apoptosis", "mitochondria","respiratory complex","transcriptomics")
 #let location = "Tampere"
 #let subtitle = "" // or none without the ""
-#let maintitle = "Decoding Glioblastoma Through Multiomic Integration of Cell Death Pathways"
+#let maintitle = "Transcriptomic Analysis of Apoptosis and Mitochondrial Respiratory Complexes in Glioblastoma"
 #let thesisProgramme = "Science and Engineering"
 #let university = "Tampere University"
 
