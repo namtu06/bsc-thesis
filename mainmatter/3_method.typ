@@ -4,46 +4,37 @@
 
 == Data Source
 
-The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204.
+The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204. Of the 99 samples, 25 were identified to be of the Classical subtype. 
 
 Additionally, the CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from the Genotype-Tissue Expression (GTEx) project as controls. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis @pdc000204. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. Differences in sequencing depth and library size between the controls and GBM samples will be resolved later in the process with the DEseq2 library. 
 
 
-== Data inspection and quality control
+== Data quality control and inspection
 
-As suggested by Harvard Chan Bioinformatics Core @hbctraining_qc, with raw gene counts, a number of plots can be done to inspect the general landscape of the data and its quality, mainly through hierarchical clustering methods.
+As suggested by Harvard Chan Bioinformatics Core @hbctraining_qc, with raw gene counts, a number of plots can be done to inspect the general landscape of the data and its quality, mainly through hierarchical clustering methods and Principal Component Analysis (PCA) of the log2-transform of the count data. Because transcriptomic expression values typically span several orders of magnitude and exhibit right-skewed distributions, log2-transform improves clustering for visualization @cox2014 @law2014 @hbctraining_qc. 
 
-@hbctraining_qc
-@hbctraining_deseq2
-
-Before performing analysis, data needs to be normalized and preprocess to make the data consistent and as noiseless as possible @rosati2024.
-
-The transcriptomic data obtained from CPTAC GBM Discovery Study dataset, given as already-cleaned-and-normalized (but not yet $log_2$-transformed) expression values according to their originating gene. The steps for this section were performed twice: once for the transcriptome data, another for the proteome data.
-
-Transcriptomic and proteomic expression values typically span several orders of magnitude and exhibit right-skewed distributions @law2014.
-Therefore, a common practice when working with expression matrices, which has been done to the current data, is to apply a $log_2$-transformation to each of the value @law2014 @cox2014. 
-An example expression value matrix ready for calculation is given in @example-expression-matrix.
-From this point onwards, "$log_2$ expression" is now referred to as "expression".
-#show table.cell.where(y: 0): strong
 #figure(
-    table(
-        columns: 5,
-        stroke: none,
-        align: center + horizon,
-        table.header([Gene],table.vline(),[Sample 1],table.vline(),[Sample 2],table.vline(),[Sample 3],table.vline(),[...]),
-        table.hline(),
-        [A1BG], num(18.833), num(18.647),num(18.958),[...],
-        [SPC25], num(13.475), num(13.469),num(13.786),[...],
-        [...],[...],[...],[...],[...]
-    ),
-    caption: [Example expression matrix]
-) <example-expression-matrix>
+    grid(
+        columns: 2,
+        row-gutter: 1em,
+    )[
+        #image("../images/QC/corrheatmap_classical.png"
+        )
+    ][
+        #image("../images/QC/PCA.png")
+    ],
+    kind: image,
+    caption:[Hierarchical Clustering Heatmap (left), PCA (right)] 
+    ,
+) <classical-corr-heat-pca>
 
+The hierarchical clustering heatmap (shown in @classical-corr-heat-pca) groups samples according to their similarity based on the samples' gene expression Pearson correlation. Samples with similar biological characteristics are expected to exhibit similar expression profiles and therefore cluster together @hbctraining_qc. In the current dataset, most Classical GBM samples form a distinct cluster from the control samples. However, three samples cluster more closely with the controls than with the other GBM samples. To determine whether these samples represent potential outliers or reflect biological variation, PCA was performed.
 
+As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological replicates are expected to have similar expression profiles and cluster together in PCA. The PCA shown in @classical-corr-heat-pca demonstrates clear separation between Classical GBM and control samples, with no apparent sample-level outliers. Thus, although three samples show higher similarity to the controls in the hierarchical clustering analysis, their position in the PCA does not indicate clear evidence of them being outliers.
 
 == Differential expression analysis
 
-
+@hbctraining_deseq2
 In the CPTAC Discovery Study, healthy brain tissue samples are provided as the
 baseline for comparison for the remaining tumor samples. Comparing the gene expressions of the tumors against healthy samples can give insights 
 (or, at least, a base for further comparative computations) into what is different.
