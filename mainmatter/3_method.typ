@@ -4,12 +4,15 @@
 
 == Data Source
 
-The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204.
+The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204.
 
-Additionally, the CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from the Genotype-Tissue Expression (GTEx) project as controls. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis @pdc000204. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. Differences between sequencing depth and library size between the controls and GBM samples will be resolved later in the process with the DEseq2 library. 
+Additionally, the CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from the Genotype-Tissue Expression (GTEx) project as controls. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis @pdc000204. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. Differences in sequencing depth and library size between the controls and GBM samples will be resolved later in the process with the DEseq2 library. 
 
 
 == Data inspection and quality control
+
+As suggested by Harvard Chan Bioinformatics Core @hbctraining_qc, with raw gene counts, a number of plots can be done to inspect the general landscape of the data and its quality, mainly through hierarchical clustering methods.
+
 @hbctraining_qc
 @hbctraining_deseq2
 
