@@ -38,15 +38,17 @@ The raw count data from the 25 Classical GBM samples and 7 GTEx control samples 
 
 With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression. The volcano plot along with the count of significant DEGs are presented in @diff-results.
 
-== GO enrichment and STRING Interaction Network Analysis
+== GO functional enrichment 
 
 GO enrichment analysis was performed on the set of significant differentially expressed genes (DEGs) to identify overrepresented Biological Process (BP) terms. The analysis was performed using the GSEApy Python library with the predefined `GO_Biological_Process_2023` gene-set library. The significant DEGs identified from the differential expression analysis were used as the input gene set. The resulting enrichment terms were ranked according to their statistical significance and the number of genes involved each of the enriched term, and displayed in a dot plot. The results are presented in @gene-ont.
 
 The top enriched biological processes were subsequently examined to identify processes relevant to the objectives of this study. Based on the enrichment results and discussed biological connection in @mito-apop-connect, apoptosis and mitochondrial respiratory-chain complexes were selected for further analysis. 
 
+== STRING Interaction Network Analysis
+
 The list of genes associated with apoptosis was retrieved from the Kyoto Encyclopedia of Genes and Genomes (KEGG) database, via GSEApy using the `KEGG_2021_Human` gene-set library @kegg. 
 The list of genes complexes I–V was retrieved from Human Mitocarta @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis.
- 
+
 The selected genes are then fed into to the STRING database to obtain protein association networks. The resulting networks were imported into Python and analysed using the NetworkX library. Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges. The resulting edge counts were used to characterize the associations between apoptosis and complexes I–V.
 
 
