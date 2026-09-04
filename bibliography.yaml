@@ -606,6 +606,29 @@ deseq2_bioc_vignette:
   accessed:
     date: 2026-09-04
 
+kegg:
+  type: web
+  title: "KEGG: Kyoto Encyclopedia of Genes and Genomes"
+  author:
+    - Kanehisa Laboratories
+  url:
+    value: https://www.genome.jp/kegg/
+    date: 2026-09-05
+  accessed:
+    date: 2026-09-05
+
+mitocarta3_human:
+  type: web
+  title: "Human MitoCarta3.0: 1136 mitochondrial genes"
+  author:
+    - Broad Institute
+  date: 2020
+  url:
+    value: https://www.broadinstitute.org/files/shared/metabolism/mitocarta/human.mitocarta3.0.html
+    date: 2026-09-05
+  accessed:
+    date: 2026-09-05
+
 barrett2013:
   type: article
   title: "NCBI GEO: Archive for Functional Genomics Data Sets—Update"
