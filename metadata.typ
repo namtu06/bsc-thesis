@@ -140,8 +140,8 @@
 #let faculty = "Engineering and Natural Sciences"
 #let keywords = ("glioblastoma", "apoptosis", "mitochondria","respiratory complex","transcriptomics")
 #let location = "Tampere"
-#let subtitle = "" // or none without the ""
-#let maintitle = "Transcriptomic Analysis of Apoptosis and Mitochondrial Respiratory Complexes in Glioblastoma"
+#let subtitle = "Computational Analysis of Apoptosis and Mitochondrial Respiratory Complexes in Classical Glioblastoma Transcriptome" // or none without the ""
+#let maintitle = "Mitochondria — Powerhouse of the Cell... and the Brain Tumor?"
 #let thesisProgramme = "Science and Engineering"
 #let university = "Tampere University"
 

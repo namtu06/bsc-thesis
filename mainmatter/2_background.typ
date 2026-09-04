@@ -61,7 +61,7 @@ with both ultimately converging on the activation of executioner caspases which 
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/deathpathway.jpg"
+        #image("../images/deathpathway.jpg",height: 12cm,
         )
     ],
     kind: image,
@@ -93,9 +93,22 @@ The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the redu
 - *Complex V*: Uses proton gradient and the reduction of oxygen to synthesize ATP.
 
 The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
-=== Mitochondrial respiratory chain-apoptosis relationship in GBM
+=== Mitochondrial respiratory chain-apoptosis relationship in GBM <mito-apop-connect>
 
-The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be inherently closely connected to each other. While the respiratory chain is essential for maintaining mitochondrial energy production and homeostasis, intrinsic apoptosis depends on the mitochondria for the regulation of apoptotic signalling. Therefore, disruption of respiratory-chain function and mitochondrial homeostasis can influence apoptotic signalling @nagy2015.
+The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be inherently closely connected to each other. While the respiratory chain is essential for maintaining mitochondrial energy production and homeostasis, intrinsic apoptosis depends on the mitochondria for the regulation of apoptotic signalling. Therefore, disruption of respiratory-chain function and mitochondrial homeostasis can influence apoptotic signalling particularly through cytochrome c since because of its involvement in both cellular respiration and apoptosis (@cytc) @nagy2015 @kalpage2020.
+
+#figure(
+    grid(
+        columns: 1,
+        row-gutter: 1em,
+    )[
+        #image("../images/cytc.jpg",height: 12cm,
+        )
+    ],
+    kind: image,
+    caption:[Proposed cytochrome c involvement in cellular respiration and apoptosis @kalpage2020. Cytochrome c acts as an electron carrier between Complex III and IV. Cellular stress causes cytochrome c to be released from the mitochondria, followed by a variety of interactions that produce apoptosome, resulting in apoptosis @jan2019 @kalpage2020.] 
+    ,
+) <cytc>
 
 This relationship is particularly relevant in GBM, where alterations in mitochondrial metabolism and oxidative phosphorylation have been implicated in tumour-cell survival and progression in specific subtypes @nagy2015 @garofano2021. Changes in respiratory-chain activity may therefore influence the susceptibility of GBM cells to apoptosis. More specifically, improper functioning of the mitochondria may result in improper apoptosis, resulting in promoted tumor cell survivability.
 
@@ -120,8 +133,22 @@ Large-scale efforts have been made to profile the transcriptomes of cancers, inc
 
 Comparative profiling involves comparing molecular measurements between predefined biological conditions to identify differences associated with a particular phenotype or state @altelaar2013. In transcriptomics, differential expression analysis is commonly used to compare gene expression between conditions, such as diseased and healthy tissue. Its main objective is to identify genes whose expression differs between the conditions, providing insight into potential molecular mechanisms underlying the observed phenotype.The resulting differential expression statistics can describe both the magnitude and direction of an expression difference, commonly represented by the log2 fold change (log2FC), and its statistical significance, represented by a p-value. Thresholds can subsequently be applied to identify genes considered differentially expressed, with the choice of thresholds depending on the experimental context and research objectives @rosati2024.
 
+A popular library for gene-level differential expression analysis is DESeq2 (with PyDESeq2 providing a Python implementation). An average workflow with DESeq2 is displayed in @deseq-flow.
 
+#figure(
+    grid(
+        columns: 1,
+        row-gutter: 1em,
+    )[
+        #image("../images/deseq-flow.pdf",height: 12cm,
+        )
+    ],
+    kind: image,
+    caption:[Conceptual workflow of differential expression analysis using DESeq2. Adapted from Harvard Chan Bioinformatics Core (HBC) @hbctraining_deseq2_analysis.] 
+    ,
+) <deseq-flow>
 
+RNA-seq count data often exhibit greater variance than their mean, a property known as overdispersion. DESeq2 accounts for this by modelling count data using a negative binomial generalized linear model, from which log₂ fold changes and their standard errors are estimated. The statistical significance of the estimated log₂ fold changes is then assessed using Wald tests. DESeq2 can additionally account for known sources of systematic variation, such as batch effects, by incorporating relevant variables into the design of the statistical model. To account for the increased number of false discoveries resulting from multiple hypothesis testing, p-values are adjusted using the Benjamini–Hochberg procedure to control the false discovery rate (FDR) @hbctraining_dge_overview @pydeseq2_docs @deseq2_bioc_vignette.
 
 === Functional analysis and network analysis
 
@@ -130,9 +157,11 @@ Interpreting differentially expressed genes (DEGs) individually may provide limi
 The Gene Ontology (GO) database provides structured and standardized representation of biological activities according to gene products,
 organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology. GO enrichment analysis evaluates whether particular GO terms are statistically overrepresented among a set of genes compared with an appropriate background gene set @ashburner2000 @yu2012. This allows groups of DEGs to be interpreted in terms of shared biological functions and processes rather than as individual genes.
 
-Still, the identified overrepresented biologcal processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011.
+Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011.
 
 Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
+
+In this study, STRING was used to construct protein–protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023.
 
 Together, functional enrichment and network analysis therefore enable differentially expressed genes to be interpreted at a systems level, providing both information on the biological processes associated with gene-expression changes and the molecular relationships connecting the genes involved.
 

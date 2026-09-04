@@ -276,6 +276,39 @@ nagy2015:
     title: Brain Research
     volume: 1595
 
+kalpage2020:
+  type: article
+  title: "Cytochrome c Phosphorylation: Control of Mitochondrial Electron Transport Chain Flux and Apoptosis"
+  author:
+    - Kalpage, Hasini A.
+    - Wan, Junmei
+    - Morse, Paul T.
+    - Zurek, Matthew P.
+    - Turner, Alice A.
+    - Khobeir, Antoine
+    - Yazdi, Nabil
+    - Hakim, Lara
+    - Liu, Jenney
+    - Vaishnav, Asmita
+    - Sanderson, Thomas H.
+    - Recanati, Maurice-Andre
+    - Grossman, Lawrence I.
+    - Lee, Icksoo
+    - Edwards, Brian F. P.
+    - Hüttemann, Maik
+  date: 2020
+  page-range: 105704
+  serial-number:
+    doi: 10.1016/j.biocel.2020.105704
+    issn: 1357-2725
+  url:
+    value: https://doi.org/10.1016/j.biocel.2020.105704
+    date: 2026-09-05
+  parent:
+    type: periodical
+    title: International Journal of Biochemistry & Cell Biology
+    volume: 121
+
 garofano2021:
   type: article
   title: "Pathway-Based Classification of Glioblastoma Uncovers a Mitochondrial Subtype with Therapeutic Vulnerabilities"
@@ -375,6 +408,37 @@ barabasi2011:
     title: Nature Reviews Genetics
     volume: 12
     issue: 1    
+
+szklarczyk2023:
+  type: article
+  title: "The STRING Database in 2023: Protein-Protein Association Networks and Functional Enrichment Analyses for Any Sequenced Genome of Interest"
+  author:
+    - Szklarczyk, Damian
+    - Kirsch, Rebecca
+    - Koutrouli, Mikaela
+    - Nastou, Katerina
+    - Mehryary, Farrokh
+    - Hachilif, Radja
+    - Gable, Annika L.
+    - Fang, Tao
+    - Doncheva, Nadezhda T.
+    - Pyysalo, Sampo
+    - Bork, Peer
+    - Jensen, Lars J.
+    - von Mering, Christian
+  date: 2023
+  page-range: D638-D646
+  serial-number:
+    doi: 10.1093/nar/gkac1000
+    issn: 1362-4962
+  url:
+    value: https://doi.org/10.1093/nar/gkac1000
+    date: 2026-09-04
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    volume: 51
+    issue: D1
 
 greene2014:
   type: article
@@ -494,6 +558,53 @@ rosati2024:
     type: periodical
     title: Computational and Structural Biotechnology Journal
     volume: 23
+
+hbctraining_deseq2_analysis:
+  type: web
+  title: "Gene-level Differential Expression Analysis with DESeq2"
+  author:
+    - Harvard Chan Bioinformatics Core
+  url:
+    value: https://hbctraining.github.io/DGE_workshop/lessons/04_DGE_DESeq2_analysis.html
+    date: 2026-09-05
+  accessed:
+    date: 2026-09-05
+
+hbctraining_dge_overview:
+  type: web
+  title: "Set Up and Overview for Gene-Level Differential Expression Analysis"
+  author:
+    - Harvard Chan Bioinformatics Core
+  url:
+    value: https://hbctraining.github.io/DGE_workshop/lessons/01_DGE_setup_and_overview.html#rna-seq-count-distribution
+    date: 2026-09-04
+  accessed:
+    date: 2026-09-04
+
+pydeseq2_docs:
+  type: web
+  title: "A Simple PyDESeq2 Workflow"
+  author:
+    - PyDESeq2 Developers
+  url:
+    value: https://pydeseq2.readthedocs.io/en/stable/auto_examples/plot_minimal_pydeseq2_pipeline.html
+    date: 2026-09-04
+  accessed:
+    date: 2026-09-04
+
+deseq2_bioc_vignette:
+  type: web
+  title: "Analyzing RNA-seq Data with DESeq2"
+  author:
+    - Love, Michael I.
+    - Anders, Simon
+    - Huber, Wolfgang
+  date: 2025-08-27
+  url:
+    value: https://bioconductor.posit.co/packages/3.21/bioc/vignettes/DESeq2/inst/doc/DESeq2.html
+    date: 2026-09-04
+  accessed:
+    date: 2026-09-04
 
 barrett2013:
   type: article

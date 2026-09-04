@@ -2,7 +2,7 @@
 
 = Results <results-discussion>
 
-== Differentially Expressed Genes in GBM <explore-plot-result>
+== Differentially Expressed Genes in GBM <diff-results>
 Presented in @corr-plots are plots plotting the transcriptomic log2FC against proteomic log2FC. 
 #figure(
     grid(
