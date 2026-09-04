@@ -18,11 +18,11 @@
 			Glioblastoma multiforme
 		]
 	),
-	multiomics: (
-		name: "Multiomics",
+	DEGs: (
+		name: "DEG",
 		description: [
 	
-			 Research that combines biotechnology ending with the “-omics” suffix such transcriptomics, proteomics, genomics, etc.
+			 (Significantly) differentially expressed genes
 		]
 	),
 	gene: (
@@ -31,30 +31,5 @@
 			Italic words denote genes
 		]
 	),
-	vector: (
-		name: math.equation(
-			alt: "vector(v)",
-			$vector(v)$
-		),
-		description: [
-			Bold upright lower-case letters denote vectors.
-		]
-	),
-	matrix: (
-		name: math.equation(
-			alt: "matrix(M)",
-			$matrix(M)$
-		),
-		description: [
-			Upright bold capital letters denote matrices.
-		]
-	),
-	tut: (
-		name: "TUT",
-		description: "Tampere University of Technology"
-	),
-	tuni: (
-		name: "TUNI",
-		description: "Tampere University"
-	),
+
 )
