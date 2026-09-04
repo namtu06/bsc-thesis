@@ -987,6 +987,25 @@ yu2012:
     volume: 16
     issue: 5
 
+geneontology2021:
+  type: article
+  title: "The Gene Ontology resource: enriching a GOld mine"
+  author:
+    - Gene Ontology Consortium
+  date: 2021
+  page-range: D325-D334
+  serial-number:
+    doi: 10.1093/nar/gkaa1113
+    issn: 1362-4962
+  url:
+    value: https://doi.org/10.1093/nar/gkaa1113
+    date: 2026-09-05
+  parent:
+    type: periodical
+    title: Nucleic Acids Research
+    volume: 49
+    issue: D1
+
 aguardia2020:
   type: article
   title: "Proneural and Mesenchymal Glioma Stem Cells Display Major Differences in Splicing and lncRNA Profiles"

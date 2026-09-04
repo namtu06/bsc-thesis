@@ -155,7 +155,20 @@ RNA-seq count data often exhibit greater variance than their mean, a property kn
 Interpreting differentially expressed genes (DEGs) individually may provide limited insight into the broader biological processes underlying the observed changes @kitano2002. Functional enrichment analysis can instead identify biological pathways or functions that are overrepresented among the identified DEGs. @yu2012
 
 The Gene Ontology (GO) database provides structured and standardized representation of biological activities according to gene products,
-organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology. GO enrichment analysis evaluates whether particular GO terms are statistically overrepresented among a set of genes compared with an appropriate background gene set @ashburner2000 @yu2012. This allows groups of DEGs to be interpreted in terms of shared biological functions and processes rather than as individual genes.
+organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology. GO enrichment analysis evaluates whether particular GO terms are statistically overrepresented among a set of genes compared with an appropriate background gene set (@GO-flow) @ashburner2000 @yu2012. The process allows groups of DEGs to be interpreted in terms of shared biological functions and processes rather than as individual genes.
+
+#figure(
+    grid(
+        columns: 1,
+        row-gutter: 1em,
+    )[
+        #image("../images/GO-process.pdf",height: auto,
+        )
+    ],
+    kind: image,
+    caption:[Workflow of GO enrichment analysis. Adapted from The Gene Ontology Consortium @geneontology2021.] 
+    ,
+) <GO-flow>
 
 Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011.
 
