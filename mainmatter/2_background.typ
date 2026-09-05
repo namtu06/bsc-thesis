@@ -145,7 +145,7 @@ Large-scale efforts have been made to profile the transcriptomes of cancers, inc
 
 Comparative profiling involves comparing molecular measurements between predefined biological conditions to identify differences associated with a particular phenotype or state @altelaar2013. In transcriptomics, differential expression analysis is commonly used to compare gene expression between conditions, such as diseased and healthy tissue. Its main objective is to identify genes whose expression differs between the conditions, providing insight into potential molecular mechanisms underlying the observed phenotype.The resulting differential expression statistics can describe both the magnitude and direction of an expression difference, commonly represented by the log2 fold change (log2FC), and its statistical significance, represented by a p-value. Thresholds can subsequently be applied to identify genes considered differentially expressed, with the choice of thresholds depending on the experimental context and research objectives @rosati2024.
 
-A popular library for gene-level differential expression analysis is DESeq2 (with PyDESeq2 providing a Python implementation). An average workflow with DESeq2 is displayed in @deseq-flow.
+A popular library for gene-level differential expression analysis is DESeq2 (with PyDESeq2 providing a Python implementation) which enables and streamlines vast amounts of analytical possibilities through raw gene counts produced by RNA-seq @deseq2_bioc_vignette. An average workflow with DESeq2 is displayed in @deseq-flow.
 
 #figure(
     grid(
