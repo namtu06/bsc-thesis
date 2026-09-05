@@ -1,6 +1,6 @@
 #import "../preamble.typ": *
 
-= Results <results-discussion>
+= Results <results>
 
 == Differentially Expressed Genes in GBM <diff-results>
 Presented in @corr-plots are plots plotting the transcriptomic log2FC against proteomic log2FC. 

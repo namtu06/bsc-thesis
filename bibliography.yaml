@@ -1106,6 +1106,25 @@ verhaak2010:
     volume: 17
     issue: 1
 
+eisenbarth2023:
+  type: article
+  title: "Glioblastoma Heterogeneity at Single Cell Resolution"
+  author:
+    - Eisenbarth, David
+    - Wang, Y. Alan
+  date: 2023-06-05
+  page-range: 2155-2165
+  serial-number:
+    doi: 10.1038/s41388-023-02738-y
+    issn: 1476-5594
+  url:
+    value: https://doi.org/10.1038/s41388-023-02738-y
+    date: 2026-09-05
+  parent:
+    type: periodical
+    title: Oncogene
+    volume: 42
+
 fabris2020:
   type: article
   title: "Comparing Enrichment Analysis and Machine Learning for Identifying Gene Properties That Discriminate Between Gene Classes"
