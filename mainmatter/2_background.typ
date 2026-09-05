@@ -20,9 +20,7 @@ GBM possesses an incredible molecular heterogeneity. Defining transcriptomic mut
 
 The expression levels of the genes listed vary vastly on a per-sample basis @verhaak2010 @hanif2017 @eisenbarth2023. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
 
-According to Verhaak et al. and other further sequencing experiments @verhaak2010 @eisenbarth2023, GBM is categories into 3 major subtypes according to their expression of signature genes: Proneural, Mesenchymal, and Classical.
-
-Each subtype have their own distinct levels of expression of the the defining genes and resistance to therapies. However, GBM samples have been shown to convert from one subtype to another during tumor progression and recurrence, contributing to its agressiveness and resistance to therapies. @eisenbarth2023.
+According to Verhaak et al. and other further sequencing experiments @verhaak2010 @eisenbarth2023, GBM is categories into 3 major subtypes according to their expression of signature genes: Proneural, Mesenchymal, and Classical. Each subtype have their own distinct levels of expression of the the defining genes and resistance to therapies. However, GBM samples have been shown to convert from one subtype to another during tumor progression and recurrence, contributing to its agressiveness and resistance to therapies. @eisenbarth2023.
 
 The Proneural subtype is characterized by major alteration of the PDGFRA gene and point mutation of _IDH1_, and it also had the most _TP53_ mutations in the TCGA dataset; functional analysis points to developmental neuron-related processes. Mesenchymal subtype has genes in the tumor necrosis factor super family such as NF1 highly expressed, reflecting its tendency to have higher overall necrosis compared to other subtypes @verhaak2010 @singh2022. 
 
@@ -128,8 +126,20 @@ Among these approaches, transcriptomic technologies provide a means of measuring
 
 === Transcriptomics and differential expression analysis
 
-Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from an organism's genome @lowe2017. According to Lowe et al. @lowe2017, two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined.
+Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from an organism's genome @lowe2017. According to Lowe et al. @lowe2017, two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined (@micro-seq).
 
+#figure(
+    grid(
+        columns: 1,
+        row-gutter: 1em,
+    )[
+        #image("../images/microarrayvsrnaseq.jpg",height: 10cm,
+        )
+    ],
+    kind: image,
+    caption:[Comparing how microarrays and RNA-seq produce gene expression values @rogawski2017.] 
+    ,
+) <micro-seq>
  
 Large-scale efforts have been made to profile the transcriptomes of cancers, including GBM. Public resources such as the Gene Expression Omnibus (GEO) and The Cancer Genome Atlas (TCGA) provide access to extensive molecular profiling datasets from numerous cancer types, including glioblastoma @barrett2013 @tcga. The Clinical Proteomic Tumor Analysis Consortium (CPTAC) has further generated and integrated transcriptomic and proteomic data from cancer studies, including GBM @cptac. These resources provide opportunities for researchers to computationally reanalyse previously generated data and investigate molecular characteristics of cancer. The next challenge is therefore to extract meaningful biological information from these large-scale quantitative datasets.
 

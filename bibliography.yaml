@@ -629,6 +629,28 @@ mitocarta3_human:
   accessed:
     date: 2026-09-05
 
+rogawski2017:
+  type: article
+  title: "Integrating RNA Sequencing into Neuro-Oncology Practice"
+  author:
+    - Rogawski, David S.
+    - Vitanza, Nicholas A.
+    - Gauthier, Angela C.
+    - Ramaswamy, Vijay
+    - Koschmann, Carl
+  date: 2017
+  page-range: 93-104
+  serial-number:
+    doi: 10.1016/j.trsl.2017.06.013
+    issn: 1931-5244
+  url:
+    value: https://doi.org/10.1016/j.trsl.2017.06.013
+    date: 2026-09-05
+  parent:
+    type: periodical
+    title: Translational Research
+    volume: 189
+
 barrett2013:
   type: article
   title: "NCBI GEO: Archive for Functional Genomics Data Sets—Update"
