@@ -6,7 +6,9 @@
 
 The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204. Of the 99 samples, 25 were identified to be of the Classical subtype.
 
-Additionally, the CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from the Genotype-Tissue Expression (GTEx) project as controls. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis @pdc000204. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. Differences in sequencing depth and library size between samples were accounted for through the size-factor normalization performed by PyDESeq2 during differential expression analysis @deseq2_bioc_vignette @pydeseq2_docs.
+Although, CPTAC does provide RNA-seq data for "healthy" samples, they are Normal Adjacent Tissue (NAT) which are brain tissues that have yet to exhibit cancerous features nearby the extracted tumors. NAT samples, specifically from CPTAC's cancer samples, have been shown to have substantial transcriptomic and epigenetic causing them to be in a molecular "unique intermediate state" between healthy and tumor, despite not yet exhibiting cancerous features @cptac3_gdc @liu2024_cptac_codex @aran2017. Therefore, NAT samples provided by CPTAC were considered unsuitable as a baseline for comparison in this thesis. In its place, the Genotype-Tissue Expression (GTEx) project provides comprehensive, and peer-reviewed RNA-seq data from healthy brain tissue, suitable for comparison in cancer research @gtex2020 @zeng2019.
+
+The CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from GTEx as controls  @pdc000204. Of these 10 GTEx controls, transcriptomic data for 7 were accessible and were therefore used as controls in this thesis. The same GTEx controls were selected to maintain consistency with the original CPTAC-GBM study and to facilitate potential future comparisons between transcriptomic and proteomic data. 
 
 
 == Data quality control and inspection
@@ -32,6 +34,25 @@ The hierarchical clustering heatmap (shown in @classical-corr-heat-pca) groups s
 
 As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological replicates are expected to have similar expression profiles and cluster together in PCA. The PCA (also shown in @classical-corr-heat-pca) demonstrates clear separation between Classical GBM and control samples, with no apparent sample-level outliers. Thus, although three samples show higher similarity to the controls in the hierarchical clustering analysis, their position in the PCA does not indicate clear evidence of them being outliers.
 
+
+
+#figure(
+    grid(
+        columns: 2,
+        row-gutter: 1em,
+    )[
+        #image("../images/QC/exprscatter.png", height: 6cm,
+        )
+    ][
+        #image("../images/QC/classical_heatmap.png", height: 6cm)
+    ],
+    kind: image,
+    caption:[Classical GBM vs GTEx control expression Scatter Plot (Left), Classical GBM (outer ring) vs GTEx control (inner ring) expression heatmap of top 250 genes with greatest expression difference (Right).] 
+    ,
+) <expr-compare>
+
+@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. To visualize this variance, the top 250 genes with the largest raw differences in expression were plotted in a heatmap. It demonstrates a strong, contrasting expression trend between the tumor and normal control tissues, confirming clear group separation prior to downstream statistical analysis.
+
 == Differential expression analysis
 
 The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to the PyDESeq2 model. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene. PyDESeq2 models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests @deseq2_bioc_vignette @pydeseq2_docs.
@@ -49,6 +70,6 @@ The top enriched biological processes were subsequently examined to identify pro
 The list of genes associated with apoptosis was retrieved from the Kyoto Encyclopedia of Genes and Genomes (KEGG) database, via GSEApy using the `KEGG_2021_Human` gene-set library @kegg. 
 The list of genes complexes I–V was retrieved from Human Mitocarta @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis.
 
-The selected genes are then fed into to the STRING database to obtain protein association networks. The resulting networks were imported into Python and analysed using the NetworkX library. Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges. The resulting edge counts were used to characterize the associations between apoptosis and complexes I–V.
+The selected genes are then fed into to the STRING database to obtain protein association networks. The resulting networks were imported into Python and analysed using the NetworkX library. Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and proteins involved. The resulting edge counts were used to characterize the associations between apoptosis and complexes I–V.
 
 

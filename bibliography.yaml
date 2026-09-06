@@ -511,6 +511,107 @@ pdc000204:
   accessed:
     date: 2026-09-03
 
+liu2024_cptac_codex:
+  type: web
+  title: "Multi-scale signaling and tumor evolution in high-grade gliomas (CPTAC-Glioblastoma-CODEX)"
+  author:
+    - Liu, J.
+    - Cao, S.
+    - Imbach, K. J.
+    - Gritsenko, M. A.
+    - Lih, T.-S. M.
+    - Kyle, J. E.
+    - Yaron, T. M.
+    - Binder, Z. A.
+    - Li, Y.
+    - Strunilin, I.
+    - Wang, Y.-T.
+    - Tsai, C.-F.
+    - Ma, W.
+    - Chen, L.
+    - Clark, N. M.
+    - Shinkle, A.
+    - Naser Al Deen, N.
+    - Caravan, W.
+    - Houston, A.
+    - Ding, L.
+  date: 2024
+  serial-number:
+    doi: 10.7937/ce1t-ea12
+  url:
+    value: https://www.cancerimagingarchive.net/analysis-result/cptac-glioblastoma-codex/
+    date: 2026-09-06
+  parent:
+    type: repository
+    title: "The Cancer Imaging Archive"
+
+aran2017:
+  type: article
+  title: "Comprehensive Analysis of Normal Adjacent to Tumor Transcriptomes"
+  author:
+    - Aran, Dvir
+    - Camarda, R. 
+    - Odegaard, John
+    - Paik, Hyun
+    - Oskotsky, Boris
+    - Krings, Gautam
+    - Goga, A.
+    - Sirota, Marina
+    - Butte, Atul J.
+  date: 2017
+  page-range: 1077
+  serial-number:
+    doi: 10.1038/s41467-017-01027-z
+    issn: 2041-1723
+  url:
+    value: https://doi.org/10.1038/s41467-017-01027-z
+    date: 2026-09-07
+  parent:
+    type: periodical
+    title: Nature Communications
+    volume: 8
+
+gtex2020:
+  type: article
+  title: "The GTEx Consortium atlas of genetic regulatory effects across human tissues"
+  author:
+    - GTEx Consortium
+  date: 2020
+  page-range: 1318-1330
+  serial-number:
+    doi: 10.1126/science.aaz1776
+    issn: 1095-9203
+  url:
+    value: https://doi.org/10.1126/science.aaz1776
+    date: 2026-09-07
+  parent:
+    type: periodical
+    title: Science
+    volume: 369
+    issue: 6509
+
+zeng2019:
+  type: article
+  title: "Selecting precise reference normal tissue samples for cancer research using a deep learning approach"
+  author:
+    - Zeng, William Z. D.
+    - Glicksberg, Benjamin S.
+    - Li, Yangyan
+    - Chen, Bin
+  date: 2019
+  page-range: 21
+  serial-number:
+    doi: 10.1186/s12920-018-0463-6
+    issn: 1755-8794
+  url:
+    value: https://doi.org/10.1186/s12920-018-0463-6
+    date: 2026-09-07
+  parent:
+    type: periodical
+    title: BMC Medical Genomics
+    volume: 12
+    issue: S1
+
 hbctraining_qc:
   type: web
   title: "QC Methods for DE Analysis Using DESeq2"
