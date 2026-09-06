@@ -178,13 +178,11 @@ organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Co
         )
     ],
     kind: image,
-    caption:[Workflow of GO enrichment analysis. Adapted from The Gene Ontology Consortium @geneontology2021.] 
+    caption:[Workflow of GO enrichment analysis. The list of DEGs are fed into the GO database which maps the DEGs to specific GO terms. The terms are statistically tested to determine its enrichment level. Adapted from The Gene Ontology Consortium @geneontology2021.] 
     ,
 ) <GO-flow>
 
-Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011.
-
-Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
+Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011. Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
 
 In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein–protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023.
 
