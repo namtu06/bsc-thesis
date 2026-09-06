@@ -44,15 +44,14 @@ As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological rep
         #image("../images/QC/exprscatter.png", height: 6cm,
         )
     ][
-        #image("../images/QC/classical_heatmap.png", height: 6cm)
+        #image("../images/QC/density.png", height: 6cm)
     ],
     kind: image,
-    caption:[Classical GBM vs GTEx control expression Scatter Plot (Left), Classical GBM (outer ring) vs GTEx control (inner ring) expression heatmap of top 250 genes with greatest expression difference (Right).] 
+    caption:[Classical GBM vs GTEx control expression Scatter Plot (Left), Expression histograms of top 10.000 genes with largest expression difference (Right). ] 
     ,
 ) <expr-compare>
 
-@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. To visualize this variance, the top 250 genes with the largest raw differences in expression were plotted in a heatmap. It demonstrates a strong, contrasting expression trend between the tumor and normal control tissues, confirming clear group separation prior to downstream statistical analysis.
-
+@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes with the largest differences between the 2 cohorts, where expressions in GBM is generally shifted upward (forward in the histogram) compared to the control. This further validates the need for further investigation into the differences between the two cohorts.
 == Differential expression analysis
 
 The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to the PyDESeq2 model. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene. PyDESeq2 models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests @deseq2_bioc_vignette @pydeseq2_docs.
