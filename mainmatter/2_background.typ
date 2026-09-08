@@ -59,7 +59,7 @@ with both ultimately converging on the activation of executioner caspases which 
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/deathpathway.jpg",height: 12cm,
+        #image("../images/background/deathpathway.jpg",height: 12cm,
         )
     ],
     kind: image,
@@ -100,7 +100,7 @@ The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be 
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/cytc.jpg",height: 12cm,
+        #image("../images/background/cytc.jpg",height: 12cm,
         )
     ],
     kind: image,
@@ -133,7 +133,7 @@ Transcriptomics technologies provide information on gene expression by measuring
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/microarrayvsrnaseq.jpg",height: 10cm,
+        #image("../images/background/microarrayvsrnaseq.jpg",height: 12cm,
         )
     ],
     kind: image,
@@ -152,7 +152,7 @@ A popular library for gene-level differential expression analysis is DESeq2 (wit
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/deseq-flow.pdf",height: 12cm,
+        #image("../images/background/deseq-flow.pdf",height: 12cm,
         )
     ],
     kind: image,
@@ -174,7 +174,7 @@ organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Co
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/GO-process.pdf",height: auto,
+        #image("../images/background/GO-process.pdf",height: auto,
         )
     ],
     kind: image,
