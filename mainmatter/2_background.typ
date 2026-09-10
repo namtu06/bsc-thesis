@@ -79,7 +79,7 @@ The intrinsic apoptotic pathway is closely associated with mitochondrial functio
 === General mitochondrial function
 The mitochondria is the primary site of cellular function, and it has fundamental roles in processes such as ATP production, ROS generation, and the execution of cell death pathways @liang2025 @jan2019. Carbohydrates, fatty acids, and amino acids can be metabolised into substrates, which enters the tricarboxylic acid (TCA) cycle. The TCA cycle generates reducing equivalents, primarily NADH and FADH₂, which subsequently donate electrons to the mitochondrial respiratory chain to drive oxidative phosphorylation and ATP production @liang2025.
 
-=== Oxidative phosphorylation and the respiratory chain
+=== Oxidative phosphorylation and the respiratory chain <respitatory-funcs>
 
 Mitochondrial oxidative phosphorylation (OXPHOS) is a key mechanism of energy production in eukaryotic cells. It is comprised of 5 inner mitochondrial protein complexes I-V (also referred to as CI, CII, etc.) and 2 mobile electron carriers forming the electron transport chain (ETC) @vercellino2022. 
 

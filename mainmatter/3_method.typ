@@ -51,12 +51,13 @@ As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological rep
     ,
 ) <expr-compare>
 
-@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes with the largest differences between the 2 cohorts, where expressions in GBM is generally shifted upward (forward in the histogram) compared to the control. This further validates the need for further investigation into the differences between the two cohorts.
+@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes of 45.000 with the largest differences between the 2 cohorts, where expressions in GBM is generally shifted upward (forward in the histogram) compared to the control. This further validates the need for further investigation into the differences between the two cohorts.
 == Differential expression analysis
 
 The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to the PyDESeq2 model. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene. PyDESeq2 models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests @deseq2_bioc_vignette @pydeseq2_docs.
 
-With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression. The volcano plot along with the count of significant DEGs are presented in @diff-results.
+With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. For further detail, significant DEGs with $log_2"FC" > 1$ were lablled as "up-regulated", and $log_2"FC"<1$ as "down-regulated". These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression.
+The volcano plot along with the count of significant DEGs are presented in @diff-results.
 
 == GO functional enrichment 
 
