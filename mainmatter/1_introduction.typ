@@ -1,6 +1,6 @@
 #import "../preamble.typ": *
 
-= Introduction <introduction>
+= INTRODUCTION <introduction>
 
 
 Glioblastoma multiforme (GBM) is the most aggressive primary brain tumour in adults and remains associated with poor patient survival despite advances in treatment @hanif2017. A major challenge in understanding and treating GBM is its substantial molecular heterogeneity. Molecular analyses have identified distinct GBM subtypes characterised by different transcriptional profiles and biological properties, which can influence tumour progression, treatment response, and patient prognosis @verhaak2010. Understanding these molecular differences is therefore important for characterising the biological mechanisms underlying GBM.

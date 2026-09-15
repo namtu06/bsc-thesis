@@ -1,6 +1,6 @@
 #import "../preamble.typ": *
 
-= Theoretical Background <background>
+= THEORETICAL BACKGROUND <background>
 
 
 == Glioblastoma <gbm-intro>
@@ -137,7 +137,7 @@ Transcriptomics technologies provide information on gene expression by measuring
         )
     ],
     kind: image,
-    caption:[Comparing how microarrays and RNA-seq produce gene expression values @rogawski2017.] 
+    caption:[Gene expression profilling in microarray and RNA-seq @rogawski2017.] 
     ,
 ) <micro-seq>
  
@@ -184,7 +184,9 @@ organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Co
 
 Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011. Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
 
-In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein–protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023.
+In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein–protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023. 
+
+A useful metric STRING provides from individual interactions is the STRING combined score which is computed by probabilistically combining multiple independent evidence sources, ranging from 0.150 to 0.999. STRING's 7 evidence channels include text mining, experiments, curated databases, co-expressions, co-occurrence across genomes, gene neighbourhoods, and gene fusion. A closer score to 1 indicates higher confidence that the interaction is real @string_scores.
 
 Together, functional enrichment and network analysis therefore enable differentially expressed genes to be interpreted at a systems level, providing both information on the biological processes associated with gene-expression changes and the molecular relationships connecting the genes involved.
 

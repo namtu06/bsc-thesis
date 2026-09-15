@@ -1,8 +1,8 @@
 #import "../preamble.typ": *
 
-= Materials and Methods <methodology>
+= MATERIALS AND METHODOLOGY <methodology>
 
-== Data Source
+== Data source
 
 The transcriptomic data were retrieved from the National Cancer Institute’s publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204. Of the 99 samples, 25 were identified to be of the Classical subtype.
 
@@ -52,24 +52,26 @@ As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological rep
 ) <expr-compare>
 
 @expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes of 45.000 with the largest differences between the 2 cohorts, where expressions in GBM is generally shifted upward (forward in the histogram) compared to the control. This further validates the need for further investigation into the differences between the two cohorts.
+
 == Differential expression analysis
 
 The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to the PyDESeq2 model. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene. PyDESeq2 models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests @deseq2_bioc_vignette @pydeseq2_docs.
 
 With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. For further detail, significant DEGs with $log_2"FC" > 1$ were lablled as "up-regulated", and $log_2"FC"<1$ as "down-regulated". These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression.
-The volcano plot along with the count of significant DEGs are presented in @diff-results.
+The volcano plot along with the count of significant DEGs are presented in Section @diff-results.
 
 == GO functional enrichment 
 
-GO enrichment analysis was performed on the set of significant differentially expressed genes (DEGs) to identify overrepresented Biological Process (BP) terms. The analysis was performed using the GSEApy Python library with the predefined `GO_Biological_Process_2023` gene-set library. The significant DEGs identified from the differential expression analysis were used as the input gene set. The resulting enrichment terms were ranked according to their statistical significance and the number of genes involved each of the enriched term, and displayed in a dot plot. The results are presented in @gene-ont.
+GO enrichment analysis was performed on the set of significant differentially expressed genes (DEGs) to identify overrepresented Biological Process (BP) terms. The analysis was performed using the GSEApy Python library with the predefined `GO_Biological_Process_2023` gene-set library. The significant DEGs identified from the differential expression analysis were used as the input gene set. The resulting enrichment terms were ranked according to their statistical significance and the number of genes involved each of the enriched term, and displayed in a dot plot. The results are presented in Section @gene-ont.
 
-The top enriched biological processes were subsequently examined to identify processes relevant to the objectives of this study. Based on the enrichment results and discussed biological connection in @mito-apop-connect, apoptosis and mitochondrial respiratory-chain complexes were selected for further analysis. 
+The top enriched biological processes were subsequently examined to identify processes relevant to the objectives of this study. Based on the enrichment results and discussed biological connection in Section @mito-apop-connect, apoptosis and mitochondrial respiratory-chain complexes were selected for further analysis. 
 
-== STRING Interaction Network Analysis
+== STRING interaction network mapping and analysis
 
 The list of genes associated with apoptosis was retrieved from the Kyoto Encyclopedia of Genes and Genomes (KEGG) database, via GSEApy using the `KEGG_2021_Human` gene-set library @kegg. 
-The list of genes complexes I–V was retrieved from Human Mitocarta @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis.
+The list of genes complexes I–V was retrieved from Human Mitocarta @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis. As an additional visualization, log2FC of the genes in the set were plotted in a bar graph to inspect the portion of up and down-regulated genes in each of the biological entities involved.
 
-The selected genes are then fed into to the STRING database to obtain protein association networks. The resulting networks were imported into Python and analysed using the NetworkX library. Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and identifying the proteins involved. The resulting edge counts and protein involvement were used to characterize the associations between apoptosis and complexes I–V.
+The selected genes are then fed into to the STRING database to obtain protein association networks, limiting the confidence score of interaction to at least 0.90 to see the most meaningful interactions. The resulting networks were imported into Python and analysed using the NetworkX library. 
 
+Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and identifying the proteins involved. The resulting edge counts and protein involvement were used to characterize the associations between apoptosis and complexes I–V. The corresponding results are presented in Section @cell-death-int.
 

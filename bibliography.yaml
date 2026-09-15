@@ -440,6 +440,17 @@ szklarczyk2023:
     volume: 51
     issue: D1
 
+string_scores:
+  type: web
+  title: "STRING Scores"
+  author:
+    - STRING Consortium
+  url:
+    value: https://string-db.org/help/scores/
+    date: 2026-09-15
+  accessed:
+    date: 2026-09-15
+
 greene2014:
   type: article
   title: "Big Data Bioinformatics"
