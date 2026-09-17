@@ -114,7 +114,7 @@ This relationship is particularly relevant in GBM, where alterations in mitochon
 
 == Transcriptomics and computational analysis
 
-=== From conventional molecular analysis to computational approaches
+=== From conventional molecular analysis to computational approaches <bioinformatics>
 Having established the relevance of apoptosis and mitochondrial respiratory-chain function in GBM, investigating alterations in the genes involved in these processes requires methods capable of measuring gene activity across large numbers of genes simultaneously.
 
 Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano @kitano2002 argues that although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
