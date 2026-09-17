@@ -19,7 +19,7 @@ significantly differentially expressed, and the change in expression and their s
     ,
 ) <volcano>
 
-Of the 45.000 results produced by PyDESeq2, roughly 27.300 genes were identified to be significantly differentially expressed — around 60%. More specifically, 20.300 of the 27.300 were up-regulated with mean $log_2"FC"$ of $3.98$, and the remaining 7.000 genes were down-regulated with mean $log_2"FC"$ of $-2.71$.
+Of the 45.000 results produced by PyDESeq2, roughly 27.300 genes were identified to be significantly differentially expressed — around 60%. More specifically, 20.300 of the 27.300 were up-regulated with mean $log_2"FC"$ of $3.98$, and the remaining 7.000 genes were down-regulated with mean $log_2"FC"$ of $-2.71$. The bulk of the log2FC values are seen to to lie within approximately 5 log2FC units for downregulated genes and 10 log2FC units for upregulated genes. 
 
 
 ==  Functional enrichment of differentially expressed genes <gene-ont>
@@ -40,9 +40,6 @@ With the set of significant DEGs obtained from the differential analysis, they a
 
 Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to be be related to the respitatory functions of the mitochondria (highlighted in red) as discussed in @respitatory-funcs, all with a corresponding $p"-value"$ lower than $0.05$. Furthermore, the majority (7 out of 9) of identified mitochondrial respiration-related BPs lie within the top 10 overrepresented BPs.
 
-== Association between apoptosis and mitochondrial respiratory complexes <cell-death-int>
-
-@fcs shows the Log2FC magnitudes of the genes involved in respiratory complexes and in apoptosis. Proportion-wise, all the complexes are seen to be mostly down-regulated, while apoptosis is split down the middle between up- and down-regulated.
 
 #figure(
     grid(
@@ -60,6 +57,12 @@ Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to 
     ,
 ) <fcs>
 
+@fcs shows the Log2FC magnitudes of the genes involved in respiratory complexes and in apoptosis. Proportion-wise, all the complexes are seen to be mostly down-regulated, while apoptosis is split down the middle between up- and down-regulated. The biological implications of the above results are discussed in Section @diff-discuss.
+
+== Association between apoptosis and mitochondrial respiratory complexes <cell-death-int>
+
+
+
 Displayed in @general-network is the obtained interaction network containing proteins resulting from apoptotic and respiratory complex genes. Additionally, the protein's involvement is annotated by the color it is filled.
 
 #figure(
@@ -75,9 +78,9 @@ Displayed in @general-network is the obtained interaction network containing pro
     ,
 ) <general-network>
 
-The 2 major groups can be seen to be very distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. The combination of stated information implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
+The 2 major groups can be seen to be very distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. The combination of stated information implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. Further discussion of CYCS will be presented in Section @major-network-discuss.
 
-For further inspection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their log2FC values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second figure from left to right, second row), where there exists no connection between 2 the groups.
+For further inspection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their log2FC values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
 
 #figure(
   grid(
@@ -86,14 +89,15 @@ For further inspection, the interactions between apoptosis and each of the respi
     row-gutter: 1em,
     
     // Row 1
-    [#image("../images/results/classical_apoptosis_complex_i.svg", height: 4.15cm)],
-    [#image("../images/results/classical_apoptosis_complex_ii.svg", height: 4.15cm)],
-    [#image("../images/results/classical_apoptosis_complex_iii.svg", height: 4.15cm)],
+    [#image("../images/results/classical_apoptosis_complex_i.svg", height: 6cm)],
+    [#image("../images/results/classical_apoptosis_complex_ii.svg", height: 6cm)],
+    [#image("../images/results/classical_apoptosis_complex_iii.svg", height: 6cm)],
     
     // Row 2
      // Empty placeholder shifts image iv to the middle column
-    [#image("../images/results/classical_apoptosis_complex_iv.svg", height: 4.15cm)],
-    [#image("../images/results/classical_apoptosis_complex_v.svg", height: 4.15cm)],
+    [#image("../images/results/classical_apoptosis_complex_iv.svg", height: 6cm)],
+    [#image("../images/results/classical_apoptosis_complex_v.svg", height: 6cm)],
+    [#image("../images/results/network_legend.svg", height: 3.5cm)]
   ),
   kind: image,
   caption: [Protein interaction network from apoptotic and respiratory complex genes in classical GBM.],
@@ -138,4 +142,4 @@ The count of edges connecting apoptotic and respiratory complex genes are shown 
     )<edge-count>
 ]
 
-Possible biological meaning and explanation of all shown results above are discussed in detail in  Section @cyto.
+The differences in the edge counts may provide insight into how apoptosis is involved with each of the complexes. Possible biological meaning and explanation of all results shown above are discussed in detail in Section @minor-network-discuss.

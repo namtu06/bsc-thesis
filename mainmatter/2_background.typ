@@ -11,16 +11,16 @@ The World Health Organization classifies gliomas into grades I to IV, with grade
 
 == Molecular mechanisms of glioblastoma
 
-=== Molecular heterogeneity and subtypes
-GBM possesses an incredible molecular heterogeneity. Defining transcriptomic mutations of GBM include @tang2025 @singh2022:
+=== Molecular heterogeneity and subtypes <gbm-hetero>
+GBM possesses an incredible molecular heterogeneity — meaning the tumor is not made up of identical cells, but rather a highly complex mix of different cell types, vast genetic mutations, and biological behaviors. Defining transcriptomic mutations of GBM include @tang2025 @singh2022:
 - *_TP53_ mutations*: Appear in 31-38% of all GBM patients, play a role in disrupting cell cycle regulation and apoptosis.
-- *_PTEN_ mutations*: Appears in 24-37% of GBM patients, activate tumor-survival-enducing pathways.
-- *_EGFR_ amplifcation and mutations*: Appears in 36-60% of GBM patients, enhances cell growth.
+- *_PTEN_ mutations*: Appear in 24-37% of GBM patients, activate tumor-survival-enducing pathways.
+- *_EGFR_ amplifcation and mutations*: Appear in 36-60% of GBM patients, enhances cell growth.
 - *and many others*.
 
 The expression levels of the genes listed vary vastly on a per-sample basis @verhaak2010 @hanif2017 @eisenbarth2023. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
 
-According to Verhaak et al. and other further sequencing experiments @verhaak2010 @eisenbarth2023, GBM is categories into 3 major subtypes according to their expression of signature genes: Proneural, Mesenchymal, and Classical. Each subtype have their own distinct levels of expression of the the defining genes and resistance to therapies. However, GBM samples have been shown to convert from one subtype to another during tumor progression and recurrence, contributing to its agressiveness and resistance to therapies. @eisenbarth2023.
+According to Verhaak et al. and other further sequencing experiments @verhaak2010 @eisenbarth2023, GBM is categorized into 3 major subtypes according to their expression of signature genes: Proneural, Mesenchymal, and Classical. Each subtype have their own distinct levels of expression of the the defining genes and resistance to therapies. However, GBM samples have been shown to convert from one subtype to another during tumor progression and recurrence, contributing to its agressiveness and resistance to therapies. @eisenbarth2023.
 
 The Proneural subtype is characterized by major alteration of the PDGFRA gene and point mutation of _IDH1_, and it also had the most _TP53_ mutations in the TCGA dataset; functional analysis points to developmental neuron-related processes. Mesenchymal subtype has genes in the tumor necrosis factor super family such as NF1 highly expressed, reflecting its tendency to have higher overall necrosis compared to other subtypes @verhaak2010 @singh2022. 
 

@@ -15,21 +15,27 @@
 	glioblastoma: (
 		name: "GBM",
 		description: [
-			Glioblastoma multiforme
+			Glioblastoma multiforme, the most aggressive form of brain tumors.
 		]
 	),
 	DEGs: (
 		name: "DEG",
 		description: [
 	
-			 (Significantly) differentially expressed genes
+			 (Significantly) differentially expressed gene.
 		]
 	),
 	gene: (
 		name: emph[EGFR],
 		description: [
-			Italic words denote genes
+			Italic words denote genes.
 		]
 	),
+	oxphos: (
+		name: "OXPHOS",
+		description: [
+			Oxidative phosphorylation, the driver of mitochondrial respiration.
+		]
+	)
 
 )

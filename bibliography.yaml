@@ -1342,13 +1342,120 @@ lee2023:
     volume: 55
     issue: 8
 
+sharma2009:
+  type: article
+  title: "Mitochondrial respiratory complex I: structure, function and implication in human diseases"
+  author:
+    - Sharma, Lokendra K.
+    - Lu, Jianxin
+    - Bai, Yidong
+  date: 2009
+  page-range: 1266-1277
+  serial-number:
+    doi: 10.2174/092986709787846578
+    issn: 1875-533X
+  url:
+    value: https://doi.org/10.2174/092986709787846578
+    date: 2026-09-18
+  parent:
+    type: periodical
+    title: Current Medicinal Chemistry
+    volume: 16
+    issue: 10
 
+ricci2004:
+  type: article
+  title: "Disruption of mitochondrial function during apoptosis is mediated by caspase cleavage of the p75 subunit of the electron transport chain"
+  author:
+    - Ricci, Jean E.
+    - Munoz-Pinedo, Cristina
+    - Fitzgerald, Patrick
+    - Bailly-Maitre, Blandine
+    - Perkins, Guy A.
+    - Yadava, Nidhi
+    - Scheffler, Irwin E.
+    - Ellisman, Mark H.
+    - Green, Douglas R.
+  date: 2004
+  page-range: 773-786
+  serial-number:
+    doi: 10.1016/S0092-8674(04)00442-0
+    issn: 0092-8674
+  url:
+    value: https://doi.org/10.1016/S0092-8674(04)00442-0
+    date: 2026-09-18
+  parent:
+    type: periodical
+    title: Cell
+    volume: 117
+    issue: 6
 
+grimm2013:
+  type: article
+  title: "Respiratory chain complex II as general sensor for apoptosis"
+  author:
+    - Grimm, Stefan
+  date: 2013
+  page-range: 565-572
+  serial-number:
+    doi: 10.1016/j.bbabio.2012.09.009
+    issn: 0005-2728
+  url:
+    value: https://doi.org/10.1016/j.bbabio.2012.09.009
+    date: 2026-09-18
+  parent:
+    type: periodical
+    title: "Biochimica et Biophysica Acta (BBA) - Bioenergetics"
+    volume: 1827
+    issue: 5
 
+nishimura2001:
+  type: article
+  title: "Regulation of apoptosis by respiration: cytochrome c release by respiratory substrates"
+  author:
+    - Nishimura, Goshi
+    - Proske, Rita J.
+    - Doyama, Hiroko
+    - Higuchi, Masahiro
+  date: 2001
+  page-range: 399-404
+  serial-number:
+    doi: 10.1016/S0014-5793(01)02859-9
+    issn: 0014-5793
+  url:
+    value: https://doi.org/10.1016/S0014-5793(01)02859-9
+    date: 2026-09-18
+  parent:
+    type: periodical
+    title: FEBS Letters
+    volume: 505
+    issue: 3
 
-
-
-
+huttemann2011:
+  type: article
+  title: "The multiple functions of cytochrome c and their regulation in life and death decisions of the mammalian cell: From respiration to apoptosis"
+  author:
+    - Hüttemann, Maik
+    - Pecina, Petr
+    - Rainbolt, Matthew
+    - Sanderson, Thomas H.
+    - Kagan, Valerian E.
+    - Samavati, Lobelia
+    - Doan, Jeffrey W.
+    - Lee, Icksoo
+  date: 2011
+  page-range: 369-381
+  serial-number:
+    doi: 10.1016/j.mito.2011.01.010
+    issn: 1567-7249
+  url:
+    value: https://doi.org/10.1016/j.mito.2011.01.010
+    date: 2026-09-18
+  parent:
+    type: periodical
+    title: Mitochondrion
+    volume: 11
+    issue: 3
 
 
 

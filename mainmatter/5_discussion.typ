@@ -1,7 +1,44 @@
 = Discussion <discussion>
 
-== Cytochrome c involvement in apoptosis and cellular respiration <cyto>
+== Transcriptomic alterations and mitochondrial processes in Classical GBM <diff-discuss>
 
-=== 
+The large proportion of DEGs implies that the transcriptional differences between Classical GBM and normal brain tissue spans across a broad range of biological functions rather than being restricted to a small number of genes. The volcano plot also indicated an asymmetric distribution of log2FC values, with most genes exhibiting moderate changes and a smaller subsets showing a substantially larger fold changes. This further validates the highly heterogeneous profile of GBM as described in Section @gbm-hetero.
 
-== Limitations and future improvements
+To investigate the biological processes associated with these transcriptional alterations, GO enrichment analysis was performed on the significant DEGs. The enrichment results indicate that genes involved in mitochondrial respiratory processes were disproportionately represented among the genes showing significant transcriptional differences in Classical GBM.
+
+The strong representation of mitochondrial respiratory processes is consistent with previous research describing alterations in mitochondrial activities and OXPHOS in GBM. Mitochondrial function has been associated with GBM progression and tumour-cell survival, while differences in oxidative phosphorylation have also been reported between molecular subtypes of GBM @nagy2015 @garofano2021. The present findings therefore agree with previous evidence that mitochondrial metabolic processes are an important component of the molecular characteristics of GBM. However, a more significant enrichment result does not necessarily confirm that the biological processes are more or less active, and must be confirmed via other analyses.
+
+Further inspection of the expression profiles of the individual respiratory complexes showed that genes belonging to Complexes I–V were predominantly down-regulated. This provides further detail in addition to the GO enrichment results, showing that the biological processes represented are accompanied by a generally negative direction of expression change among the genes involved. This may imply reduced mitochondrial activity, potentially leading to improper regulation of cell death-related functions, agreeing with what was proposed in previous literature in Section @mito-apop-connect. However, this interpretation remains speculative, as reduced mitochondrial respiratory activity cannot be determined from transcriptomic data alone @vogel2012, and experimental confirmation is still required.
+
+
+== Established apoptosis–mitochondrial respiratory relationship in Classical GBM <major-network-discuss>
+
+The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. Mitochondrial alterations can affect apoptotic signalling, while proteins involved in the respiratory chain may also participate in pathways regulating cell death. In particular, cytochrome c, encoded by CYCS, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020.
+
+The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with this established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to capture a previously established link between mitochondrial respiratory function and apoptosis. More importantly, many previous computational studies of GBM have relied on TCGA-derived transcriptomic data, whereas the present analysis uses the independent CPTAC cohort, showing that this association is also computationally observed in a separate GBM dataset.
+
+Furthermore, the present analysis examines this relationship specifically within Classical GBM, rather than considering GBM as a single molecular group. Thus, while the relationship between mitochondrial respiration, CYCS, and apoptosis itself is well established, its computational observation within Classical GBM using the CPTAC cohort provides a subtype-specific characterization of this relationship. This also provides a basis for investigating whether similar associations are observed in the remaining two major GBM subtypes in future studies.
+
+
+== Additional network associations between apoptosis and respiratory complexes <minor-network-discuss>
+
+
+Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, the network analysis identified additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
+
+The number of associations varied between the respiratory complexes, with Complex I showing the largest number of connections, followed by Complex II, Complex IV, and Complex III, while no associations were identified for Complex V. This variation suggests that the relationship between apoptosis and mitochondrial respiratory complexes may extend beyond the well-established role of CYCS and involve multiple components of the respiratory chain.
+
+The high number of associations identified for Complex I may be related to the multiple established connections between this complex and apoptotic regulation. In addition to its central role in electron transport, Complex I is a major site of mitochondrial ROS production, while several of its subunits have been directly associated with apoptotic processes. For example, NDUFA13/GRIM-19 has been identified as a regulator of cell death, while NDUFS1 can be targeted by caspases during apoptosis @sharma2009 @ricci2004. The relatively high connectivity of Complex I in the present network may therefore reflect the diverse biological links between Complex I and apoptosis-associated processes.
+
+Complex II showed the second-highest number of associations in the network. This finding is consistent with previous evidence describing Complex II as an important mediator of cell-death signalling. Unlike the other respiratory complexes, Complex II also directly links the tricarboxylic acid cycle with the electron transport chain, allowing metabolic changes to influence respiratory and apoptotic signalling. In particular, Complex II has been proposed to function as a general sensor of apoptotic stimuli, with alterations in its activity capable of promoting ROS generation and cell death @grimm2013.
+
+Complex IV showed the third-highest number of associations in the network, with 10 connections. As the terminal complex of the electron transport chain, Complex IV receives electrons from cytochrome c and transfers them to molecular oxygen, completing the electron transfer process @vercellino2022. Its direct interaction with cytochrome c provides an established connection to the apoptotic pathway, as cytochrome c can also function as a mediator of intrinsic apoptosis following its release from mitochondria @huttemann2011. The relatively high number of associations identified for Complex IV may therefore reflect its position at the intersection of mitochondrial respiration and the CYCS-associated apoptotic pathway.
+
+Complex III transfers electrons to cytochrome c, which subsequently transfers electrons to Complex IV as part of the respiratory chain @vercellino2022. Its primarily intermediate role in electron transfer may contribute to its lower connection count compared with the aforementioned two complexes. Furthermore, respiratory activity involving Complex III has been experimentally associated with cytochrome c release during apoptosis @nishimura2001. Although Complex III showed fewer associations than Complexes I and II, these findings indicate that its connection to apoptosis remains relevant within the network.
+
+In contrast, no associations were identified for Complex V. Complex V differs functionally from Complexes I–IV because it does not directly participate in electron transfer or proton pumping; instead, ATP synthase uses the proton-motive force generated by the respiratory chain to produce ATP @vercellino2022. Therefore, it suggests that the network captures interactions that are more direct, and not as passive as the Complex V-apoptosis interaction.
+
+
+
+It should be emphasized that the studies discussed above do not establish the observed order of connectivity as an absolute biological hierarchy. Rather, they provide possible biological interpretations for the differences in connection counts observed in the present network, while the network itself provides the basis for identifying these associations in Classical GBM.
+
+== Limitations and future work
