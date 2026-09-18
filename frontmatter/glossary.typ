@@ -36,6 +36,12 @@
 		description: [
 			Oxidative phosphorylation, the driver of mitochondrial respiration.
 		]
-	)
+	),
 
+	apoptosis: (
+		name: "Apoptosis",
+		description: [
+			A major form of programmed cell death, closely connected to the mitochondria
+		]
+	)
 )

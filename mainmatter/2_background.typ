@@ -7,12 +7,12 @@
 
 Glioblastoma multiforme (GBM) is one of the most aggressive and most common form of gliomas, with an extremely poor prognosis of a median survival period of 12-15 months @lemee2018 @hanif2017. To date, GBM has no clear carcinogenetic cause, with high exposure to ionizing radiation being the only confirmed risk. Common carcinogenetic causes of other cancers such as smoking, diet, pesticide exposure, etc. have not been shown to cause GBM @hanif2017.
 
-The World Health Organization classifies gliomas into grades I to IV, with grade I being relatively unproliferative and can be eliminated via surgery, and grade IV being the most invasive and highly malignant — GBM is classified under grade IV @hanif2017. Additionally, GBM possesses an extreme heterogeneity in its structure which results in its resistance to conventional therapies and high recurrence rate @singh2022. A recent review article by David Eisenbarth and Y. Alan Wang @eisenbarth2023 identified at least 10 major areas of heterogeneity in GBM's biology, presenting vast amounts of fronts to tackle therapeutically.
+The World Health Organization classifies gliomas into grades I to IV, with grade I being relatively unproliferative and can be eliminated via surgery, and grade IV being the most invasive and highly malignant — GBM is classified under grade IV @hanif2017. Additionally, GBM possesses an extreme heterogeneity in its structure — meaning the tumor is not made up of identical cells, but rather a highly complex mix of different cell types, vast genetic mutations, and biological behaviors — which results in its resistance to conventional therapies and high recurrence rate @singh2022. A recent review article by David Eisenbarth and Y. Alan Wang @eisenbarth2023 identified at least 10 major areas of heterogeneity in GBM's biology, presenting vast amounts of fronts to tackle therapeutically.
 
 == Molecular mechanisms of glioblastoma
 
 === Molecular heterogeneity and subtypes <gbm-hetero>
-GBM possesses an incredible molecular heterogeneity — meaning the tumor is not made up of identical cells, but rather a highly complex mix of different cell types, vast genetic mutations, and biological behaviors. Defining transcriptomic mutations of GBM include @tang2025 @singh2022:
+GBM possesses an incredible molecular heterogeneity . Defining transcriptomic mutations of GBM include @tang2025 @singh2022:
 - *_TP53_ mutations*: Appear in 31-38% of all GBM patients, play a role in disrupting cell cycle regulation and apoptosis.
 - *_PTEN_ mutations*: Appear in 24-37% of GBM patients, activate tumor-survival-enducing pathways.
 - *_EGFR_ amplifcation and mutations*: Appear in 36-60% of GBM patients, enhances cell growth.
