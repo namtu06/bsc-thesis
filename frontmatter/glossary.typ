@@ -41,7 +41,29 @@
 	apoptosis: (
 		name: "Apoptosis",
 		description: [
-			A major form of programmed cell death, closely connected to the mitochondria
+			A major form of programmed cell death, closely connected to the mitochondria.
+		]
+	),
+
+	functional_analysis: (
+		name: "Functional analysis",
+		description: [
+			The identification of biological functions represented by genes or proteins.
+		]
+	),
+
+	enrichment_analysis: (
+		name: "Enrichment analysis",
+		description: [
+			Specific method of functional analysis, using statistical methods to identify significant functional groups.
+		]
+	),
+
+	CPTAC: (
+		name: "CPTAC",
+		description: [
+			Clinical Proteomic Tumor Analysis Consortium, a comprehensive and coordinated effort to understand molecular basis of cancer
+			through the application of robust, quantitative, proteomic technologies and workflows.
 		]
 	)
 )

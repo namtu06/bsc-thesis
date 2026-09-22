@@ -12,13 +12,7 @@ The World Health Organization classifies gliomas into grades I to IV, with grade
 == Molecular mechanisms of glioblastoma
 
 === Molecular heterogeneity and subtypes <gbm-hetero>
-GBM possesses an incredible molecular heterogeneity . Defining transcriptomic mutations of GBM include @tang2025 @singh2022:
-- *_TP53_ mutations*: Appear in 31-38% of all GBM patients, play a role in disrupting cell cycle regulation and apoptosis.
-- *_PTEN_ mutations*: Appear in 24-37% of GBM patients, activate tumor-survival-enducing pathways.
-- *_EGFR_ amplifcation and mutations*: Appear in 36-60% of GBM patients, enhances cell growth.
-- *and many others*.
-
-The expression levels of the genes listed vary vastly on a per-sample basis @verhaak2010 @hanif2017 @eisenbarth2023. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
+GBM possesses an incredible molecular heterogeneity . Defining transcriptomic mutations of GBM include *_TP53_ mutations* apppearing in 31-38% of all GBM patients which play a role in disrupting cell cycle regulation and apoptosis, *_PTEN_ mutations* appearing in 24-37% of GBM patients which activate tumor-survival-enducing pathways, *_EGFR_ amplifcation and mutations* appearing in 36-60% of GBM patients which enhance cell growth, and many others @tang2025 @singh2022. The expression levels of the genes listed vary vastly on a per-sample basis @verhaak2010 @hanif2017 @eisenbarth2023. This shows that GBM is not a single uniform disease, and different molecular profiles can correspond to different biological characteristics of the same disease.
 
 According to Verhaak et al. and other further sequencing experiments @verhaak2010 @eisenbarth2023, GBM is categorized into 3 major subtypes according to their expression of signature genes: Proneural, Mesenchymal, and Classical. Each subtype have their own distinct levels of expression of the the defining genes and resistance to therapies. However, GBM samples have been shown to convert from one subtype to another during tumor progression and recurrence, contributing to its agressiveness and resistance to therapies. @eisenbarth2023.
 
@@ -33,7 +27,7 @@ Molecular alterations in GBM described above significantly affect pathways gover
 A few of the most common pathways dysregulated (out of the several dozens) are @singh2022 @tang2025 @gomes2025:
 - *RTK/EGFR Signaling*: EGFR is a receptor tyrosine kinase whose activation stimulates downstream signalling pathways including PI3K/AKT/mTOR. Amplification or other activating alterations of EGFR can therefore result in persistent signalling that promotes tumour proliferation and survival.
 - *PI3K/AKT/mTOR*: A central pathway influencing cell survival and proliferation with _EGFR_ as a major upstream activator, the activation of which promotes tumor growth and treatment resistance. The tumor-supressing gene _PTEN_ negatively affects the pathway, meaning the loss of it exacerbates GBM's aggressiveness.
-- *p53*: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. Dysregulation leads to uncontrolled proliferation and impaired cell death.
+- *p53*: _TP53_ being a major component, the pathway governs cell cycle and apoptosis. The dysregulation of this pathway leads to uncontrolled proliferation and impaired cell death.
 
 
 Collectively, these alterations have the tendency to disrupt signalling pathways involved in cell proliferation, cell-cycle regulation, and cellular survival. Particularly, alterations affecting survival pathways allow abnormal genes to continue multiplying despite cellular damage or other signals that would otherwise signal their death, contributing to GBM's invasiveness @lee2023. As such, the dysregulation of cellular survival and death mechanisms are an important aspect to be inspected further. Among these mechanisms, apoptosis is particularly relevant because it is among one of the most common forms of regulated cell death @lee2023. 
@@ -44,15 +38,13 @@ Collectively, these alterations have the tendency to disrupt signalling pathways
 
 
 
-== Apoptosis in glioblastoma
+== Programmed cell deaths
+
+Other types of cell deaths here.
 
 Apoptosis, when functioning normally, is essential for normal development and tissue homeostasis, while its dysregulation has been implicated in various diseases, including cancer. In cancer, impaired apoptotic signalling can allow cells carrying genomic abnormalities to evade elimination and continue proliferating, thereby contributing to tumour development and progression. Consequently, the ability of cancer cells to evade apoptosis is considered an important characteristic of tumorigenesis @gomes2025 @lee2023.
 
-Apoptosis has 2 main pathways depending on the molecular interactions involved: (1) *intrinsic or mitochondrial pathway*, triggered by a variety of both extra- and intra-celullar stress, and (2) *extrinsic or death receptor pathway*, activated when extracellular ligands attach to certain extracellular receptors and resulting in the formation of death-inducing signalling complexes @lee2023 @jan2019. More specifically, the cascades of interactions leading to apoptosis are @jan2019:
-- *Intrinsic pathway*: stress induces the production of proteins in the Bcl-2 family which when inserted into the mitochondrial membrane, releasing cytochrome c. Cytochrome c interacts with Apaf-1 and procaspase-9, producing the apoptosome complex that triggers the activation of caspase-9,
-- *Extrinsic pathway*: extracellular ligands include TNF (tumor necrosis factor), Fas-L (Fas ligand), and TRAIL (TNF-related apoptosis-inducing ligand), when attached to their respective extracellular portion of transmembrane receptors, forms a death-inducing signalling complex (DISC) and leads to the activation of caspase-8,
-
-with both ultimately converging on the activation of executioner caspases which start the main process of apoptosis, better visualized in @cell-death-pathway-diagram. The main process involves loss of inner mitochondrial membrane potential, hyperproduction of superoxide ions, outflow of matrix calcium glutathione, and release of membrane proteins, rendering the cell "dead" @jan2019.
+Apoptosis has 2 main pathways depending on the molecular interactions involved: (1) *intrinsic or mitochondrial pathway*, triggered by a variety of both extra- and intra-celullar stress, and (2) *extrinsic or death receptor pathway*, activated when extracellular ligands attach to certain extracellular receptors and resulting in the formation of death-inducing signalling complexes @lee2023 @jan2019. More specifically, the cascades of interactions leading to apoptosis ar described and visualized in @cell-death-pathway-diagram. The main process involves loss of inner mitochondrial membrane potential, hyperproduction of superoxide ions, outflow of matrix calcium glutathione, and release of membrane proteins, rendering the cell "dead" @jan2019.
 
 #figure(
     grid(
@@ -63,7 +55,7 @@ with both ultimately converging on the activation of executioner caspases which 
         )
     ],
     kind: image,
-    caption:[Pathways of Apoptosis @jan2019] 
+    caption:[Pathways of Apoptosis @jan2019. In the *intrinsic pathway (right)*, stress induces the production of proteins in the Bcl-2 family which when inserted into the mitochondrial membrane, releasing cytochrome c. Cytochrome c interacts with Apaf-1 and procaspase-9, producing the apoptosome complex that triggers the activation of caspase-9. In the *extrinsic pathway (left)* extracellular ligands include TNF (tumor necrosis factor), Fas-L (Fas ligand), and TRAIL (TNF-related apoptosis-inducing ligand), when attached to their respective extracellular portion of transmembrane receptors, forms a death-inducing signalling complex (DISC) and leads to the activation of caspase-8. Both pathways' final caspase ultimately activate executioner caspases which start the main process of apoptosis @jan2019.] 
     ,
 ) <cell-death-pathway-diagram>
 
@@ -77,20 +69,14 @@ The intrinsic apoptotic pathway is closely associated with mitochondrial functio
 
 == Mitochondrial function and respiratory complexes
 === General mitochondrial function
-The mitochondria is the primary site of cellular function, and it has fundamental roles in processes such as ATP production, ROS generation, and the execution of cell death pathways @liang2025 @jan2019. Carbohydrates, fatty acids, and amino acids can be metabolised into substrates, which enters the tricarboxylic acid (TCA) cycle. The TCA cycle generates reducing equivalents, primarily NADH and FADH₂, which subsequently donate electrons to the mitochondrial respiratory chain to drive oxidative phosphorylation and ATP production @liang2025.
+The mitochondria is the primary site of cellular function, and it has fundamental roles in processes such as ATP production, ROS generation, and the execution of cell death pathways @liang2025 @jan2019. Carbohydrates, fatty acids, and amino acids can be metabolised into substrates, which enters the tricarboxylic acid (TCA) cycle. The TCA cycle generates reducing equivalents, primarily NADH and FADH₂, which subsequently donate electrons to the mitochondrial respiratory chain to drive oxidative phosphorylation and ATP production @liang2025. 
 
 === Oxidative phosphorylation and the respiratory chain <respitatory-funcs>
 
-Mitochondrial oxidative phosphorylation (OXPHOS) is a key mechanism of energy production in eukaryotic cells. It is comprised of 5 inner mitochondrial protein complexes I-V (also referred to as CI, CII, etc.) and 2 mobile electron carriers forming the electron transport chain (ETC) @vercellino2022. 
+Mitochondrial oxidative phosphorylation (OXPHOS) is a key mechanism of energy production in both cancerous and non-cancerous cells. It is comprised of five inner mitochondrial protein complexes I-V (also referred to as CI, CII, etc.) and 2 mobile electron carriers forming the electron transport chain (ETC) @vercellino2022. 
 
-The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the reduction of molecular oxygen to water and the pumping of protons across the inner mitochondrial membrane (IMM) via Complex I, III, and IV, each using their own pumping mechanism, to drive ATP synthesis @vercellino2022. The ETC also uses energy from the reducing equivalents to generated a proton gradient across the IMM, which is used by ATP synthase (Complex V) to *phosphorylate* ADP to ATP, the universal energy currency of cells . The specific roles of each complexes are as follows @vercellino2022:
-- *Complex I*: Transfers electrons from NADH to ubiquinone and pumps protons.
-- *Complex II*: Does not pump protons but contributes to reduction of ubiquinone.
-- *Complex III*: Reduces ubiquinone and cytochrome c, in turn shuttles to Complex IV.
-- *Complex IV*: Donates electron for final reduction of oxygen.
-- *Complex V*: Uses proton gradient and the reduction of oxygen to synthesize ATP.
+The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the reduction of molecular oxygen to water and the pumping of protons across the inner mitochondrial membrane (IMM) via Complex I, III, and IV, each using their own pumping mechanism, to drive ATP synthesis @vercellino2022. The ETC also uses energy from the reducing equivalents to generated a proton gradient across the IMM, which is used by ATP synthase (Complex V) to *phosphorylate* ADP to ATP, the universal energy currency of cells. More specifically, *Complex I* transfers electrons from NADH to ubiquinone and pumps protons, *Complex II* does not pump protons but contributes to reduction of ubiquinone, *Complex III* reduces ubiquinone and cytochrome c, and in turn shuttles to Complex IV, *Complex IV* donates electron for final reduction of oxygen, and *Complex V* uses proton gradient and the reduction of oxygen to synthesize ATP @vercellino2022. The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
 
-The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
 === Mitochondrial respiratory chain-apoptosis relationship in GBM <mito-apop-connect>
 
 The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be inherently closely connected to each other. While the respiratory chain is essential for maintaining mitochondrial energy production and homeostasis, intrinsic apoptosis depends on the mitochondria for the regulation of apoptotic signalling. Therefore, disruption of respiratory-chain function and mitochondrial homeostasis can influence apoptotic signalling particularly through cytochrome c because of its involvement in both cellular respiration and apoptosis (@cytc) @nagy2015 @kalpage2020.
@@ -117,16 +103,16 @@ This relationship is particularly relevant in GBM, where alterations in mitochon
 === From conventional molecular analysis to computational approaches <bioinformatics>
 Having established the relevance of apoptosis and mitochondrial respiratory-chain function in GBM, investigating alterations in the genes involved in these processes requires methods capable of measuring gene activity across large numbers of genes simultaneously.
 
-Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano @kitano2002 argues that although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
+Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano argues that although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole @kitano2002. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
 
-Although systems-level approaches to biology had already gained considerable interest, their application was historically constrained by limitations in experimental technologies and the availability of quantitative molecular data @kitano2002. Recent advancements has made high-throughput and high quality profiling of biological systems possible, bringing forth a new set of challenges and opportunities in computationally analyzing and interpreting the new massive amount of deposited data, particularly with DNA microarrays and Mass Spectrometry (MS)-based  proteomics @greene2014 @elvitigala2010. 
+Although systems-level approaches to biology had already gained considerable interest, their application was historically constrained by limitations in experimental technologies and the availability of quantitative molecular data @kitano2002. Recent advancements has made high-throughput and high quality profiling of biological systems possible, bringing forth a new set of challenges and opportunities in computationally analyzing and interpreting the new massive amount of deposited data, particularly with RNA-based (transcriptomic) and protein-based (proteomic) data @greene2014 @elvitigala2010. 
 
 Among these approaches, transcriptomic technologies provide a means of measuring genome-wide changes in gene expression, which can subsequently be analysed computationally to identify molecular alterations associated with disease. For example, transcriptomic profiling has enabled the identification of distinct molecular subtypes of GBM, presenting more specific areas of deeper research into the disease @verhaak2010.
 
 
 === Transcriptomics and differential expression analysis
 
-Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from an organism's genome @lowe2017. According to Lowe et al. @lowe2017, two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined (@micro-seq).
+Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from the genome @lowe2017. According to Lowe et al. @lowe2017, two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined (@micro-seq).
 
 #figure(
     grid(
@@ -137,15 +123,15 @@ Transcriptomics technologies provide information on gene expression by measuring
         )
     ],
     kind: image,
-    caption:[Gene expression profilling in microarray and RNA-seq @rogawski2017.] 
+    caption:[Gene expression profilling comparison in microarray and RNA-seq. In microarrays, the extracted RNA are reverse transcribed and labeled with fluorescent probes. The cDNAs are applied to a microarray chip, where they bind to complementary sequences from annotated genes. The expression values correspond to the fluorescence of each cell. In RNA-seq, extracted RNA is fragmented, reverse-transcribed, and modified with linkers to aid sequencing. The obtained cDNA is then sequenced and aligned against a reference genome to obtain the expression levels @rogawski2017.] 
     ,
 ) <micro-seq>
  
-Large-scale efforts have been made to profile the transcriptomes of cancers, including GBM. Public resources such as the Gene Expression Omnibus (GEO) and The Cancer Genome Atlas (TCGA) provide access to extensive molecular profiling datasets from numerous cancer types, including glioblastoma @barrett2013 @tcga. The Clinical Proteomic Tumor Analysis Consortium (CPTAC) has further generated and integrated transcriptomic and proteomic data from cancer studies, including GBM @cptac. These resources provide opportunities for researchers to computationally reanalyse previously generated data and investigate molecular characteristics of cancer. The next challenge is therefore to extract meaningful biological information from these large-scale quantitative datasets.
+Large-scale efforts have been made to profile the transcriptomes of cancers, including GBM. Public resources such as the Gene Expression Omnibus (GEO) and The Cancer Genome Atlas (TCGA) provide access to extensive molecular profiling datasets from numerous cancer types @barrett2013 @tcga. The Clinical Proteomic Tumor Analysis Consortium (CPTAC) has further generated and integrated transcriptomic and proteomic data from cancer studies, including that of GBM @cptac. These resources provide opportunities for researchers to computationally reanalyse previously generated data and investigate molecular characteristics of cancer. The next challenge is therefore to extract meaningful biological information from these large-scale quantitative datasets.
 
 Comparative profiling involves comparing molecular measurements between predefined biological conditions to identify differences associated with a particular phenotype or state @altelaar2013. In transcriptomics, differential expression analysis is commonly used to compare gene expression between conditions, such as diseased and healthy tissue. Its main objective is to identify genes whose expression differs between the conditions, providing insight into potential molecular mechanisms underlying the observed phenotype.The resulting differential expression statistics can describe both the magnitude and direction of an expression difference, commonly represented by the log2 fold change (log2FC), and its statistical significance, represented by a p-value. Thresholds can subsequently be applied to identify genes considered differentially expressed, with the choice of thresholds depending on the experimental context and research objectives @rosati2024.
 
-A popular library for gene-level differential expression analysis is DESeq2 (with PyDESeq2 providing a Python implementation) which enables and streamlines vast amounts of analytical possibilities through raw gene counts produced by RNA-seq @deseq2_bioc_vignette. An average workflow with DESeq2 is displayed in @deseq-flow.
+A popular library for gene-level differential expression analysis is DESeq2 (with PyDESeq2 providing a Python implementation) which enables and streamlines vast amounts of analytical possibilities through raw gene counts produced by RNA-seq @deseq2_bioc_vignette. An average workflow with DESeq2 suggested by Harvard Chan Bioinformatics Core (HBC) is displayed in @deseq-flow.
 
 #figure(
     grid(
@@ -156,7 +142,7 @@ A popular library for gene-level differential expression analysis is DESeq2 (wit
         )
     ],
     kind: image,
-    caption:[Conceptual workflow of differential expression analysis using DESeq2. Adapted from Harvard Chan Bioinformatics Core (HBC) @hbctraining_deseq2_analysis.] 
+    caption:[Workflow of differential expression analysis using DESeq2 (adapted from HBC). The raw gene count are put through quality control. Afterwards, DESeq2 models raw counts, accounting for size factors, fitting and shrinking gene-wise dispersion estimates, and fitting a generalized linear model for each gene's experssion level, producing the gene's corresponding log2FC value. The resulting log2FC values are tested for a variety of metrics such as p-values and standard error @hbctraining_deseq2_analysis.] 
     ,
 ) <deseq-flow>
 
