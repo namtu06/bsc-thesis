@@ -56,7 +56,7 @@ Apoptosis has two main pathways depending on the molecular interactions involved
         )
     ],
     kind: image,
-    caption:[Pathways of Apoptosis @jan2019. In the *intrinsic pathway (right)*, stress induces the production of proteins in the Bcl-2 family which when inserted into the mitochondrial membrane, releasing cytochrome c. Cytochrome c interacts with Apaf-1 and procaspase-9, producing the apoptosome complex that triggers the activation of caspase-9. In the *extrinsic pathway (left)* extracellular ligands include TNF (tumor necrosis factor), Fas-L (Fas ligand), and TRAIL (TNF-related apoptosis-inducing ligand), when attached to their respective extracellular portion of transmembrane receptors, forms a death-inducing signalling complex (DISC) and leads to the activation of caspase-8. Both pathways' final caspase ultimately activate executioner caspases which start the main process of apoptosis @jan2019.] 
+    caption:[Pathways of apoptosis @jan2019. In the *intrinsic pathway (right)*, stress induces the production of proteins in the Bcl-2 family which when inserted into the mitochondrial membrane, releasing cytochrome c. Cytochrome c interacts with Apaf-1 and procaspase-9, producing the apoptosome complex that triggers the activation of caspase-9. In the *extrinsic pathway (left)* extracellular ligands include TNF (tumor necrosis factor), Fas-L (Fas ligand), and TRAIL (TNF-related apoptosis-inducing ligand), when attached to their respective extracellular portion of transmembrane receptors, forms a death-inducing signalling complex (DISC) and leads to the activation of caspase-8. Both pathways' final caspase ultimately activate executioner caspases which start the main process of apoptosis @jan2019.] 
     ,
 ) <cell-death-pathway-diagram>
 
@@ -78,7 +78,7 @@ The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the redu
 
 === Mitochondrial respiratory chain-apoptosis relationship in GBM <mito-apop-connect>
 
-The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be inherently closely connected to each other. While the respiratory chain is essential for maintaining mitochondrial energy production and homeostasis, intrinsic apoptosis depends on the mitochondria for the regulation of apoptotic signalling. Therefore, disruption of respiratory-chain function and mitochondrial homeostasis can influence apoptotic signalling particularly through cytochrome c because of its involvement in both cellular respiration and apoptosis (@cytc) @nagy2015 @kalpage2020.
+The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be inherently closely connected to each other. While the respiratory chain is essential for maintaining mitochondrial energy production and homeostasis, intrinsic apoptosis depends on the mitochondria for the regulation of apoptotic signalling. Therefore, disruption of respiratory-chain function and mitochondrial homeostasis can influence apoptotic signalling particularly through cytochrome c because of its involvement in both cellular respiration and apoptosis (@cytc). This relationship is particularly relevant in GBM, where alterations in mitochondrial metabolism and oxidative phosphorylation have been implicated in tumour-cell survival and progression in specific subtypes @nagy2015 @garofano2021 @kalpage2020.
 
 #figure(
     grid(
@@ -93,7 +93,7 @@ The mitochondrial respiratory chain and (intrinsic) apoptosis can be seen to be 
     ,
 ) <cytc>
 
-This relationship is particularly relevant in GBM, where alterations in mitochondrial metabolism and oxidative phosphorylation have been implicated in tumour-cell survival and progression in specific subtypes @nagy2015 @garofano2021. Changes in respiratory-chain activity may therefore influence the susceptibility of GBM cells to apoptosis. More specifically, improper functioning of the mitochondria may result in improper apoptosis, resulting in promoted tumor cell survivability.
+Changes in respiratory-chain activity may therefore influence the susceptibility of GBM cells to apoptosis. More specifically, improper functioning of the mitochondria may result in improper apoptosis, leading to promoted tumor cell survival.
 
 
 
@@ -102,9 +102,9 @@ This relationship is particularly relevant in GBM, where alterations in mitochon
 === From conventional molecular analysis to computational approaches <bioinformatics>
 Having established the relevance of apoptosis and mitochondrial respiratory-chain function in GBM, investigating alterations in the genes involved in these processes requires methods capable of measuring gene activity across large numbers of genes simultaneously.
 
-Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano argues that although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole @kitano2002. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
+Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano argues that, although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole @kitano2002. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
 
-Although systems-level approaches to biology had already gained considerable interest, their application was historically constrained by limitations in experimental technologies and the availability of quantitative molecular data @kitano2002. Recent advancements has made high-throughput and high quality profiling of biological systems possible, bringing forth a new set of challenges and opportunities in computationally analyzing and interpreting the new massive amount of deposited data, particularly with RNA-based (transcriptomic) and protein-based (proteomic) data @greene2014 @elvitigala2010. 
+Although systems-level approaches to biology had already gained considerable interest, their application was constrained by limitations in experimental technologies and the availability of quantitative molecular data @kitano2002. Recent advancements has made high-throughput and high quality profiling of biological systems possible, bringing forth a new set of challenges and opportunities in computationally analyzing and interpreting the new massive amount of deposited data, particularly with RNA-based (transcriptomic) and protein-based (proteomic) data @greene2014 @elvitigala2010. 
 
 Among these approaches, transcriptomic technologies provide a means of measuring genome-wide changes in gene expression, which can subsequently be analysed computationally to identify molecular alterations associated with disease. For example, transcriptomic profiling has enabled the identification of distinct molecular subtypes of GBM, presenting more specific areas of deeper research into the disease @verhaak2010.
 
@@ -151,7 +151,7 @@ RNA-seq count data often exhibit greater variance than their mean, a property kn
 
 Interpreting differentially expressed genes (DEGs) individually may provide limited insight into the broader biological processes underlying the observed changes @kitano2002. Functional enrichment analysis can instead identify biological pathways or functions that are overrepresented among the identified DEGs. @yu2012
 
-The Gene Ontology (GO) database provides structured and standardized representation of biological activities according to gene products,
+A mean of performing functional enrichment is through the Gene Onotlogy (GO) database. The GO database provides structured and standardized representation of biological activities according to gene products,
 organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Components (CC), and (3) Biological Processes (BP) @geneontology. GO enrichment analysis evaluates whether particular GO terms are statistically overrepresented among a set of genes compared with an appropriate background gene set (@GO-flow) @ashburner2000 @yu2012. The process allows groups of DEGs to be interpreted in terms of shared biological functions and processes rather than as individual genes.
 
 #figure(
@@ -169,7 +169,7 @@ organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Co
 
 Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011. Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
 
-In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein–protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023. 
+In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein-protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023. 
 
 A useful metric STRING provides from individual interactions is the STRING combined score which is computed by probabilistically combining multiple independent evidence sources, ranging from 0.150 to 0.999. STRING's 7 evidence channels include text mining, experiments, curated databases, co-expressions, co-occurrence across genomes, gene neighbourhoods, and gene fusion. A closer score to 1 indicates higher confidence that the interaction is real @string_scores.
 
