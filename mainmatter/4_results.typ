@@ -43,17 +43,17 @@ Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to 
 
 #figure(
     grid(
-        columns: 2,
+        rows: 2,
         row-gutter: 1em,
     )[
-        #image("../images/results/classical_mitochondrial_complexes_log2fc.svg", height:3cm,
+        #image("../images/results/classical_mitochondrial_complexes_log2fc.svg", height:auto,
         )
     ][
-        #image("../images/results/classical_apoptosis_log2fc.svg", height: 3cm,
+        #image("../images/results/classical_apoptosis_log2fc.svg", height: auto,
         )
     ],
     kind: image,
-    caption:[Log2FC bar plot of genes in respiratory complexes (left), and in apoptosis (right).] 
+    caption:[Log2FC bar plot of genes in respiratory complexes (top), and in apoptosis (bottom).] 
     ,
 ) <fcs>
 
