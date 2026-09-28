@@ -4,7 +4,7 @@
 
 == Data source <data-source>
 
-The transcriptomic data were retrieved from the National Cancer Institute’s (NCI) publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the NCI’s Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204. Of the 99 samples, 25 were identified to be of the Classical subtype.
+The transcriptomic data were retrieved from the publicly available Clinical Proteomic Tumor Analysis Consortium Glioblastoma Multiforme (CPTAC-GBM) cohort through the National Cancer Institute's Genomic Data Commons (GDC) Data Portal. The GDC dataset contained RNA-seq data from over 200 GBM samples in the form of raw counts of each gene. CPTAC-GBM Discovery Study metadata were then used to identify the molecular subtypes of the corresponding cases. Among the CPTAC cases, 99 samples with the Proneural, Mesenchymal, and Classical molecular subtypes were identified and used for the transcriptomic analysis @cptac3_gdc @pdc000204. Of the 99 samples, 25 were identified to be of the Classical subtype.
 
 Although CPTAC provides RNA-seq data for "healthy" samples, the samples are Normal Adjacent Tissue (NAT) which are brain tissues that have yet to exhibit cancerous features nearby the extracted tumors @cptac3_gdc @liu2024_cptac_codex. Aran et al.  showed NAT samples specifically from CPTAC's cancer samples have substantial transcriptomic and epigenetic alterations, causing them to be in a molecular "unique intermediate state" between healthy and tumor, despite not yet exhibiting cancerous features @aran2017. Therefore, NAT samples provided by CPTAC were considered unsuitable as a baseline for comparison in this thesis. In its place, the Genotype-Tissue Expression (GTEx) project provides comprehensive, and peer-reviewed RNA-seq data from healthy brain tissue, suitable for comparison in cancer research @gtex2020 @zeng2019.
 
@@ -13,22 +13,29 @@ The CPTAC-GBM Discovery Study used 10 normal frontal cortex samples from GTEx as
 
 == Data quality control and inspection
 
-As suggested by the Harvard Chan Bioinformatics Core @hbctraining_qc, with raw gene counts, a number of plots can be used to inspect the general landscape of the data and assess its quality, mainly through hierarchical clustering methods and Principal Component Analysis (PCA) of log2-transformed count data. Because transcriptomic expression values can span several orders of magnitude, log2 transformation compresses the range of expression values and reduces the influence of highly expressed genes, thereby improving the suitability of the data for clustering and visualization @cox2014 @law2014 @hbctraining_qc.
+As suggested by the Harvard Chan Bioinformatics Core, with raw gene counts, a number of unsupervised explatory data analysis methods can be used to inspect the general landscape of the data and assess its quality, mainly through hierarchical clustering methods and Principal Component Analysis (PCA) of log2-transformed count data. Because transcriptomic expression values can span several orders of magnitude, log2-transformation compresses the range of expression values and reduces the influence of highly expressed genes, thereby improving the suitability of the data for clustering and visualization @cox2014 @law2014 @hbctraining_qc.
 
 #figure(
-    grid(
-        columns: 2,
-        row-gutter: 1em,
-    )[
-        #image("../images/QC/corrheatmap_classical.png", height: 6cm,
-        )
-    ][
-        #image("../images/QC/PCA.png", height: 6cm)
-    ],
-    kind: image,
-    caption:[Hierarchical Clustering Heatmap (left), PCA (right)] 
-    ,
+  grid(
+    columns: 2,
+    gutter: 1.5em, // Replaced row-gutter with general gutter for clean spacing
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*A*],
+      image("../images/QC/corrheatmap_classical.png", width: 100%)
+    ),
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*B*],
+      image("../images/QC/PCA.png", width: 100%)
+    )
+  ),
+  kind: image,
+  caption: [Data Quality Control Analyses. *(A)* Hierarchical clustering heatmap of sample-to-sample correlations, demonstrating group-wise similarities. *(B)* Principal Component Analysis (PCA) plot showing the global variance and distinct separation between sample cohorts.]
 ) <classical-corr-heat-pca>
+
 
 The hierarchical clustering heatmap (shown in @classical-corr-heat-pca) groups samples according to their similarity based on the samples' gene expression Pearson correlation. Samples with similar biological characteristics are expected to exhibit similar expression profiles and therefore cluster together @hbctraining_qc. In the current dataset, most Classical GBM samples form a distinct cluster from the control samples. However, three samples cluster more closely with the controls than with the other GBM samples. To determine whether these samples represent potential outliers or reflect biological variation, PCA is a complementary quality control plot used for further data quality confirmation.
 
@@ -37,25 +44,32 @@ As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological rep
 
 
 #figure(
-    grid(
-        columns: 2,
-        row-gutter: 1em,
-    )[
-        #image("../images/QC/exprscatter.png", height: 6cm,
-        )
-    ][
-        #image("../images/QC/density.png", height: 6cm)
-    ],
-    kind: image,
-    caption:[Classical GBM vs GTEx control expression Scatter Plot (Left), Expression histograms of top 10.000 genes with largest expression difference (Right). ] 
-    ,
+  grid(
+    columns: 2,
+    gutter: 1.5em,
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*A*],
+      image("../images/QC/exprscatter.png", height: 6cm)
+    ),
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*B*],
+      image("../images/QC/density.png", height: 6cm)
+    )
+  ),
+  kind: image,
+  caption: [Comparative Gene Expression and Variance Distributions. *(A)* Scatter plot of gene expression magnitudes comparing Classical GBM against GTEx control samples. *(B)* Frequency histograms showing the distribution profiles of the top 10.000 genes exhibiting the largest absolute differences in expression.]
 ) <expr-compare>
 
-@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes of 45.000 with the largest differences between the 2 cohorts, where expressions in GBM is generally shifted upward (forward in the histogram) compared to the control. This further validates the need for further investigation into the differences between the two cohorts.
+
+@expr-compare presents an initial exploration of the baseline expression levels across the two cohorts. The scatter plot reveals a subset of genes exhibiting high expression values in the GBM samples relative to the GTEx controls. This is further confirmed by the expression histogram of the 10.000 genes of 45.000 with the largest differences between the GBM samples and controls, where expressions in GBM is generally shifted upward compared to the control. This further validates the need for further investigation into the differences between the two.
 
 == Differential expression analysis
 
-The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to the PyDESeq2 model. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene. PyDESeq2 models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests @deseq2_bioc_vignette @pydeseq2_docs.
+The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to PyDESeq2, which models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene @deseq2_bioc_vignette @pydeseq2_docs.
 
 With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. For further detail, significant DEGs with $log_2"FC" > 1$ were lablled as "up-regulated", and $log_2"FC"<1$ as "down-regulated". These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression.
 The volcano plot along with the count of significant DEGs are presented in Section @diff-results.
@@ -69,9 +83,10 @@ The top enriched biological processes were subsequently examined to identify pro
 == STRING interaction network mapping and analysis
 
 The list of genes associated with apoptosis was retrieved from the Kyoto Encyclopedia of Genes and Genomes (KEGG) database, via GSEApy using the `KEGG_2021_Human` gene-set library @kegg. 
-The list of genes complexes I–V was retrieved from Human Mitocarta @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis. As an additional visualization, log2FC of the genes in the set were plotted in a bar graph to inspect the portion of up and down-regulated genes in each of the biological entities involved.
+The list of genes complexes I–V was retrieved from Human Mitocarta which provides information on mitochondrial genes such as their pathways and tissues in which they are involved @mitocarta3_human. DEGs belonging to either the apoptosis gene set or the mitochondrial respiratory-complex gene sets were combined into a single gene set for further analysis. As an additional visualization, log2FC of the genes in the set were plotted in a bar graph to inspect the portion of up and down-regulated genes in each of the biological entities involved.
 
 The selected genes are then fed into to the STRING database to obtain protein association networks, limiting the confidence score of interaction to at least 0.90 to see the most meaningful interactions. The resulting networks were imported into Python and analysed using the NetworkX library. 
 
 Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and identifying the proteins involved. The resulting edge counts and protein involvement were used to characterize the associations between apoptosis and complexes I–V. The corresponding results are presented in Section @cell-death-int.
 
+== Statistical Analysis

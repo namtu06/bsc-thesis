@@ -8,6 +8,6 @@
 // thesis there.
 //
 
-#include "A.typ"
-#include "B.typ"
-#include "C.typ"
+//#include "A.typ"
+//#include "B.typ"
+//#include "C.typ"

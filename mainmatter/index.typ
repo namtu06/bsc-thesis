@@ -16,8 +16,8 @@
 #include "5_discussion.typ"
 #include "6_conclusions.typ"
 
-#include "01.typ"
-#include "02.typ"
-#include "03.typ"
-#include "04.typ"
-#include "05.typ"
+///#include "01.typ"
+//#include "02.typ"
+//#include "03.typ"
+//#include "04.typ"
+//#include "05.typ"
