@@ -19,7 +19,7 @@ significantly differentially expressed, and the change in expression and their s
     ,
 ) <volcano>
 
-Of the 45.000 results produced by PyDESeq2, roughly 27.300 genes were identified to be significantly differentially expressed — around 60%. More specifically, 20.300 of the 27.300 were up-regulated with mean $log_2"FC"$ of $3.98$, and the remaining 7.000 genes were down-regulated with mean $log_2"FC"$ of $-2.71$. The bulk of the log2FC values are seen to to lie within approximately 5 log2FC units for downregulated genes and 10 log2FC units for upregulated genes. 
+Of the 45.000 results produced by PyDESeq2, roughly 27.300 genes were identified to be significantly differentially expressed - around 60%. More specifically, 20.300 of the 27.300 were up-regulated with mean $log_2"FC"$ of $3.98$, and the remaining 7.000 genes were down-regulated with mean $log_2"FC"$ of $-2.71$. The bulk of the log2FC values are seen to to lie within approximately 5 log2FC units for downregulated genes and 10 log2FC units for upregulated genes. 
 
 
 ==  Functional enrichment of differentially expressed genes <gene-ont>

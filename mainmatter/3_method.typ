@@ -88,8 +88,8 @@ The selected genes are then fed into to the STRING database to obtain protein as
 
 Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and identifying the proteins involved. The resulting edge counts and protein involvement were used to characterize the associations between apoptosis and complexes I–V. The corresponding results are presented in Section @cell-death-int.
 
-== Statistical Analysis
+== Statistical analysis
 
-The differential expression analysis was performed with PyDESeq2. The log2FC values were modelled with a negative binomial generalized linear model, and the corresponding $p$-values are determined using Wald tests. The $p$-values were further corrected with Benjamini-Hochberg method to account for inflated false discovery rate due to multiple testing @deseq2_bioc_vignette @pydeseq2_docs. $"Log"_2"FC" >1$ with $p < 0.05$ were considered significant.
+The differential expression analysis was performed with PyDESeq2. The $log_2"FC"$ values were modelled with a negative binomial generalized linear model, and the corresponding $p$-values are determined using Wald tests. The $p$-values were further corrected with Benjamini-Hochberg method to account for inflated false discovery rate due to multiple testing @deseq2_bioc_vignette @pydeseq2_docs. $"Log"_2"FC" >1$ with $p < 0.05$ were considered significant.
 
-The $p$-values for GO Enrichment were determined using one-sided Fisher's exact test, and also corrected using Benjamini-Hochberg method for multiple testing; $p < 0.05$ were considered significant @scbestpractices_gsea.
+The $p$-values for GO Enrichment were determined using one-sided Fisher's exact test, and also corrected using Benjamini-Hochberg method for multiple testing; $p < 0.05$ were considered significant @scbestpractices_gsea. The STRING confidence scores are based on the database's own probabilistic framework. A closer score to 1 indicates higher confidence that the interaction is real @string_scores.

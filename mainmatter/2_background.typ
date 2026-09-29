@@ -18,7 +18,7 @@ According to Verhaak et al. and other further sequencing experiments, GBM is cat
 
 The Proneural subtype is characterized by major alteration of _PDGFRA_ and point mutation of _IDH1_, and it also had the most _TP53_ mutations in the TCGA dataset; functional analysis suggests the genes are involved in developmental neuron-related processes. Mesenchymal subtype has genes in the tumor necrosis factor super family such as NF1 highly expressed, reflecting its tendency to have higher overall necrosis compared to other subtypes @verhaak2010 @singh2022. 
 
-Verhaak et al. noted that, while _EGFR_ are likely important across all subtypes, analysis shows that it has an even more impactful role in the Classical subtype where high-level _EGFR_ amplification was observed to occur in 97% of the samples and infrequently occuring in other subtypes. Alongside that, there is a distinct lack of _TP53_ mutation in the Classical subtype even though it is the most frequently mutated gene in GBM as a whole @verhaak2010. Homozygous deletion of chromosome 9p21.3 also occured in 94% of the samples, affecting _CDKN2A_. This shows that the Classical subtype is characterized by a distinct molecular profile with alterations in regulatory pathways involving receptor signalling, cell-cycle regulation, and tumor suppression, justifying further investigation of this specific subtype @singh2022. The functional consequences of these alterations are discussed in the following section.
+Verhaak et al. noted that, while _EGFR_ are likely important across all subtypes, analysis shows that it has an even more impactful role in the Classical subtype where high-level _EGFR_ amplification occured in 97% of the samples and infrequently occuring in other subtypes. Alongside that, there is a distinct lack of _TP53_ mutation in the Classical subtype even though it is the most frequently mutated gene in GBM as a whole @verhaak2010. Homozygous deletion of chromosome 9p21.3 also occured in 94% of the samples, affecting _CDKN2A_. This shows that the Classical subtype is characterized by a distinct molecular profile with alterations in regulatory pathways involving receptor signalling, cell-cycle regulation, and tumor suppression, justifying further investigation of this specific subtype @singh2022. The functional consequences of these alterations are discussed in the following section.
 
 === Major molecular pathways altered in GBM
 
@@ -74,7 +74,7 @@ The mitochondria is the primary site of cellular function, and it has fundamenta
 
 Mitochondrial oxidative phosphorylation (OXPHOS) is a key mechanism of energy production in both cancerous and non-cancerous cells. It is comprised of five inner mitochondrial protein complexes I-V (also referred to as CI, CII, etc.) and 2 mobile electron carriers forming the electron transport chain (ETC) @vercellino2022. 
 
-The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the reduction of molecular oxygen to water and the pumping of protons across the inner mitochondrial membrane (IMM) via Complex I, III, and IV, each using their own pumping mechanism, to drive ATP synthesis @vercellino2022. The ETC also uses energy from the reducing equivalents to generated a proton gradient across the IMM, which is used by ATP synthase (Complex V) to *phosphorylate* ADP to ATP, the universal energy currency of cells. More specifically, *Complex I* transfers electrons from NADH to ubiquinone and pumps protons, *Complex II* does not pump protons but contributes to reduction of ubiquinone, *Complex III* reduces ubiquinone and cytochrome c, and in turn shuttles to Complex IV, *Complex IV* donates electron for final reduction of oxygen, and *Complex V* uses proton gradient and the reduction of oxygen to synthesize ATP @vercellino2022. The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
+The ETC *oxidizes* reducing equivalents in NADH and succinate, inducing the reduction of molecular oxygen to water and the pumping of protons across the inner mitochondrial membrane (IMM) via Complex I, III, and IV, each using their own pumping mechanism, to drive ATP synthesis @vercellino2022. The ETC also uses energy from the reducing equivalents to generated a proton gradient across the IMM, which is used by ATP synthase (Complex V) to *phosphorylate* ADP to ATP, the universal energy currency of cells. More specifically, *Complex I* transfers electrons from NADH to ubiquinone and pumps protons, *Complex II* does not pump protons but contributes to reduction of ubiquinone, *Complex III* reduces ubiquinone and cytochrome c, and in turn shuttles to Complex IV, *Complex IV* donates electron for final reduction of oxygen, and *Complex V* uses the proton gradient and the reduction of oxygen to synthesize ATP @vercellino2022. The activity of the respiratory chain is therefore essential for maintaining mitochondrial energy production and cellular function.
 
 === Mitochondrial respiratory chain-apoptosis relationship in GBM <mito-apop-connect>
 
@@ -100,7 +100,7 @@ Changes in respiratory-chain activity may therefore influence the susceptibility
 == Transcriptomics and computational analysis
 
 === From conventional molecular analysis to computational approaches <bioinformatics>
-Having established the relevance of apoptosis and mitochondrial respiratory-chain function in GBM, investigating alterations in the genes involved in these processes requires methods capable of measuring gene activity across large numbers of genes simultaneously.
+Having established the relevance of apoptosis and mitochondrial respiratory-chain function in GBM, investigating alterations in the genes involved in these processes requires methods capable of measuring gene activity across large numbers of genes simultaneously - at the systems level.
 
 Understanding complex biological systems requires integration of both experimental and computational approaches @kitano2002b. Kitano argues that, although studying individual components of an organism can provide valuable insights, such approaches alone are insufficient to understand the behaviour of the system as a whole @kitano2002. In molecular pathology, diseases are rarely attributable to a single gene, but instead arise from complex interactions between multiple molecular components and biological processes @barabasi2011.
 
@@ -111,7 +111,7 @@ Among these approaches, transcriptomic technologies provide a means of measuring
 
 === Transcriptomics and differential expression analysis
 
-Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from the genome @lowe2017. According to Lowe et al. @lowe2017, two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined (@micro-seq).
+Transcriptomics technologies provide information on gene expression by measuring the RNA transcripts produced from the genome @lowe2017. According to Lowe et al., two major approaches for measuring transcript abundance are microarrays, which quantify predetermined sequences, and RNA sequencing (RNA-seq), which uses high-throughput sequencing to measure transcript sequences without requiring them to be predetermined @lowe2017. @micro-seq presents the two technologies and how they quantify expression data in detail.
 
 #figure(
     grid(
@@ -137,7 +137,7 @@ A popular library for gene-level differential expression analysis is DESeq2 (wit
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/background/deseq-flow.pdf",height: 12cm,
+        #image("../images/background/deseq-flow.pdf",height: 10cm,
         )
     ],
     kind: image,
@@ -145,7 +145,7 @@ A popular library for gene-level differential expression analysis is DESeq2 (wit
     ,
 ) <deseq-flow>
 
-RNA-seq count data often exhibit greater variance than their mean, a property known as overdispersion. DESeq2 accounts for this by modelling count data using a negative binomial generalized linear model, from which $log_2"FC"$s and their standard errors are estimated. The statistical significance of the estimated $log_2"FC"$s is then assessed using Wald tests. DESeq2 can additionally account for known sources of systematic variation, such as batch effects, by incorporating relevant variables into the design of the statistical model. To account for the increased number of false discoveries resulting from multiple hypothesis testing, $p$-values are adjusted using the Benjamini–Hochberg procedure to control the false discovery rate (FDR) @hbctraining_dge_overview @pydeseq2_docs @deseq2_bioc_vignette.
+RNA-seq count data often exhibit greater variance than their mean, a property known as overdispersion. DESeq2 accounts for this by modelling count data using a negative binomial generalized linear model, from which $log_2"FC"$s and their standard errors are estimated. The statistical significance of the estimated $log_2"FC"$s is then assessed using Wald tests. DESeq2 can additionally account for known sources of systematic variation, such as batch effects, by incorporating relevant variables into the design of the statistical model. To account for the increased number of false discoveries resulting from multiple hypothesis testing, $p$-values are adjusted using the Benjamini-Hochberg procedure to control the false discovery rate (FDR) @hbctraining_dge_overview @pydeseq2_docs @deseq2_bioc_vignette.
 
 === Functional analysis and network analysis
 
@@ -167,7 +167,7 @@ organized into three main aspects: (1) Molecular Functions (MF), (2) Cellular Co
     ,
 ) <GO-flow>
 
-Still, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011. Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
+However, the identified overrepresented biological processes do not show how the individual genes are interacting with one another. Therefore, a network-based approach can complement the identified BPs by representing the genes as nodes and their interactions as edges, allowing for the inspection at the systems-level @barabasi2011. Network-based approaches can reveal highly connected components, clusters of interacting molecules, and relationships between biological processes that may not be apparent when genes are considered individually. This can provide additional context for interpreting molecular alterations and identifying potential interactions between genes involved in related biological processes @barabasi2011.
 
 In this thesis, Search Tool for the Retrieval of Interacting Genes/Proteins (STRING) was used to construct protein-protein association networks from selected differentially expressed genes. STRING maps the submitted gene identifiers to their corresponding protein products and integrates known and predicted protein associations from multiple evidence sources. The resulting networks represent proteins as nodes and their associations as edges, providing a means of examining functional relationships among the proteins encoded by the selected DEGs @szklarczyk2023. 
 
