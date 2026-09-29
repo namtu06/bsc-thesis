@@ -69,9 +69,8 @@ As noted by the Harvard Chan Bioinformatics Core @hbctraining_qc, biological rep
 
 == Differential expression analysis
 
-The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to PyDESeq2, which models RNA-seq count data using a negative binomial generalized linear model and assesses the statistical significance of the estimated coefficients using Wald tests. PyDESeq2 performed differential expression analysis and generated the corresponding log2FC, standard error, test statistic, p-value, and adjusted p-value for each gene @deseq2_bioc_vignette @pydeseq2_docs.
-
-With the log2FCs and their adjusted p-values, volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $ "adjusted" p"-value" < 0.05$ were considered significantly differentially expressed. For further detail, significant DEGs with $log_2"FC" > 1$ were lablled as "up-regulated", and $log_2"FC"<1$ as "down-regulated". These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression.
+The raw count data from the 25 Classical GBM samples and 7 GTEx control samples were used as input to PyDESeq2 to obtain the $log_2"FC"$ values and their corresponding adjusted $p$-values.
+Volcano plots were used to display the distribution of differentially expressed genes (DEGs). DEGs $abs(log_2"FC") > 1$ and $  p < 0.05$ were considered significantly differentially expressed. For further detail, significant DEGs with $log_2"FC" > 1$ were lablled as "up-regulated", and $log_2"FC"<1$ as "down-regulated". These thresholds were selected to identify genes showing both a minimum two-fold change in expression and statistically significant differential expression.
 The volcano plot along with the count of significant DEGs are presented in Section @diff-results.
 
 == GO functional enrichment 
@@ -90,3 +89,7 @@ The selected genes are then fed into to the STRING database to obtain protein as
 Associations between apoptosis-associated proteins and proteins belonging to each mitochondrial respiratory-chain complex were identified by counting the corresponding network edges and identifying the proteins involved. The resulting edge counts and protein involvement were used to characterize the associations between apoptosis and complexes I–V. The corresponding results are presented in Section @cell-death-int.
 
 == Statistical Analysis
+
+The differential expression analysis was performed with PyDESeq2. The log2FC values were modelled with a negative binomial generalized linear model, and the corresponding $p$-values are determined using Wald tests. The $p$-values were further corrected with Benjamini-Hochberg method to account for inflated false discovery rate due to multiple testing @deseq2_bioc_vignette @pydeseq2_docs. $"Log"_2"FC" >1$ with $p < 0.05$ were considered significant.
+
+The $p$-values for GO Enrichment were determined using one-sided Fisher's exact test, and also corrected using Benjamini-Hochberg method for multiple testing; $p < 0.05$ were considered significant @scbestpractices_gsea.

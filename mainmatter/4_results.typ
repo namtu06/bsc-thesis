@@ -15,7 +15,7 @@ significantly differentially expressed, and the change in expression and their s
         )
     ],
     kind: image,
-    caption:[Classical GBM vs GTEx Control Volcano Plot] 
+    caption:[Classical GBM vs GTEx Control Volcano Plot.] 
     ,
 ) <volcano>
 
@@ -34,11 +34,11 @@ With the set of significant DEGs obtained from the differential analysis, they a
         )
     ],
     kind: image,
-    caption:[GO Enrichment dot plot] 
+    caption:[GO Enrichment dot plot. Terms were ranked based on count of representing genes. Terms with same number of representing genes are ranked based on $-log_10("adjusted-"p)$. Terms related to mitochondrial respiration are highlighted in red.] 
     ,
 ) <goenrichment>
 
-Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to be be related to the respitatory functions of the mitochondria (highlighted in red) as discussed in @respitatory-funcs, all with a corresponding $p"-value"$ lower than $0.05$. Furthermore, the majority (7 out of 9) of identified mitochondrial respiration-related BPs lie within the top 10 overrepresented BPs.
+Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to be be related to the respitatory functions of the mitochondria (highlighted in red) as discussed in Section @respitatory-funcs, all with a corresponding $p"-value"$ lower than $0.05$. Furthermore, the majority (7 out of 9) of identified mitochondrial respiration-related BPs lie within the top 10 overrepresented BPs.
 
 
 #figure(
@@ -53,11 +53,11 @@ Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to 
         )
     ],
     kind: image,
-    caption:[Log2FC bar plot of genes in respiratory complexes (top), and in apoptosis (bottom).] 
+    caption:[$"Log"_2"FC"$ bar plot of genes in respiratory complexes (top), and in apoptosis (bottom).] 
     ,
 ) <fcs>
 
-@fcs shows the Log2FC magnitudes of the genes involved in respiratory complexes and in apoptosis. Proportion-wise, all the complexes are seen to be mostly down-regulated, while apoptosis is split down the middle between up- and down-regulated. The biological implications of the above results are discussed in Section @diff-discuss.
+@fcs shows the $log_2"FC"$ magnitudes of the genes involved in respiratory complexes and in apoptosis. Proportion-wise, all the complexes are seen to be mostly down-regulated, while apoptosis is split down the middle between up- and down-regulated. The biological implications of the above results are discussed in Section @diff-discuss.
 
 == Association between apoptosis and mitochondrial respiratory complexes <cell-death-int>
 
@@ -80,7 +80,7 @@ Displayed in @general-network is the obtained interaction network containing pro
 
 The 2 major groups can be seen to be very distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. The combination of stated information implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. Further discussion of CYCS will be presented in Section @major-network-discuss.
 
-For further inspection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their log2FC values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
+For further inspection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
 
 #figure(
   grid(

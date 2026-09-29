@@ -718,6 +718,20 @@ deseq2_bioc_vignette:
   accessed:
     date: 2026-09-04
 
+scbestpractices_gsea:
+  type: web
+  title: "Gene Set Enrichment and Pathway Analysis"
+  author:
+    - Hediyeh-Zadeh, Soroor
+    - Badia-i-Mompel, Pau
+    - Virshup, Isaac
+    - Heinzlmeier, Luis
+  url:
+    value: https://www.sc-best-practices.org/conditions/gsea-pathway/
+    date: 2026-09-29
+  accessed:
+    date: 2026-09-29
+
 kegg:
   type: web
   title: "KEGG: Kyoto Encyclopedia of Genes and Genomes"
