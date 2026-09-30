@@ -17,9 +17,9 @@ However, these interpretations from the computations remain speculative, as incr
 
 == Established apoptosis–mitochondrial respiratory relationship in Classical GBM <major-network-discuss>
 
-The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. Mitochondrial alterations can affect apoptotic signalling, while proteins involved in the respiratory chain may also participate in pathways regulating cell death. In particular, cytochrome c, encoded by CYCS, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020.
 
-The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with this established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to capture a previously established link between mitochondrial respiratory function and apoptosis. More importantly, many previous computational studies of GBM have relied on TCGA-derived transcriptomic data, whereas the present analysis uses the independent CPTAC cohort, showing that this association is also computationally observed in a separate GBM dataset.
+
+The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is consistent with past established biological connection @jan2019 @kalpage2020. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to capture a previously established link between mitochondrial respiratory function and apoptosis. More importantly, many previous computational studies of GBM have relied on TCGA-derived transcriptomic data, whereas the present analysis uses the independent CPTAC cohort, showing that this association is also computationally observed in a separate GBM dataset.
 
 Furthermore, the present analysis examines this relationship specifically within Classical GBM, rather than considering GBM as a single molecular group. Thus, while the relationship between mitochondrial respiration, CYCS, and apoptosis itself is well established, its computational observation within Classical GBM using the CPTAC cohort provides a subtype-specific characterization of this relationship. This also provides a basis for investigating whether similar associations are observed in the remaining two major GBM subtypes in future studies.
 
@@ -27,7 +27,7 @@ Furthermore, the present analysis examines this relationship specifically within
 == Additional network associations between apoptosis and respiratory complexes <minor-network-discuss>
 
 
-Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, the network analysis identified additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
+
 
 The number of associations varied between the respiratory complexes, with Complex I showing the largest number of connections, followed by Complex II, Complex IV, and Complex III, while no associations were identified for Complex V. This variation suggests that the relationship between apoptosis and mitochondrial respiratory complexes may extend beyond the well-established role of CYCS and involve multiple components of the respiratory chain.
 
