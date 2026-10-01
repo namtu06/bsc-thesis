@@ -2,7 +2,7 @@
 
 = Results <results>
 
-== Differentially Expressed Genes in GBM <diff-results>
+== Differentially Expressed Genes in Classical GBM <diff-results>
 
 To identify genes that are meaningfully differentially expressed and their distribution, a volcano plot was used. Displayed in @volcano is the volcano generated from the differential analysis results performed with PyDESeq2, with $log_2"FC"$ on the x-axis and its $-log_10("adjusted" p"-value")$ on the y-axis for a single gene. The plot shows a large portion of the genes in the GBM samples are 
 significantly differentially expressed, and the change in expression and their statistical significance vary. Absolute values $log_2"FC"$ can ran range from 0 to 15, and $-log_10(p)$ can reach over 300, corresponding to $p = 10^(-300)$.
@@ -23,7 +23,7 @@ Of the 45.000 results produced by PyDESeq2, roughly 27.300 genes were identified
 
 
 ==  Functional enrichment of differentially expressed genes <gene-ont>
-To identify biological processes (BPs) that may be affected in GBM compared to a healthy sample, functional enrichment is performed to identify BPs that are represented by different subsets of genes within the set of identified DEGs and their statistical significance. With the set of significant DEGs obtained from the differential analysis, they are enriched with GO to identify overrepressented biological processes in the GBM samples. The results of the enrichment are displayed as a dot plot in @goenrichment where the top 20 overrepresented GO Biological terms are presented along with their statistical significance and the count of their representing genes. 
+Further bringing the results to the systems level, functional enrichment is performed to identify BPs that are overrepresented by different subsets of genes within the set of identified DEGs from the previous analysis. With the set of significant DEGs obtained from the differential analysis, they are enriched with GO to identify overrepressented biological processes in the GBM samples. The results of the enrichment are displayed as a dot plot in @goenrichment where the top 20 overrepresented GO Biological terms are presented along with their statistical significance and the count of their representing genes. 
 
 Biological processes with connections to mitochondrial respiration, either directly stated its name or are a smaller process making up the entire respiration process, are highlighted in red to visualize their portions relative to the other identified BPs. 
 Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to be be related to the respitatory functions of the mitochondria; all with corresponding $p<0.05$. Furthermore, 7 out of 9 identified mitochondrial respiration-related BPs lie within the top 10 overrepresented BPs.
@@ -66,7 +66,7 @@ Displayed in @general-network is the obtained interaction network containing pro
 
 The two major groups are distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. This implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
 
-The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. In particular, cytochrome c, encoded by identified CYCS protein, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020. The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with past established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to reliably capture the relationship, enabling further analysis.
+The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. In particular, cytochrome c, encoded by identified CYCS protein, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020. The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with past established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to reliably reconstruct the relationship, enabling further analysis.
 
 For further inspection of the biological connection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
 
@@ -112,7 +112,7 @@ For further inspection of the biological connection, the interactions between ap
 
 Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, subnetwork analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
 
-The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. The interactions of each of the complexes with apoptosis can vary. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
+The interactions of each of the complexes with apoptosis can be seen to vary. The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
 
 #import table: cell, header, hline, vline
 #[
@@ -202,7 +202,7 @@ To see which proteins are participating in the CYCS-mediated connection between 
 
 The names of the CYCS-interacting proteins encoded are listed in @protein-names. A major standout are the proteins belonging to apoptosis. These proteins participate in the major events in the intrinsic signalling pathway leading up to apoptosis. Additionally, genes closely related to CYCS, such as CYC1, is present in complex I-III. All of this means it is worth investigating the expression levels of the genes encoding them. 
 
-By looking at the $log_2"FC"$ values of the genes encoding the proteins above, inference can be made about the activity of apoptosis and mitochondrial respiration in GBM compared to health brain tissue.
+By looking at the $log_2"FC"$ values of the genes encoding the proteins above, inference can be made about the activity of apoptosis and mitochondrial respiration in Classical GBM compared to health brain tissue.
 As such, the genes representing the mitochondrial respiration processes, the genes' $log_2"FC"$ magnitudes are visualized as a bar graph in @fcs. 
 
 
