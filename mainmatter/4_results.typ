@@ -64,11 +64,11 @@ Displayed in @general-network is the obtained interaction network containing pro
     ,
 ) <general-network>
 
-The two major groups are distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. This implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
+The two major respiratory complexes and apoptosis groups are distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. This implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
 
 The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. In particular, cytochrome c, encoded by identified CYCS protein, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020. The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with past established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to reliably reconstruct the relationship, enabling further analysis.
 
-For further inspection of the biological connection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
+Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, subnetwork analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM. For further inspection of the biological connection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V, where there exists no connection between 2 the groups.
 
 
 
@@ -110,7 +110,7 @@ For further inspection of the biological connection, the interactions between ap
   caption: [Protein interaction subnetworks in Classical GBM. Subnetworks are between *(A)* apoptosis and complex I, *(B)* apoptosis and complex II, *(C)* apoptosis and complex III, *(D)* apoptosis and complex IV, and *(E)* apoptosis and complex V.],
 ) <individual-maps>
 
-Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, subnetwork analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
+
 
 The interactions of each of the complexes with apoptosis can be seen to vary. The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
 
@@ -155,7 +155,7 @@ The interactions of each of the complexes with apoptosis can be seen to vary. Th
 
 
 
-To see which proteins are participating in the CYCS-mediated connection between apoptosis and respiratory complexes, the specific names of the proteins with direct connection with CYCS in the network are identified.
+As mentioned, edge counts alone do not provide much insight into the regulation of the proteins involved; further identification of proteins and integration with other analyses is needed to understand the system better. The specific names of the proteins with direct connection with CYCS in the network are identified to see which proteins are participating in the CYCS-mediated connection between apoptosis and respiratory complexes. The names of the CYCS-interacting-proteins-encoding genes are listed in @protein-names.
 
 #import table: cell, header, hline, vline
 #[
@@ -170,7 +170,7 @@ To see which proteins are participating in the CYCS-mediated connection between 
                 table.vline(),
                 [],
                 table.vline(),
-                [Proteins with direct interaction with CYCS],
+                [CYCS-interacting-protein-encoding genes],
                 table.vline()
             ),
             table.hline(),
@@ -196,13 +196,13 @@ To see which proteins are participating in the CYCS-mediated connection between 
             table.hline(),
             [BAX, BCL2, BCL2L1, CASP3, CASP7, CASP8, CASP9, DIABLO, ENDOG, ITPR1, ITPR3, TP53],
         ),
-        caption: [CYCS-interacting proteins encoded by identified DEGs],
+        caption: [CYCS-interacting-proteins-encoding DEGs],
     )<protein-names>
 ] 
 
-The names of the CYCS-interacting proteins encoded are listed in @protein-names. A major standout are the proteins belonging to apoptosis. These proteins participate in the major events in the intrinsic signalling pathway leading up to apoptosis. Additionally, genes closely related to CYCS, such as CYC1, is present in complex I-III. All of this means it is worth investigating the expression levels of the genes encoding them. 
+A major standout are the proteins belonging to apoptosis. These proteins participate in the major events in the intrinsic signalling pathway leading up to apoptosis. Additionally, genes closely related to CYCS, such as CYC1, is present in complex I-III. All of this means it is worth investigating the expression levels of the genes encoding them. This is especially important as the genes listed play a major role in the apoptotic signalling pathways.
 
-By looking at the $log_2"FC"$ values of the genes encoding the proteins above, inference can be made about the activity of apoptosis and mitochondrial respiration in Classical GBM compared to health brain tissue.
+By looking at the $log_2"FC"$ values of the genes encoding the proteins above, inference can be made about the activity of apoptosis and mitochondrial respiration in Classical GBM compared to health brain tissue. 
 As such, the genes representing the mitochondrial respiration processes, the genes' $log_2"FC"$ magnitudes are visualized as a bar graph in @fcs. 
 
 

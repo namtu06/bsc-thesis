@@ -28,7 +28,13 @@
 	gene: (
 		name: emph[EGFR],
 		description: [
-			Italic words denote genes.
+			Italic capitalized words denote genes.
+		]
+	),
+	gene_protein: (
+		name: "EGFR",
+		description: [
+			Non-italicized capitalized words denote protein encoded by gene of the same name.
 		]
 	),
 	oxphos: (
