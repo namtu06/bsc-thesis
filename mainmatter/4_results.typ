@@ -15,7 +15,7 @@ significantly differentially expressed, and the change in expression and their s
         )
     ],
     kind: image,
-    caption:[Classical GBM vs GTEx Control Volcano Plot.] 
+    caption:[Classical GBM vs GTEx Control Volcano Plot. There are 27.300 total significantly differentially expressed genes. More specifically, there are 20.300 significantly up-regulated genes (colored in red), and 7.000 significantly down-regulated genes (colored in blue).  ] 
     ,
 ) <volcano>
 
@@ -35,7 +35,7 @@ Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to 
         columns: 1,
         row-gutter: 1em,
     )[
-        #image("../images/results/goenrichment.png", height: 14cm,
+        #image("../images/results/goenrichment.png", height: 9.57cm,
         )
     ],
     kind: image,
@@ -43,33 +43,7 @@ Of the top 20 overrepresented BPs in terms of gene counts, 9 were identified to 
     ,
 ) <goenrichment>
 
-This shows that the dysregulation of the mitochondrial respiration process does not occur by chance. Because this process has a crucial role in maintain normal mitochondrial function, the resulting improper apoptosis may also not occur by chance; further validating the lack of cell death being one of the main drivers of GBM proliferation. For further inspection of the genes representing the mitochondrial respiration processes, the genes' $log_2"FC"$ magnitudes are visualized in a bar graph. 
-
-
-#figure(
-  grid(
-    rows: 2,
-    row-gutter: 1.5em,
-    stack(
-      dir: ttb,
-      spacing: 0.5em,
-      align(left)[*A*],
-      image("../images/results/classical_apoptosis_log2fc.svg", width: 100%)
-    ),
-    stack(
-      dir: ttb,
-      spacing: 0.5em,
-      align(left)[*B*],
-      image("../images/results/classical_mitochondrial_complexes_log2fc.svg", width: 100%)
-    )
-    
-  ),
-  kind: image,
-  caption: [$"Log"_2"FC"$ bar graph of genes in (A) in apoptosis, and (B) respiratory complexes.]
-) <fcs>
-
-
-@fcs shows the $log_2"FC"$ magnitudes of the genes involved in respiratory complexes and in apoptosis. Proportion-wise, all the complexes are seen to be mostly down-regulated, while apoptosis is split down the middle between up- and down-regulated. The biological implications of the above results are discussed in Section @diff-discuss.
+This shows that the dysregulation of the mitochondrial respiration process does not occur by chance. Because this process has a crucial role in maintain normal mitochondrial function, the resulting improper apoptosis may also not occur by chance; further validating the lack of cell death being one of the main drivers of GBM proliferation. 
 
 == Association between apoptosis and mitochondrial respiratory complexes <cell-death-int>
 
@@ -134,7 +108,7 @@ For further inspection, the interactions between apoptosis and each of the respi
   caption: [Protein interaction subnetworks in Classical GBM. Subnetworks are between *(A)* apoptosis and complex I, *(B)* apoptosis and complex II, *(C)* apoptosis and complex III, *(D)* apoptosis and complex IV, and *(E)* apoptosis and complex V.],
 ) <individual-maps>
 
-Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, the subnetworks analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
+Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, subnetwork analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
 
 
 #import table: cell, header, hline, vline
@@ -176,4 +150,79 @@ Beyond the established CYCS-mediated connection between mitochondrial respiratio
 
 
 
-The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. The interactions of each of the complexes with apoptosis can vary. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions of 9, and complex I with the highest number of interactions of 25, followed by complex II with 13, complex IV with 10, and complex III with 9.
+The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. The interactions of each of the complexes with apoptosis can vary. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
+
+To see which proteins are participating in the CYCS-mediated connection between apoptosis and respiratory complexes, the specific names of the proteins with direct connection with CYCS in the network are identified.
+
+#import table: cell, header, hline, vline
+#[
+    #show table.cell.where(y: 0): strong
+    #figure(
+        table(
+            columns: 2,
+            stroke: none,
+            align: center + horizon,
+            table.header(
+                table.hline(),
+                table.vline(),
+                [],
+                table.vline(),
+                [Proteins with direct interaction with CYCS],
+                table.vline()
+            ),
+            table.hline(),
+            
+            
+            table.hline(),
+            [*Complex I*],
+            table.hline(),
+            [COX4I1, COX4I2, COX5A, COX5B, COX6A1, COX6B1, COX6C, CYC1, MT-CO1, MT-CO2, MT-CO3, MT-CYB, SDHA, SDHB, SDHC, SDHD, UQCR10, UQCRB, UQCRC1, UQCRC2, UQCRFS1, UQCRH, UQCRQ],
+            [*Complex II*],
+            table.hline(),
+            [CYC1, MT-CYB, SDHA, SDHB, SDHC, SDHD, UQCR10, UQCRB, UQCRC1, UQCRC2, UQCRFS1, UQCRH, UQCRQ],
+            [*Complex III*],
+            table.hline(),
+            [CYC1, MT-CYB, UQCR10, UQCRB, UQCRC1, UQCRC2, UQCRFS1, UQCRH, UQCRQ],
+            [*Complex IV*],
+            table.hline(),
+            [COX4I1, COX4I2, COX5A, COX5B, COX6A1, COX6B1, COX6C, MT-CO1, MT-CO2, MT-CO3],
+            [*Complex V*],
+            table.hline(),
+            [None],
+            [*Apoptosis*],
+            table.hline(),
+            [BAX, BCL2, BCL2L1, CASP3, CASP7, CASP8, CASP9, DIABLO, ENDOG, ITPR1, ITPR3, TP53],
+        ),
+        caption: [CYCS-interacting proteins encoded by identified DEGs],
+    )<protein-names>
+] 
+
+The names of the CYCS-interacting proteins encoded are listed in @protein-names. A major standout are the proteins belonging to apoptosis. These proteins participate in the major events in the intrinsic signalling pathway leading up to apoptosis. Additionally, genes closely related to CYCS, such as CYC1, is present in complex I-III. All of this means it is worth investigating the expression levels of the genes encoding them. 
+
+By looking at the $log_2"FC"$ values of the genes encoding the proteins above, inference can be made about the activity of apoptosis and mitochondrial respiration in GBM compared to health brain tissue.
+As such, the genes representing the mitochondrial respiration processes, the genes' $log_2"FC"$ magnitudes are visualized as a bar graph in @fcs. 
+
+
+#figure(
+  grid(
+    rows: 2,
+    row-gutter: 1.5em,
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*A*],
+      image("../images/results/classical_apoptosis_log2fc.svg", width: 100%)
+    ),
+    stack(
+      dir: ttb,
+      spacing: 0.5em,
+      align(left)[*B*],
+      image("../images/results/classical_mitochondrial_complexes_log2fc.svg", width: 100%)
+    )
+    
+  ),
+  kind: image,
+  caption: [$"Log"_2"FC"$ bar graph of CYCS-interacting encoding genes in *(A)* in apoptosis, and *(B)* respiratory complexes.]
+) <fcs>
+
+
