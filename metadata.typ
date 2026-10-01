@@ -10,7 +10,7 @@
 
 // Common metadata.
 
-#let author = "Nam Từ"
+#let author = "Từ Hoàng Hải Nam"
 
 #let examiners = (
 	(

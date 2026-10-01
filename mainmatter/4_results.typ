@@ -64,11 +64,13 @@ Displayed in @general-network is the obtained interaction network containing pro
     ,
 ) <general-network>
 
-The 2 major groups can be seen to be very distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. This implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
+The two major groups are distinct from one another, and connect with each other through a single apoptotic protein that is CYCS. The STRING combined score of the interactions present start from at least 0.90 to as high as 0.999, with many of the interactions connected to CYCS lie in the higher end of the range. This implies that the gene resulting in CYCS plays a major role in mediating the interaction between the 2 groups. 
 
-The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. In particular, cytochrome c, encoded by identified CYCS protein, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020.
+The relationship between mitochondrial energy metabolism and apoptosis is particularly relevant in GBM, as mitochondrial processes are involved not only in energy production but also in the regulation of apoptotic pathways @nagy2015. In particular, cytochrome c, encoded by identified CYCS protein, has a dual role as a component of the mitochondrial electron transport chain and as a central mediator of the intrinsic apoptotic pathway. Under apoptotic conditions, the release of cytochrome c from mitochondria into the cytosol contributes to the formation of the apoptosome and subsequent activation of downstream caspases @jan2019 @kalpage2020. The identification of CYCS within the relationship between apoptotic genes and mitochondrial respiratory complexes is therefore consistent with past established biological connection. Rather than representing a newly identified mechanism, the result demonstrates that the computational analysis was able to reliably capture the relationship, enabling further analysis.
 
-For further inspection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
+For further inspection of the biological connection, the interactions between apoptosis and each of the respiratory complex are mapped in @individual-maps, and their $log_2"FC"$ values are filled within each node. A major standout in the individual networks is the interaction network between apoptosis and complex V (second subfigure from left to right, second row), where there exists no connection between 2 the groups.
+
+
 
 #figure(
   grid(
@@ -110,6 +112,7 @@ For further inspection, the interactions between apoptosis and each of the respi
 
 Beyond the established CYCS-mediated connection between mitochondrial respiration and apoptosis, subnetwork analysis can identify additional associations between apoptotic genes and the individual mitochondrial respiratory complexes. These findings extend the analysis beyond the canonical relationship and provide a more detailed view of how apoptotic genes may be connected to different components of the mitochondrial respiratory chain in Classical GBM.
 
+The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. The interactions of each of the complexes with apoptosis can vary. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
 
 #import table: cell, header, hline, vline
 #[
@@ -150,7 +153,7 @@ Beyond the established CYCS-mediated connection between mitochondrial respiratio
 
 
 
-The count of edges connecting apoptotic and respiratory complex genes are shown in @edge-count. The interactions of each of the complexes with apoptosis can vary. Excluding complex V which had 0 interactions,  complex III has the lowest number of interactions, and complex I with the highest number of interactions, followed by complex II, complex IV, and complex III. The number of connections alone do not definitively indicate the complexes' amount of involvement in apoptosis. Nevertheless, they still give insight into how some complexes are more directly involved than others, this is discussed in further detail in Section @minor-network-discuss.
+
 
 To see which proteins are participating in the CYCS-mediated connection between apoptosis and respiratory complexes, the specific names of the proteins with direct connection with CYCS in the network are identified.
 
@@ -222,7 +225,11 @@ As such, the genes representing the mitochondrial respiration processes, the gen
     
   ),
   kind: image,
-  caption: [$"Log"_2"FC"$ bar graph of CYCS-interacting encoding genes in *(A)* in apoptosis, and *(B)* respiratory complexes.]
+  caption: [$"Log"_2"FC"$ bar graph of CYCS-interacting-protein encoding genes in *(A)* in apoptosis, and *(B)* respiratory complexes.]
 ) <fcs>
+
+In the respiratory complexes' genes, down-regulation is seen to happen across all the complexes, excluding complex V. This suggests that there is a global breakdown of the OXPHOS process in Classical GBM, leading to improper mitochondrial functions and ultimately improper regulation of cell death.
+
+In the dysregulated apoptotic genes, the genes encoding proteins that act as major activation events in both pathways of apoptosis are mostly up-regulated. In particular, the genes for the final caspases that ultimately trigger apoptosis - CASP3 and CASP7 - are upregulated. In the extrinsic pathway, the major caspase gene CASP8 is upregulated by 2 fold-change units. In the intrinsic pathway, TP53, BCL2, and BAX are all genes for proteins that act as major upstream activations of the pathway. However, the subsequent downstream activation caspase 9 encoded by CASP9 is down-regulated. Additionally, genes assisting in the activation of the intrinsic pathway and release of the caspases such as ITPR3, DIABLO, and ENDOG are down-regulated. In general, there is a distinct discrepancy in the dysregulation of the apoptotic genes, where the genes are neither all up-regulated or down-regulated.
 
 
